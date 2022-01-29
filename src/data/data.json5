@@ -1,0 +1,443 @@
+{
+  sideNavLinks: {
+    patreonLink: {
+      name: "Patreon",
+      link: "https://www.patreon.com/NightmareMasterclass",
+    },
+
+    youtubeLink: {
+      name: "YouTube",
+      link: "https://www.youtube.com/c/NightmareMasterclass",
+    },
+
+    liveLink: {
+      name: "Live",
+      link: "https://www.youtube.com/channel/UCZJis5cqkVfeCwTHrXvkj_w",
+    },
+
+    kofiLink: {
+      name: "Ko-Fi",
+      link: "https://ko-fi.com/NightmareMasterclass",
+    },
+
+    bandcampLink: {
+      name: "Bandcamp",
+      link: "https://nightmaremasterclass.bandcamp.com/",
+    },
+
+    libsynLink: {
+      name: "Libsyn",
+      link: "https://nightmaretonight.libsyn.com/",
+    }
+  },
+  playlist: {
+    petscopPlaylist: {
+      name: "The Petscop Investigation",
+      link: "https://www.youtube.com/watch?v:Crvn5-LOUFA&list:PL66V-u4b7Z8BkYl59qLV5-6N3FkxTG0Pw",
+    },
+    recentAnalysisPlaylist: {
+      name: "Recent Analysis Vids",
+      link: "https://www.youtube.com/watch?v:vny8mR9AqN0&list:PL66V-u4b7Z8BdTuMdwhazUMFUcn9g8KWX",
+    },
+    theoryPlaylist: {
+      name: "Theory",
+      link: "https://www.youtube.com/watch?v:usmyyHxO6Fo&list:PL66V-u4b7Z8DlzVfXLyKHfG34tuDI5Ohl",
+    },
+    criticismPlaylist: {
+      name: "Criticism",
+      link: "https://www.youtube.com/watch?v:Jg5_Q5opuRY&list:PL66V-u4b7Z8DgHIPLhilRSuDuAzpcuLsd",
+    },
+    podcastPlaylist: {
+      name: "Nightmare Tonight",
+      link: "https://www.youtube.com/watch?v:fz1XgHpTk1U&list:PL66V-u4b7Z8A-GBlwAoZwPYaWL_tXWisf",
+    },
+    dhmisPlaylist: {
+      name: "DHMIS Critical Approaches",
+      link: "https://www.youtube.com/watch?v:X0LHtXVQo5o&list:PL66V-u4b7Z8Ar5xKspcwaq7r_uFlvWDs6",
+    },
+    diminishPlaylist: {
+      name: "Exploring Diminish",
+      link: "https://www.youtube.com/watch?v:A3WT0cqx4pg&list:PL8aKnJJbVcbSmiAHMYM3TMqMaTzNk1tu9",
+    },
+  },
+  announcements: {
+    head: "Appearances",
+    text: "I recently went on Epoch Philosophy's podcast to talk about the simulation hypothesis. Check it out!",
+    link: "https://www.youtube.com/watch?v:jhCd4Wa9rXk",
+    desc: "Simulation Theory: Disaster and Marxian Futures, ft. Nightmare Masterclass"
+  },
+  live: {
+    drawing: {
+      title: "Drawing Stuff 7.10.21",
+      iframeRef: "https://www.youtube.com/embed/U29HdJEJmRg",
+    },
+    sim: {
+      title: "Post Vid Q&A: The Simulation Theory",
+      iframeRef: "https://www.youtube.com/embed/ilIfCizIros",
+    },
+    skulls: {
+      title: "drawing skulls and other stuff",
+      iframeRef: "https://www.youtube.com/embed/j8sLPIYfAts",
+    },
+    streamData: {
+      title: "Saturday Chill Stream 3.13.21",
+      iframeRef: "https://www.youtube.com/embed/h2yELn1GQYQ",
+    }, 
+    streamDataTwo: {
+      title: "Saturday Chill Stream 3.6.21",
+      iframeRef: "https://www.youtube.com/embed/zx9anJKwItI",
+    },
+    streamDataThree: {
+      title: "Saturday Chill Stream 2.27.21",
+      iframeRef: "https://www.youtube.com/embed/C5b8m3eUTjM",
+    },
+    streamDataFour: {
+      title: "Saturday Chill Stream 2.13.21",
+      iframeRef: "https://www.youtube.com/embed/nL6Vsg8hcvw",
+    },
+    streamDataFive: {
+      title: "Exploring the Super Mario 64 Beta Archive",
+      description: "In this live installment of Nightmare Masterclass, I'll be exploring a new web series called the SM64 Beta Archives.",
+      iframeRef: "https://www.youtube.com/embed/yK5pZdwrUZw",
+    },
+    streamDataSix: {
+      title: "Exploring Diminish 1.30.21",
+      description: "Content Warning for Diminish 14: disturbing images.",
+      iframeRef: "https://www.youtube.com/embed/1r5dT4Fv6xs",
+    },
+    streamDataSeven: {
+      title: "Exploring Diminish 1.23.21",
+      description: "In this very special live installment of Nightmare Masterclass, I'll be continuing my exploration of a new series called Diminish. ",
+      iframeRef: "https://www.youtube.com/embed/-2bG6FjgIu4",
+    },
+    streamDataEight: {
+      title: "Exploring Diminish 1.20.21",
+      description: "In this very special live installment of Nightmare Masterclass, I'll be continuing my exploration of a new series called Diminish. ",
+      iframeRef: "https://www.youtube.com/embed/QNVgmvwGCOs",
+    },
+    streamDataNine: {
+      title: "Exploring Diminish 1.18.21",
+      description: "In this very special live installment of Nightmare Masterclass, I'll be exploring a new series called Diminish. I strongly encourage you to sub to their channel. From what I've seen thus far, this is a high quality work.",
+      iframeRef: "https://www.youtube.com/embed/A3WT0cqx4pg",
+    },
+    streamDataTen: {
+      title: "Catastrophe Crow: Discussing the Controversy",
+      description: "In this live installment of Nightmare Masterclass, I'll be discussing a recent controversy related to the spooky ARG known as Catastrophe Crow.",
+      iframeRef: "https://www.youtube.com/embed/AlTHAkfAceM",
+    },
+    streamDataEleven: {
+      title: "Exploring Catastrophe Crow: New Findings",
+      description: "In this live installment of Nightmare Masterclass, I'll be exploring some recent developments related to the mysterious game known as Catastrophe Crow.",
+      iframeRef: "https://www.youtube.com/embed/cBuBmimRyE0",
+    },
+    streamDataTwelve: {
+      title: "Exploring Catastrophe Crow 12.4.2020",
+      description: "In this live installment of Nightmare Masterclass, I'll be exploring the mysterious game known as Catastrophe Crow.",
+      iframeRef: "https://www.youtube.com/embed/c3zfn4ZHOxU",
+    }
+  },
+  bandcamp: {
+    lede: "Buy My Music",
+    copy: "High fidelity audio files for my entire discography are available on Bandcamp.",
+    buttonCopy: "Buy Now",
+    buttonLink: "https://nightmaremasterclass.bandcamp.com/music",
+  },
+  plugs: {
+    tierOne: {
+      title: "Nightmare Babies",
+      id: "nightmare-babies",
+      cost: "$1 per Month",
+      description:
+        "My little one-dollar babies get weekly updates on the status of current projects, as well as your name in the credits of every video. Additionally, you'll get early access to episodes of my podcast, Nightmare Tonight.",
+      signUp: "Join $1 Tier",
+      signUpLink: "https://www.patreon.com/join/NightmareMasterclass/checkout?rid:3638015",
+    },
+    tierTwo: {
+      title: "Nightmare Associates",
+      id: "nightmare-associates",
+      cost: "$5 per Month",
+      description: "My faithful associates get all previous perks plus early access to new videos, as well as the ability to stream and download all of my new music tracks.",
+      signUp: "Join $5 Tier",
+      signUpLink: "https://www.patreon.com/join/NightmareMasterclass/checkout?rid:3638274",
+    },
+    tierThree: {
+      title: "Nightmare Colleagues",
+      id: "nightmare-colleagues",
+      cost: "$10 per Month",
+      description: "My reputable colleagues get all previous perks plus access to my research notes, as well as semi-monthly Q&A videos.",
+      signUp: "Join $10 Tier",
+      signUpLink: "https://www.patreon.com/join/NightmareMasterclass/checkout?rid:3638350",
+    },
+    tierFour: {
+      title: "Nightmare Masters",
+      id: "nightmare-masters",
+      cost: "$25 per Month",
+      description:
+        "Masters get all previous perks plus a personalized thank you note from yours truly, and access to live streams in which I edit upcoming videos, create my synth tracks, or just chill and have a drink or two.",
+      signUp: "Join $25 Tier",
+      signUpLink: "https://www.patreon.com/join/NightmareMasterclass/checkout?rid:3638450",
+    }
+  },
+  pods: {
+    podData: {
+      title: "The Folly of Happiness with Epoch Philosophy",
+      description:
+        "In this installment, I'm joined by fellow youtuber Ian, who has a channel called Epoch Philosophy. Our discussion was prompted by a recent video essay he made on the topic of happiness.",
+      iframeRef:
+        "//html5-player.libsyn.com/embed/episode/id/19016510/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataTwo: {
+      title: "The Horror of Work with The Lit Crit Guy",
+      description: "In this installment of Nightmare Tonight, I'm speaking with Jon, aka the Lit Crit Guy! Join us as we discuss the horror of work.",
+      iframeRef:
+        "//html5-player.libsyn.com/embed/episode/id/18915593/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataThree: {
+      title: "Doom Mods with Liz Ryerson",
+      description: "In this episode, I'm interviewing Liz Ryerson about her fascination with Doom mods. Liz was recently featured in a doc series called Preserving Worlds, so be sure to check out her episode.",
+      iframeRef:
+        "//html5-player.libsyn.com/embed/episode/id/18150923/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataFour: {
+      title: "Preserving Worlds with Derek Murphy and Mitchell Zemil",
+      description: "In this episode of Nightmare Tonight, I'm speaking with filmmakers Derek Murphy and Mitchell Zemil about their documentary series, Preserving Worlds. You can watch it for free on Means TV right now!",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/18030014/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataFive: {
+      title: "Talking Roderick with Mike Watson",
+      description: "In this installment of Nightmare Tonight, I'm joined by author Mike Watson, who recently launched a campaign to republish philosopher Rick Roderick's book.",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/17876840/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataSix: {
+      title: "The Culture of Narcissism",
+      description: "In this short installment of Nightmare Tonight, I'll be talking about a book I recently read called The Culture of Narcissism by social critic Christopher Lasch. You might recall I briefly referenced this book in my analysis of Hiding in My Home. If there are any other books you might be interested in seeing me discuss, let me know.",
+      iframeRef:
+        "//html5-player.libsyn.com/embed/episode/id/17773598/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataSeven: {
+      title: "Unpacking Jameson's Political Unconscious, Pt. 2",
+      description: "Hey, it's a very special night because a new ep of my podcast, Nightmare Tonight, is now available. And that is the sole reason this night is special.  Enjoy!",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/15085730/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataEight: {
+      title: "Unpacking Jameson's Political Unconscious, Pt. 1",
+      description: "In this ep of Nightmare Tonight, I'll be unpacking Fredric Jameson's Political Unconscious. In the course of analyzing Disco Elysium, I found Jameson's approach to be quite useful and enriching. So, I thought it might be a good idea to do a more thorough primer on his method.",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/15012125/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataNine: {
+      title: "The Death Cult of Capitalism w/ LaborKyle",
+      description: "Tonight, I'm joined by YouTuber LaborKyle. Join us as we discuss the death cult of capitalism. Kyle is awesome!",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/13847615/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataTen: {
+      title: "UNLOCKED: Film Commentary - John Carpenter's The Thing",
+      description: "Hey folks! How is everyone holding up? If you're looking for something to distract you from the horror of everyday life, I made a film commentary track for John Carpenter's The Thing. The movie starts at 2:32 on this audio track. Joining me in this endeavor is Kayla, my cohost on the Rudd Files.",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/13736186/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataEleven: {
+      title: "I Want to Believe by A.M. Gittlitz",
+      description: "Tonight, I have with me A.M. Gittlitz, author of I Want to Believe: Posadism, UFOs and Apocalypse Communism.",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/13558622/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataTwelve: {
+      title: "What is AI Builds?",
+      description: "Tonight, I'm joined by Alex, the creator of a creepy web series called AI Builds. If you're not familiar with AI Builds, I strongly recommend that you check it out prior to listening to this interview.",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/13167428/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    }, 
+    podDataThirteen: {
+      title: "The Battle of Ideas w/ Intellectual Dark Wave",
+      description: "Folks, it's time for some antifascist synthpop. Tonight, I'm joined by Matt from Intellectual Dark Wave. In this ep, Matt discusses the origin of this musical endeavor, as well as his various qualms with the figures of the so-called Intellectual Dark Web. Enjoy!",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/12491222/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataFourteen: {
+      title: "Investigating the Vampire Castle, Cancel Culture, and Jung's Shadow",
+      description: "In this mystical episode of Nightmare Tonight, I'm joined by Angie of the fantastic YouTube channel, Angie Speaks. Tonight's topics include Mark Fisher's Exiting the Vampire Castle, the nuances of so-called Cancel Cuture, spiritualism, and Jung's notion of the shadow. Enjoy!",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/12065618/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataFifteen: {
+      title: "The Class Politics of Us, Elevated Horror, Destiny's Heel Turn, and More",
+      description: "In this spicy episode of Nightmare Tonight, I am joined by Kay from the YouTube channel Kay and Skittles. Enjoy!",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/11902589/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
+    podDataSixteen: {
+      title: "An In Depth Discussion on Joker",
+      description: "In this episode, my guest Kayla and I discuss the political subtext of Joker, as well as some of the more frivolous responses to the film.",
+      iframeRef: "//html5-player.libsyn.com/embed/episode/id/11623946/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },  
+  },
+  music: {
+    epstein: {
+      track: "Jeffrey Epstein Didn't Kill Himself",
+      id: 'epstein',
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:112110958/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/" 
+    },
+    instrumentality: {
+      track: "Instrumentality",
+      id: 'instrumentality',
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:4206074846/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/"
+    },
+    endOfEverything: {
+      track: "The End of Everything",
+      id: 'endOfEverything',
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:4028507714/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true"
+    },
+    baseReality: {
+      track: "Base Reality",
+      id: "base-reality",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:3085025918/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    simulation: {
+      track: "Simulation",
+      id: "simulation",
+      iframeRef:
+        "https://bandcamp.com/EmbeddedPlayer/track:411013761/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true",
+    },
+    music: {
+      track: "Hiding",
+      id: "hiding",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:2099514036/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicTwo: {
+      track: "Narcissus",
+      id: "narcissus",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:2833096291/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicThree: {
+      track: "David Lynch Should Direct a Star Wars Movie",
+      id: "david-lynch",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:180159475/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicFour: {
+      track: "Cybernetic",
+      id: "cybernetic",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:2809389266/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicFive: {
+      track: "Netborn",
+      id: "netborn",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:2826138311/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicSix: {
+      track: "Vigenère",
+      id: "vigenere",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:1244149/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicSeven: {
+      track: "Responding to Doomers",
+      id: "responding-tp-doomers",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:998724553/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicEight: {
+      track: "Doomerism (It's Not Your Fault)",
+      id: "doomerism",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:3757316206/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicNine: {
+      track: "It's Okay, Doomer",
+      id: "its-okay-doomer",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:2590734630/size:large/bgcol:333333/linkcol:0687f5/tracklist:false/artwork:small/transparent:true/",
+    }
+  },
+  albums: {
+    albumOne: {
+      title: "The Political Unconscious",
+      iframeRef: "<iframe style='border: 0; width: 250px; height: 574px;' loading='lazy' title='The Political Unconscious' src='https://bandcamp.com/EmbeddedPlayer/album=3495461876/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/' seamless><a href='https://nightmaremasterclass.bandcamp.com/album/the-political-unconscious'>The Political Unconscious by David Stockdale</a></iframe>",
+    },
+    albumTwo: {
+      title: "The Petscop Investigation - OST",
+      iframeRef: "<iframe style='border: 0; width: 250px; height: 706px;' loading='lazy' title='The Petscop Investigation - OST' src='https://bandcamp.com/EmbeddedPlayer/album=152690259/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/' seamless><a href='https://nightmaremasterclass.bandcamp.com/album/the-petscop-investigation-ost'>The Petscop Investigation - OST by David Stockdale</a></iframe>",
+    },
+    albumThree: {
+      title: "halloween mix",
+      iframeRef: "<iframe style='border: 0; width: 250px; height: 706px;' loading='lazy' title='halloween mix' src='https://bandcamp.com/EmbeddedPlayer/album=4016597294/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/' seamless><a href='https://nightmaremasterclass.bandcamp.com/album/halloween-mix'>halloween mix by Nightmare Masterclass</a></iframe>",
+    },
+  },
+  vids: {
+    thhpii: {
+      title: "Decoding This House Has People in It: REMASTERED",
+      description: "As a special treat to kick off 2022, I’m releasing a new version of my very first video, Decoding This House Has People In It.",
+      iframeRef: "https://www.youtube.com/embed/y736mLukzt8",
+    },
+    digitalTransition: {
+      title: "Local 58: A Foray Into Digital Horror",
+      description: "<p>In this installment, I’ll be discussing Local 58’s most recent video, Digital Transition. Local 58 is truly a remarkable channel. You might recall that I’ve previously covered Local 58; specifically, I performed a “close reading” of the very first installment in the series, “You Are On The Fastest Available Route.” I will definitely be touching on a lot of the points I made in that video, so be sure to check it out.</p>",
+      iframeRef: 'https://www.youtube.com/embed/JLqAc9gIv_4',
+    },
+    saladFingers: {
+      title: "Salad Fingers Analysis: The Madness of Market Logic",
+      description: "<p>In this installment, I’ll be covering the latest iteration of Salad Fingers, a surreal animated web series by an artist named David Firth. I’ve previously written about Salad Fingers with respect to the multitude of fan theories that have proliferated since the work’s creation. My prior video on Salad Fingers might be informative in certain respects, so watch it if you’re inclined. In this video, my aim is to perform a thorough analysis of the latest episode, titled simply Market.</p>",
+      iframeRef: 'https://www.youtube.com/embed/ZTwjj_nbiGI',
+    },
+    evan: {
+      title: "The End of Everything: An Evangelion Essay",
+      description: "<p>Neon Genesis Evangelion is an anime series created and directed by Hideaki Anno. The original series aired from 1995 to 1996. A number of films have been released since. And with Evangelion’s Netflix debut in 2019, the show has experienced something of a resurgence in popularity. The fourth and final installment of Evangelion’s Rebuild film series was released in August of this year. There have been multiple Evangelion “endings'' at this point, all of which I’ll be discussing in this video.</p>",
+      iframeRef: "https://www.youtube.com/embed/qMDZj7APOko",
+    },
+    paranoids: {
+      title: "What Happened to the Paranormal Paranoids?",
+      description: "<p>In this installment, I'll be exploring a creepy web series about a group of paranormal investigators called the Paranormal Paranoids.",
+      iframeRef: "https://www.youtube.com/embed/O1Jk20wh4Fg",
+    },
+    simulation: {
+      title: "The Simulation Theory: An Exploration",
+      description: "<p>Do we live in a simulation? In this installment, I'll be exploring that very question. For those of you who have watched my channel from the very beginning, you of course know that I discussed the simulation hypothesis in reference to an episode of Rick and Morty some years ago. Believe it or not, that was one of the first videos of mine that really took off. Frankly, it seems a bit quaint by today's standards. I guess living through armageddon can really put things into perspective. But lately I've found myself mulling over the whole simulation issue again, and I wanted to use this opportunity to do a bit more of an in-depth exploration.</p>",
+      iframeRef: "https://www.youtube.com/embed/TCcUkGTwntY",
+    },
+    bosSpecial: {
+      title: "Bo Burnham's New Special is a Nightmare",
+      description:
+        "<p>A short review of Bo Burnham's new special. With apologies to Richard Dawkins!</p>",
+      iframeRef: "https://www.youtube.com/embed/OrxdxuayEPU",
+    },
+    videoData: {
+      title: "You Will Hear Screaming: An Analysis of Gemini Home Entertainment",
+      description: "<p>In this installment, I will be taking a look at a strange web series known as Gemini Home Entertainment by an artist named Remy Abode.</p>",
+      iframeRef: "https://www.youtube.com/embed/CqsQQPYsB6k",
+    },
+    videoDataTwo: {
+      title: "My Dunking Days Are Over",
+      description: "<p>A clip from a recent stream in which I discuss the conundrum of my role in the spectacle of online debate.</p>",
+      iframeRef: "https://www.youtube.com/embed/mO7Fy4XHinQ",
+    },
+    videoDataThree: {
+      title: "Cyberpunk 2077 is an Abomination",
+      description: "<p>In this installment, I will be offering a critique of the game Cyberpunk 2077. As I'm sure you know by this point, this much anticipated game had a notoriously botched release. But there are much deeper problems with Cyberpunk than the shoddy state of the game upon its release.</p>",
+      iframeRef: "https://www.youtube.com/embed/7kglpw3Xfr4",
+    },
+    videoDataFour: {
+      title: "Hiding in My Home: A Metatextual ARG",
+      description: "<p>In this installment, I will be investigating an ongoing ARG known as Hiding in My Home. If you are not familiar with the series, I strongly recommend you check it out prior to watching this video. At this time, the series has about 8,000 subscribers. It’s been growing steadily, but I still think it deserves a bigger audience. So please be sure to subscribe and click the notification bell so you can follow along as the series progresses.</p>",
+      iframeRef: "https://www.youtube.com/embed/T-SxY19eluM",
+    },
+    videoDataFive: {
+      title: "What is David Lynch's New Series About?",
+      description: "<p>Last month, it was reported that the great David Lynch will be directing a new series for Netflix. IT IS HAPPENING AGAIN. A total of thirteen episodes have been planned, and Lynch is expected to begin filming in May of 2021. In this short installment, I just wanted to offer some speculation on what this new work might be about.</p>",
+      iframeRef: "https://www.youtube.com/embed/XoxzwznQZwc",
+    },
+    videoDataSix: {
+      title: "Every Copy is Personalized: The Haunting Story of the SM64 Beta Archive",
+      description: "<p>In this installment, I’ll be exploring a creepy YouTube channel by the name of Super Mario 64 Beta Archive.</p>",
+      iframeRef: "https://www.youtube.com/embed/aLGWeYzC12A",
+    },
+    videoDataSeven: {
+      title: "Coping with the Incomprehensible: An Analysis of Color Out of Space (feat. Kay and Skittles)",
+      description: "<p>In this installment of Nightmare Masterclass, I'm joined by fellow YouTuber @Kay And Skittles. Tonight we'll be unpacking the horror film Color Out of Space, starring the incomprehensible Nicolas Cage.</p>",
+      iframeRef: "https://www.youtube.com/embed/jNGLoR8QMnI",
+    },
+    videoDataEight: {
+      title: "Roy Wyson: A Cybernetic Horror",
+      description: "<p>In this installment of Nightmare Masterclass, I will be exploring the question, “Who is Roy Wyson?” Continue at your peril.</p>",
+      iframeRef: "https://www.youtube.com/embed/txMC0j6wyH4",
+    },
+    videoDataNine: {
+      title: "Responding to Doomers",
+      description: "<p>In this installment, I’ll be responding to some of the more notable comments I received on my last video, Doomerism: The Struggle to Find Meaning. I thought this would be a good opportunity to showcase some of the thoughts people had to offer and clarify some of my own positions on the Doomer phenomenon.</p>",
+      iframeRef: "https://www.youtube.com/embed/hu-cwU39Cgw",
+    },
+    videoDataTen: {
+      title: "Doomerism: The Struggle to Find Meaning",
+      description: "<p>Normally, I strive to analyze various works in the realm of horror. But tonight, we’re doing something a little different. In this installment, I’m going to be analyzing a certain social phenomenon, the doomer. What is the doomer? Is there an ethos we can come to understand that can be said to constitute a form of doomerism?</p>",
+      iframeRef: "https://www.youtube.com/embed/uym1PJh3CBU",
+    },
+  }
+}
