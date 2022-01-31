@@ -2,11 +2,6 @@ import { elementBuilder, musicBuilder, albumBuilder, bandcampBuilder } from "./f
 import Data from '../data/data.json5'
 
 const Music = () => {
-  const musicTab = document.getElementById("music-tab");
-  musicTab.setAttribute(
-    "style",
-    "background-color: #027bb348; border-radius: 5px;"
-  );
   let homelink = document.querySelector(".home-link")
   homelink.setAttribute("id", "home-special");
 

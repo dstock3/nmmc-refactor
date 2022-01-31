@@ -8,12 +8,6 @@ const Contact = () => {
   let patreonPlug = document.querySelector(".patreon")
   patreonPlug.setAttribute("id", "patreon-contact");
 
-  const contactTab = document.getElementById("contact-tab");
-  contactTab.setAttribute(
-    "style",
-    "background-color: #027bb348; border-radius: 5px;"
-  );
-
   const mainBody = document.querySelector(".main-body")
   const formPage = elementBuilder("div", "form-page", mainBody);
   const formBody = elementBuilder("div", "form-body", formPage);

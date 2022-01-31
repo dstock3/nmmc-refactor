@@ -2,12 +2,6 @@ import { elementBuilder, videoArrayHandler } from "./functions";
 import Data from '../data/data.json5'
 
 const Videos = () => {
-  const videosTab = document.getElementById("videos-tab");
-  videosTab.setAttribute(
-    "style",
-    "background-color: #027bb348; border-radius: 5px;"
-  );
-
   let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-special");
   

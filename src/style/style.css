@@ -757,14 +757,17 @@ html {
     font-weight: bold;
   }
   
-  .selected:hover {
+  .nav-li:hover {
     background-color: #07aaf3;
     font-weight: normal;
+    color: black;
+    cursor: pointer;
   }
   
   .selected {
-    background-color: #07aaf3;
-    color: black;
+    background-color: #027bb348; 
+    border-radius: 5px; 
+    color: #07aaf3;
   }
   
   #babies-active {
