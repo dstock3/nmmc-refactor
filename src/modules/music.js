@@ -19,15 +19,15 @@ const Music = () => {
   albumHead.textContent = "Full Albums";
   
   let musicArray = []
-  for (let prop in Data.music) {
-    musicArray.push(Data.music[prop])
+  for (let prop in Data.tracks) {
+    musicArray.push(Data.tracks[prop])
   }
   
   const musicElementArray = musicBuilder(musicArray);
   
   let albumArray = []
   for (let prop in Data.albums) {
-    albumArray.push(Data.albums)
+    albumArray.push(Data.albums[prop])
   }
   
   const albumElementArray = albumBuilder(albumArray);

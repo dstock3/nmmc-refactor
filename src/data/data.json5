@@ -265,7 +265,7 @@
       iframeRef: "//html5-player.libsyn.com/embed/episode/id/11623946/height/360/theme/legacy/thumbnail/yes/direction/backward/",
     },  
   },
-  music: {
+  tracks: {
     epstein: {
       track: "Jeffrey Epstein Didn't Kill Himself",
       id: 'epstein',

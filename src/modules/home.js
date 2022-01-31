@@ -69,15 +69,15 @@ const Home = () => {
   /* Music Section */
   
   let musicArray = []
-  for (let prop in Data.music) {
-    musicArray.push(Data.music[prop])
+  for (let prop in Data.tracks) {
+    musicArray.push(Data.tracks[prop])
   }
   
   const musicPage = elementBuilder("div", "music-container", juniorBody);
   const musicHead = elementBuilder("h2", "music-head", musicPage);
   musicHead.textContent = `Freshest Tracks`;
-  const newMmusic = musicArray[0];
-  const newArray = [newMmusic];
+  const newMusic = musicArray[0];
+  const newArray = [newMusic];
   
   musicBuilder(newArray);
   
