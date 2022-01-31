@@ -1,9 +1,16 @@
-import { elementBuilder, videoBuilder, podBuilder, musicBuilder, spaceCreator } from './functions.js'
+import { elementBuilder, videoBuilder, podBuilder, musicBuilder, spaceCreator, tabSelect, removeExistingPage } from './functions.js'
+import { Videos } from './videos.js'
+import { Podcast } from './podcast.js'
+import { Music } from './music.js'
+import { Plugs } from './plug.js'
 import Data from '../data/data.json5'
 
 const Home = () => {
   let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
+
+  let mainBody = document.querySelector(".main-body")
+  let juniorBody = document.querySelector(".junior-body")
   
   /* Video Section */
   
@@ -22,9 +29,17 @@ const Home = () => {
   
   const vidButtonDiv = elementBuilder("div", "more-vids", videoContainer);
   const moreVideos = elementBuilder("button", "vid-button", vidButtonDiv);
-  const vidAnchor = elementBuilder("a", "vid-link", moreVideos);
+  const vidAnchor = elementBuilder("div", "vid-link", moreVideos);
   vidAnchor.textContent = "More Vids >";
-  vidAnchor.href = "videos.html";
+
+  vidAnchor.addEventListener("click", function goVid() {
+    tabSelect(["music", "podcast", "streams", "contact"]);
+
+    removeExistingPage(mainBody, juniorBody) 
+    Plugs()
+    Videos()
+
+  })
   
   /* Podcast Section */
   
@@ -39,9 +54,17 @@ const Home = () => {
   const podContainer = document.getElementsByClassName("pod-container")[0];
   const podButtonDiv = elementBuilder("div", "more-pods", podContainer);
   const morePods = elementBuilder("button", "pod-button", podButtonDiv);
-  const podAnchor = elementBuilder("a", "vid-link", morePods);
+  const podAnchor = elementBuilder("div", "vid-link", morePods);
   podAnchor.textContent = "More Pods >";
-  podAnchor.href = "podcast.html";
+
+  podAnchor.addEventListener("click", function goVid() {
+    tabSelect(["home", "videos", 'music', "streams", "contact"]);
+
+    removeExistingPage(mainBody, juniorBody) 
+    Plugs()
+    Podcast()
+  })
+
   
   /* Music Section */
   
@@ -49,7 +72,6 @@ const Home = () => {
   for (let prop in Data.music) {
     musicArray.push(Data.music[prop])
   }
-  const juniorBody = document.querySelector(".junior-body")
   
   const musicPage = elementBuilder("div", "music-container", juniorBody);
   const musicHead = elementBuilder("h2", "music-head", musicPage);
@@ -60,9 +82,16 @@ const Home = () => {
   musicBuilder(newArray);
   
   const moreMusic = elementBuilder("button", "music-button", musicPage);
-  const musicAnchor = elementBuilder("a", "music-link", moreMusic);
+  const musicAnchor = elementBuilder("div", "music-link", moreMusic);
   musicAnchor.textContent = "More Music >";
-  musicAnchor.href = "music.html";
+
+  musicAnchor.addEventListener("click", function goVid() {
+    tabSelect(["home", "videos", "podcast", "streams", "contact"]);
+                
+    removeExistingPage(mainBody, juniorBody)
+    Plugs() 
+    Music()
+  })
   
   spaceCreator(juniorBody);
   
