@@ -1,4 +1,5 @@
 import { elementBuilder, videoArrayHandler } from "./functions";
+import Data from '../data/data.json5'
 
 const videosTab = document.getElementById("videos");
 videosTab.setAttribute(
@@ -10,6 +11,11 @@ sideNavContainer.setAttribute("id", "side-nav-special");
 
 const vidPageHead = elementBuilder("h1", "vid-page-head", mainBody);
 vidPageHead.textContent = "Recent Vids";
+
+let videoArray = []
+for (let prop in Data.vids) {
+  videoArray.push(Data.vids[prop])
+}
 
 const videoElementsArray = videoArrayHandler(videoArray);
 

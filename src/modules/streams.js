@@ -1,4 +1,5 @@
 import { elementBuilder, videoArrayHandler } from "./functions";
+import Data from '../data/data.json5'
 
 const streamsTab = document.getElementById("streams");
 streamsTab.setAttribute(
@@ -10,5 +11,10 @@ sideNavContainer.setAttribute("id", "side-nav-special");
 
 const streamsPageHead = elementBuilder("h1", "streams-page-head", mainBody);
 streamsPageHead.textContent = "NMMC Live";
+
+let streamArray
+for (let prop in Data.live) {
+  streamArray.push(Data.live[prop])
+}
 
 videoArrayHandler(streamArray);
