@@ -15,7 +15,7 @@ const Plugs = () => {
     let tabDiv = elementBuilder("div", "tab-div", patreonPlug);
     
     let babyTab = elementBuilder("div", "tab", tabDiv);
-    babyTab.classList.add("selected");
+    babyTab.classList.add("plug-selected");
     let babySelect = elementBuilder("span", "tab-select", babyTab);
     babySelect.textContent = Data.plugs.tierOne.cost;
     
@@ -33,10 +33,10 @@ const Plugs = () => {
     masterSelect.textContent = Data.plugs.tierFour.cost;
     
     function selectTab(selectedTab, otherTab, anotherTab, yetAnotherTab) {
-      selectedTab.classList.add("selected");
-      otherTab.classList.remove("selected");
-      anotherTab.classList.remove("selected");
-      yetAnotherTab.classList.remove("selected");
+      selectedTab.classList.add("plug-selected");
+      otherTab.classList.remove("plug-selected");
+      anotherTab.classList.remove("plug-selected");
+      yetAnotherTab.classList.remove("plug-selected");
     }
     
     const patreonPlugArray = patreonPlugBuilder(myTiers);

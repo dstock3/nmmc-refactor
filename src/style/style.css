@@ -769,7 +769,17 @@ html {
     border-radius: 5px; 
     color: #07aaf3;
   }
-  
+
+  .plug-selected:hover {
+    background-color: #07aaf3;
+    font-weight: normal;
+  }
+
+  .plug-selected {
+    background-color: #07aaf3;
+    color: black;
+  }
+    
   #babies-active {
     order: 0;
   }
