@@ -2,11 +2,12 @@ import { elementBuilder, musicBuilder, albumBuilder, bandcampBuilder } from "./f
 import Data from '../data/data.json5'
 
 const Music = () => {
-  const musicTab = document.getElementById("music");
+  const musicTab = document.getElementById("music-tab");
   musicTab.setAttribute(
     "style",
     "background-color: #027bb348; border-radius: 5px;"
   );
+  let homelink = document.querySelector(".home-link")
   homelink.setAttribute("id", "home-special");
 
   let sideNavContainer = document.querySelector(".side-nav-container")
@@ -31,7 +32,7 @@ const Music = () => {
   
   let albumArray = []
   for (let prop in Data.albums) {
-    albumArray.push(Data.album)
+    albumArray.push(Data.albums)
   }
   
   const albumElementArray = albumBuilder(albumArray);

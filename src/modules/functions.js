@@ -191,6 +191,7 @@ function elementBuilder(elType, className, parent) {
   
   function albumBuilder(newAlbumArray) {
     let albumElementArray = [];
+    let albumSection = document.querySelector(".album-section")
     for (let i = 0; i < newAlbumArray.length; i++) {
       let newAlbumContainer = elementBuilder(
         "div",
@@ -205,6 +206,7 @@ function elementBuilder(elType, className, parent) {
   }
   
   function bandcampBuilder(newBandcampData) {
+    let patreonPlug = document.querySelector(".patreon")
     let bandcampDiv = elementBuilder("div", "kofi-div", patreonPlug);
     let bandcampHead = elementBuilder("h2", "kofi-head", bandcampDiv);
     bandcampHead.textContent = newBandcampData.lede;
@@ -235,6 +237,7 @@ function elementBuilder(elType, className, parent) {
   
   function patreonPlugBuilder(tierArray) {
     let patreonPlugArray = [];
+    let patreonPlug = document.querySelector(".patreon")
   
     for (let i = 0; i < tierArray.length; i++) {
       let patreonPlugElements = [];
@@ -271,6 +274,7 @@ function elementBuilder(elType, className, parent) {
   }
   
   function koFiBuilder(koFiData) {
+    let patreonPlug = document.querySelector(".patreon")
     let koFiDiv = elementBuilder("div", "kofi-div", patreonPlug);
     let koFiHead = elementBuilder("h2", "kofi-head", koFiDiv);
     koFiHead.textContent = koFiData.lede;
@@ -293,15 +297,17 @@ function elementBuilder(elType, className, parent) {
   function tabSelect(tabArray) {
     for (let i = 0; i < tabArray.length; i++) {
       let tab = tabArray[i]
-      let tabElement = document.getElementById(tab);
+      let tabElement = document.getElementById(tab + "-tab");
       tabElement.classList.remove("selected");
     }
   }
 
-  function removeExistingPage(parent) {
-    let contentChildren = Array.from(parent.childNodes);
-    for (let i = 0; i < contentChildren.length; i++) {
-      contentChildren[i].remove()
+  function removeExistingPage(parent, parentTwo) {
+    let contentChildren1 = Array.from(parent.childNodes);
+    let contentChildren2 = Array.from(parentTwo.childNodes);
+    let allContent = contentChildren1.concat(contentChildren2);
+    for (let i = 0; i < allContent.length; i++) {
+      allContent[i].remove()
     }
 
   }

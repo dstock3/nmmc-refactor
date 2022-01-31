@@ -1,12 +1,14 @@
+import '../style/contact.css'
 import { elementBuilder } from './functions.js'
 
 const Contact = () => {
   let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
 
+  let patreonPlug = document.querySelector(".patreon")
   patreonPlug.setAttribute("id", "patreon-contact");
 
-  const contactTab = document.getElementById("contact");
+  const contactTab = document.getElementById("contact-tab");
   contactTab.setAttribute(
     "style",
     "background-color: #027bb348; border-radius: 5px;"

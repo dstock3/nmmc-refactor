@@ -1,4 +1,5 @@
 import { elementBuilder } from "./functions";
+import '../style/contact-response.css'
 import Cube from "../assets/images/illustrations/cube.png"
 
 const ContactResponse = () => {

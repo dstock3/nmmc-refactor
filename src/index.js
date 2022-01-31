@@ -2,7 +2,13 @@ import './style/reset.css'
 import './style/style.css'
 import Data from './data/data.json5';
 import { elementBuilder, linkBuilder, tabSelect, removeExistingPage, randomGenerator, randomImageGenerator } from './modules/functions.js';
-import { Home, Music, Podcast, Streams, Videos, Contact } from './modules/home.js'
+import { Home } from './modules/home.js'
+import { Music } from './modules/music.js'
+import { Podcast } from './modules/podcast.js'
+import { Streams } from './modules/streams.js'
+import { Videos } from './modules/videos.js'
+import { Contact } from './modules/contact.js'
+import { Plugs } from './modules/plug.js'
 import Logo from './assets/images/logo.png'
 import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.png'
@@ -21,7 +27,7 @@ favIcon.href = Favicon
 
 const header = elementBuilder("header", "head-nav", mainContainer);
 const homelink = elementBuilder("a", "home-link", header);
-homelink.href = "index.html";
+homelink.href = "#";
 const logo = elementBuilder("img", "logo", homelink);
 logo.src = Logo
 logo.alt = `NMMC logo`;
@@ -97,58 +103,63 @@ const playlistLinks = linkBuilder(
   true
 );
 
-
 const tabBuilder = (() => {
-    const tabs = ['Home', 'Videos', 'Podcast', 'Music', 'Streams', 'Contact']
+    const tabs = ['home', 'videos', 'podcast', 'music', 'streams', 'contact']
 
     Home()
 
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
         let tabElement = elementBuilder('li', "nav-li", linkList);
-        tabElement.id = tab
-        tabElement.textContent = tab;
+        tabElement.id = tab + "-tab"
+        tabElement.textContent = tab.charAt(0).toUpperCase() + tab.slice(1);
         
-        const home = document.getElementById("Home");
+        const home = document.getElementById("home-tab");
         home.classList.add("selected");
 
         tabElement.addEventListener('click', function goToPage() {
             tabElement.classList.add("selected");
 
             switch (tab) {
-              case 'Home':
-                tabSelect(['Music', "Videos", "Podcast", "Streams", "Contact"]);
+              case 'home':
+                tabSelect(['music', "videos", "podcast", "streams", "contact"]);
 
-                removeExistingPage(mainBody) 
+                removeExistingPage(mainBody, juniorBody) 
                 Home()
                 break;
-              case 'Videos':
-                tabSelect(["Home", "Music", "Podcast", "Streams", "Contact"]);
+              case 'videos':
+                tabSelect(["home", "music", "podcast", "streams", "contact"]);
 
-                removeExistingPage(mainBody) 
+                removeExistingPage(mainBody, juniorBody) 
+                Plugs()
                 Videos()
+                
                 break;
-              case 'Podcast':
-                tabSelect(["Home", "Videos", 'Music', "Streams", "Contact"]);
+              case 'podcast':
+                tabSelect(["home", "videos", 'music', "streams", "contact"]);
 
-                removeExistingPage(mainBody) 
+                removeExistingPage(mainBody, juniorBody) 
+                Plugs()
                 Podcast()
                 break;
-              case 'Music':
-                tabSelect(["Home", "Videos", "Podcast", "Streams", "Contact"]);
+              case 'music':
+                tabSelect(["home", "videos", "podcast", "streams", "contact"]);
                 
-                removeExistingPage(mainBody) 
+                removeExistingPage(mainBody, juniorBody)
+                Plugs() 
                 Music()
                 break;
-              case "Streams":
-                tabSelect(["Home", "Videos", "Podcast", "Contact", "Music"]);
+              case "streams":
+                tabSelect(["home", "videos", "podcast", "contact", "music"]);
               
-                removeExistingPage(mainBody) 
+                removeExistingPage(mainBody, juniorBody)
+                Plugs()
                 Streams()
-              case 'Contact':
-                tabSelect(["Home", "Videos", "Podcast", "Streams", "Music"]);
+              case 'contact':
+                tabSelect(["home", "videos", "podcast", "streams", "music"]);
               
-                removeExistingPage(mainBody) 
+                removeExistingPage(mainBody, juniorBody)
+                Plugs()
                 Contact()
                 break;
             }

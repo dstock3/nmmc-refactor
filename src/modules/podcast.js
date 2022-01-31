@@ -2,7 +2,7 @@ import { elementBuilder, podListBuilder } from "./functions";
 import Data from '../data/data.json5'
 
 const Podcast = () => {
-  const podcastTab = document.getElementById("podcast");
+  const podcastTab = document.getElementById("podcast-tab");
   podcastTab.setAttribute(
     "style",
     "background-color: #027bb348; border-radius: 5px;"

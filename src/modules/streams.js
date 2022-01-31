@@ -2,7 +2,7 @@ import { elementBuilder, videoArrayHandler } from "./functions";
 import Data from '../data/data.json5'
 
 const Streams = () => {
-  const streamsTab = document.getElementById("streams");
+  const streamsTab = document.getElementById("streams-tab");
   streamsTab.setAttribute(
     "style",
     "background-color: #027bb348; border-radius: 5px;"
