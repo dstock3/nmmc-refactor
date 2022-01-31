@@ -2,12 +2,15 @@ import './style/reset.css'
 import './style/style.css'
 import Data from './data/data.json5';
 import { elementBuilder, linkBuilder, randomGenerator, randomImageGenerator } from './modules/functions.js';
+import { Home } from './modules/home.js'
 import Logo from './assets/images/logo.png'
 import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.png'
 import Skull from './assets/images/illustrations/skull.png'
 import Alien from './assets/images/illustrations/ALIEN.png'
 import Television from './assets/images/illustrations/TELEVISION.png'
+
+Home()
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
