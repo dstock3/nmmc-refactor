@@ -1,4 +1,5 @@
 import { elementBuilder, podListBuilder } from "./functions";
+import Data from '../data/data.json5'
 
 const podcastTab = document.getElementById("podcast");
 podcastTab.setAttribute(
@@ -10,6 +11,11 @@ sideNavContainer.setAttribute("id", "side-nav-special");
 
 const podPageHead = elementBuilder("h1", "pod-page-head", mainBody);
 podPageHead.textContent = "Nightmare Tonight";
+
+let podArray = []
+for (let prop in Data.pods) {
+  podArray.push(Data.pods[prop])
+}
 
 const podElementsArray = podListBuilder(podArray);
 

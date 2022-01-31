@@ -19,7 +19,18 @@ const albumSection = elementBuilder("div", "album-section", mainBody);
 
 albumHead.textContent = "Full Albums";
 
+let musicArray = []
+for (let prop in Data.music) {
+  musicArray.push(Data.music[prop])
+}
+
 const musicElementArray = musicBuilder(musicArray);
+
+let albumArray = []
+for (let prop in Data.albums) {
+  albumArray.push(Data.album)
+}
+
 const albumElementArray = albumBuilder(albumArray);
 
 const kofiDiv = document.getElementsByClassName("kofi-div")[0];

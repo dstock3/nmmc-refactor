@@ -12,7 +12,7 @@ sideNavContainer.setAttribute("id", "side-nav-special");
 const streamsPageHead = elementBuilder("h1", "streams-page-head", mainBody);
 streamsPageHead.textContent = "NMMC Live";
 
-let streamArray
+let streamArray = []
 for (let prop in Data.live) {
   streamArray.push(Data.live[prop])
 }
