@@ -1,16 +1,14 @@
 import './style/reset.css'
 import './style/style.css'
 import Data from './data/data.json5';
-import { elementBuilder, linkBuilder, randomGenerator, randomImageGenerator } from './modules/functions.js';
-import { Home } from './modules/home.js'
+import { elementBuilder, linkBuilder, tabSelect, removeExistingPage, randomGenerator, randomImageGenerator } from './modules/functions.js';
+import { Home, Music, Podcast, Streams, Videos, Contact } from './modules/home.js'
 import Logo from './assets/images/logo.png'
 import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.png'
 import Skull from './assets/images/illustrations/skull.png'
 import Alien from './assets/images/illustrations/ALIEN.png'
 import Television from './assets/images/illustrations/TELEVISION.png'
-
-Home()
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
@@ -31,48 +29,6 @@ logo.alt = `NMMC logo`;
 const linkNav = elementBuilder("nav", "link-nav", header);
 const linkList = elementBuilder("ul", "nav-list", linkNav);
 
-/*
-const videoLink = {
-  name: "Videos",
-  link: "videos.html",
-};
-
-const podLink = {
-  name: "Podcast",
-  link: "podcast.html",
-};
-
-const musicLink = {
-  name: "Music",
-  link: "music.html",
-};
-
-const blogLink = {
-  name: "Blog",
-  link: "blog.html",
-};
-
-const streamLink = {
-  name: "Streams",
-  link: "streams.html",
-};
-
-const contactLink = {
-  name: "Contact",
-  link: "contact.html",
-};
-
-const linksArray = [
-  videoLink,
-  podLink,
-  musicLink,
-  blogLink,
-  streamLink,
-  contactLink,
-];
-*/
-
-//const linkElementArray = linkBuilder(linksArray, linkList, "nav-li");
 const navLi = document.getElementsByClassName("nav-li");
 
 const sectionContainer = elementBuilder(
@@ -92,6 +48,9 @@ const sideNavDropdown = elementBuilder(
   "side-nav-dropdown",
   sideNavContainer
 );
+
+const mainBody = elementBuilder("main", "main-body", sectionContainer);
+const juniorBody = elementBuilder("div", "junior-body", sectionContainer);
 
 const sideNavList = elementBuilder("ul", "side-nav-list", sideNav);
 
@@ -138,6 +97,64 @@ const playlistLinks = linkBuilder(
   true
 );
 
+
+const tabBuilder = (() => {
+    const tabs = ['Home', 'Videos', 'Podcast', 'Music', 'Streams', 'Contact']
+
+    Home()
+
+    for (let i = 0; i < tabs.length; i++) {
+        let tab = tabs[i];
+        let tabElement = elementBuilder('li', "nav-li", linkList);
+        tabElement.id = tab
+        tabElement.textContent = tab;
+        
+        const home = document.getElementById("Home");
+        home.classList.add("selected");
+
+        tabElement.addEventListener('click', function goToPage() {
+            tabElement.classList.add("selected");
+
+            switch (tab) {
+              case 'Home':
+                tabSelect(['Music', "Videos", "Podcast", "Streams", "Contact"]);
+
+                removeExistingPage(mainBody) 
+                Home()
+                break;
+              case 'Videos':
+                tabSelect(["Home", "Music", "Podcast", "Streams", "Contact"]);
+
+                removeExistingPage(mainBody) 
+                Videos()
+                break;
+              case 'Podcast':
+                tabSelect(["Home", "Videos", 'Music', "Streams", "Contact"]);
+
+                removeExistingPage(mainBody) 
+                Podcast()
+                break;
+              case 'Music':
+                tabSelect(["Home", "Videos", "Podcast", "Streams", "Contact"]);
+                
+                removeExistingPage(mainBody) 
+                Music()
+                break;
+              case "Streams":
+                tabSelect(["Home", "Videos", "Podcast", "Contact", "Music"]);
+              
+                removeExistingPage(mainBody) 
+                Streams()
+              case 'Contact':
+                tabSelect(["Home", "Videos", "Podcast", "Streams", "Music"]);
+              
+                removeExistingPage(mainBody) 
+                Contact()
+                break;
+            }
+        });
+    }
+})();
 
 /* Footer */
 

@@ -1,6 +1,7 @@
 import { elementBuilder } from './functions.js'
 
 const Contact = () => {
+  let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
 
   patreonPlug.setAttribute("id", "patreon-contact");
@@ -11,6 +12,7 @@ const Contact = () => {
     "background-color: #027bb348; border-radius: 5px;"
   );
 
+  const mainBody = document.querySelector(".main-body")
   const formPage = elementBuilder("div", "form-page", mainBody);
   const formBody = elementBuilder("div", "form-body", formPage);
   const formHead = elementBuilder("h1", "form-head", formBody);

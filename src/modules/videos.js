@@ -8,8 +8,10 @@ const Videos = () => {
     "background-color: #027bb348; border-radius: 5px;"
   );
 
+  let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-special");
-
+  
+  const mainBody = document.querySelector(".main-body")
   const vidPageHead = elementBuilder("h1", "vid-page-head", mainBody);
   vidPageHead.textContent = "Recent Vids";
 
@@ -21,7 +23,7 @@ const Videos = () => {
   const videoElementsArray = videoArrayHandler(videoArray);
 
   const videoContainer = document.getElementsByClassName("video-container");
-  for (i = 0; i < videoContainer.length; i++) {
+  for (let i = 0; i < videoContainer.length; i++) {
     videoContainer[i].classList.add("video-page");
   }
 }

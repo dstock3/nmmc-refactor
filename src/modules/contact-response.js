@@ -2,6 +2,7 @@ import { elementBuilder } from "./functions";
 import Cube from "../assets/images/illustrations/cube.png"
 
 const ContactResponse = () => {
+  const mainBody = document.querySelector(".main-body")
   const responseContainer = elementBuilder("div", "response-container", mainBody);
   const responseHead = elementBuilder("h1", "response-head", responseContainer);
   responseHead.setAttribute("id", "main-head");

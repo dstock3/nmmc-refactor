@@ -1,3 +1,4 @@
+
 function elementBuilder(elType, className, parent) {
     const newElement = document.createElement(elType);
     newElement.classList.add(className);
@@ -41,6 +42,7 @@ function elementBuilder(elType, className, parent) {
   
   // for videos and streams
   function videoBuilder(newVideoData) {
+    let mainBody = document.querySelector(".main-body")
     let newVideoContainer = elementBuilder("div", "video-container", mainBody);
     let newVideoHead = elementBuilder("h2", "video-head", newVideoContainer);
     newVideoHead.textContent = newVideoData.title;
@@ -68,7 +70,7 @@ function elementBuilder(elType, className, parent) {
   
   function videoArrayHandler(videoArray) {
     let videoElementsArray = [];
-    for (i = 0; i < videoArray.length; i++) {
+    for (let i = 0; i < videoArray.length; i++) {
       let videoElements = videoBuilder(videoArray[i]);
       let video = document.getElementsByTagName("iframe")[i];
       videoElements.push(video);
@@ -81,6 +83,7 @@ function elementBuilder(elType, className, parent) {
   // for pods
   
   function podBuilder(newPodData) {
+    let mainBody = document.querySelector(".main-body")
     let newPodContainer = elementBuilder("div", "pod-container", mainBody);
     let newPodHead = elementBuilder("h2", "pod-head", newPodContainer);
     newPodHead.textContent = newPodData.title;
@@ -106,7 +109,7 @@ function elementBuilder(elType, className, parent) {
   
   function podListBuilder(myPodArray) {
     let podElementsArray = [];
-    for (i = 0; i < myPodArray.length; i++) {
+    for (let i = 0; i < myPodArray.length; i++) {
       let podElements = podBuilder(myPodArray[i]);
       podElementsArray.push(podElements);
     }
@@ -116,8 +119,9 @@ function elementBuilder(elType, className, parent) {
   // For Blogs...
   
   function blogBuilder(newBlogArray) {
+    let mainBody = document.querySelector(".main-body")
     let blogElementsArray = [];
-    for (i = 0; i < newBlogArray.length; i++) {
+    for (let i = 0; i < newBlogArray.length; i++) {
       let blogElements = [];
       let blogContainer = elementBuilder("div", "blog-container", mainBody);
       blogElements.push(blogContainer);
@@ -149,8 +153,10 @@ function elementBuilder(elType, className, parent) {
   
   function musicBuilder(newMusicArray) {
     let musicElementArray = [];
-    for (i = 0; i < newMusicArray.length; i++) {
+    for (let i = 0; i < newMusicArray.length; i++) {
       let musicElements = [];
+      let mainBody = document.querySelector(".main-body")
+      let musicPage = elementBuilder("div", "music-container", mainBody);
       let newMusicContainer = elementBuilder("div", "track-container", musicPage);
       musicElements.push(newMusicContainer);
       let newMusic = iframeHelper(
@@ -185,7 +191,7 @@ function elementBuilder(elType, className, parent) {
   
   function albumBuilder(newAlbumArray) {
     let albumElementArray = [];
-    for (i = 0; i < newAlbumArray.length; i++) {
+    for (let i = 0; i < newAlbumArray.length; i++) {
       let newAlbumContainer = elementBuilder(
         "div",
         "album-container",
@@ -230,7 +236,7 @@ function elementBuilder(elType, className, parent) {
   function patreonPlugBuilder(tierArray) {
     let patreonPlugArray = [];
   
-    for (i = 0; i < tierArray.length; i++) {
+    for (let i = 0; i < tierArray.length; i++) {
       let patreonPlugElements = [];
   
       let patreonTier = elementBuilder("div", "patreon-tier", patreonPlug);
@@ -283,4 +289,20 @@ function elementBuilder(elType, className, parent) {
   
     return koFiArray;
   }
-export {  elementBuilder, spaceCreator, linkBuilder, videoArrayHandler, randomGenerator, podBuilder, podListBuilder, blogBuilder, musicBuilder, randomImageGenerator, iframeHelper, albumBuilder, bandcampBuilder, patreonPlugBuilder, koFiBuilder}  
+
+  function tabSelect(tabArray) {
+    for (let i = 0; i < tabArray.length; i++) {
+      let tab = tabArray[i]
+      let tabElement = document.getElementById(tab);
+      tabElement.classList.remove("selected");
+    }
+  }
+
+  function removeExistingPage(parent) {
+    let contentChildren = Array.from(parent.childNodes);
+    for (let i = 0; i < contentChildren.length; i++) {
+      contentChildren[i].remove()
+    }
+
+  }
+export {  elementBuilder, spaceCreator, linkBuilder, videoBuilder, videoArrayHandler, randomGenerator, podBuilder, podListBuilder, blogBuilder, musicBuilder, randomImageGenerator, iframeHelper, albumBuilder, bandcampBuilder, patreonPlugBuilder, koFiBuilder, tabSelect, removeExistingPage }  

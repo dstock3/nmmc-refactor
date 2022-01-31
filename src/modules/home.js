@@ -1,4 +1,4 @@
-import { elementBuilder, videoBuilder, podBuilder } from './functions.js'
+import { elementBuilder, videoBuilder, podBuilder, musicBuilder, spaceCreator } from './functions.js'
 import Data from '../data/data.json5'
 
 const Home = () => {
@@ -7,6 +7,10 @@ const Home = () => {
   
   /* Video Section */
   
+  let videoArray = []
+  for (let prop in Data.vids) {
+    videoArray.push(Data.vids[prop])
+  }
   let video = videoArray[0];
   videoBuilder(video);
   const videoContainer = document.getElementsByClassName("video-container")[0];
@@ -24,7 +28,12 @@ const Home = () => {
   
   /* Podcast Section */
   
-  podData = podArray[0];
+  let podArray = []
+  for (let prop in Data.pods) {
+    podArray.push(Data.pods[prop])
+  }
+  
+  const podData = podArray[0];
   podBuilder(podData);
   
   const podContainer = document.getElementsByClassName("pod-container")[0];
@@ -35,6 +44,12 @@ const Home = () => {
   podAnchor.href = "podcast.html";
   
   /* Music Section */
+  
+  let musicArray = []
+  for (let prop in Data.music) {
+    musicArray.push(Data.music[prop])
+  }
+  const juniorBody = document.querySelector(".junior-body")
   
   const musicPage = elementBuilder("div", "music-container", juniorBody);
   const musicHead = elementBuilder("h2", "music-head", musicPage);
@@ -51,7 +66,9 @@ const Home = () => {
   
   spaceCreator(juniorBody);
   
+  
   /* Blog Section */
+  /*
   
   const newBlog = blogArray[0];
   
@@ -74,7 +91,7 @@ const Home = () => {
   readLink.textContent = "Read More >";
   readLink.href = "blog.html";
   
-  spaceCreator(juniorBody);
+  spaceCreator(juniorBody);*/
   
   /* Announcements */
   
@@ -89,14 +106,14 @@ const Home = () => {
   
   const announcementsBody = elementBuilder("p", "a-body", announcements);
   announcementsBody.textContent = Data.announcements.text;
-  announcementsLink = elementBuilder("a", "a-link", announcements);
+  const announcementsLink = elementBuilder("a", "a-link", announcements);
   announcementsLink.href = Data.announcements.link;
   announcementsLink.setAttribute("target", "_blank");
   announcementsLink.setAttribute("rel", "noreferrer noopener");
   announcementsLink.textContent = Data.announcements.desc
   
   const buttons = document.getElementsByTagName("button");
-  for (i = 1; i < buttons.length; i++) {
+  for (let i = 1; i < buttons.length; i++) {
     buttons[i].classList.add("home-buttons");
   }
 }

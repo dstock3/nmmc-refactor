@@ -7,10 +7,12 @@ const Music = () => {
     "style",
     "background-color: #027bb348; border-radius: 5px;"
   );
-  
   homelink.setAttribute("id", "home-special");
+
+  let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-music");
-  
+
+  const mainBody = document.querySelector(".main-body")
   const musicPage = elementBuilder("div", "music-page", mainBody);
   const musicHead = elementBuilder("h1", "music-page-head", musicPage);
   musicHead.textContent = `Freshest Tracks`;
