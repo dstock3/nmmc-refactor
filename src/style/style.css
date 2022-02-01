@@ -137,12 +137,20 @@ html {
   
   .nav-li {
     display: inline;
-    padding-right: 3%;
+    margin-right: 3%;
     position: relative;
   }
+
+  .nav-li:hover {
+    background-color: #07aaf3;
+    color: black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
   
-  header .nav-anchor {
+  header .nav-li  {
     font-size: 1.75em;
+    padding: 5px;
   }
   
   .nav-anchor {
@@ -1152,8 +1160,7 @@ html {
   
     .head-nav {
       flex-direction: column;
-      padding-bottom: 2%;
-      -webkit-padding-after: 2%;
+      margin-bottom: 25px;
     }
   
     .link-nav {
@@ -1180,11 +1187,11 @@ html {
       position: relative;
     }
   
-    header .nav-anchor {
+    header .nav-li {
       font-size: 1.75em;
     }
   
-    .nav-anchor:hover {
+    .nav-li:hover {
       background-color: transparent;
       color: #3f5bb8;
       border-radius: 5px;
