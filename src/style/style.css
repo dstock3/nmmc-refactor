@@ -633,7 +633,7 @@ html {
     padding-bottom: 25px;
   }
   
-  #home-special {
+  .home-special {
     left: 11%;
   }
   
@@ -934,7 +934,7 @@ html {
       left: 2%;
     }
   
-    #home-special {
+    .home-special {
       left: 8%;
     }
   
@@ -981,7 +981,7 @@ html {
       left: 0%;
     }
   
-    #home-special {
+    .home-special {
       left: 1%;
     }
   
@@ -1032,7 +1032,7 @@ html {
       left: 7%;
     }
   
-    #home-special {
+    .home-special {
       left: 4%;
     }
   
@@ -1163,7 +1163,7 @@ html {
     }
   
     .home-link,
-    #home-special {
+    .home-special {
       left: 0;
       margin: auto;
     }

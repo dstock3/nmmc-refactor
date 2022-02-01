@@ -58,7 +58,7 @@ const Home = () => {
   podAnchor.textContent = "More Pods >";
 
   podAnchor.addEventListener("click", function goVid() {
-    tabSelect(["home", "videos", 'music', "streams", "contact"]);
+    tabSelect(["videos", 'music', "streams", "contact"]);
 
     removeExistingPage(mainBody, juniorBody) 
     Plugs()
@@ -74,19 +74,19 @@ const Home = () => {
   }
   
   const musicPage = elementBuilder("div", "music-container", juniorBody);
+  
   const musicHead = elementBuilder("h2", "music-head", musicPage);
   musicHead.textContent = `Freshest Tracks`;
-  const newMusic = musicArray[0];
-  const newArray = [newMusic];
+  const newArray = [musicArray[0]];
   
-  musicBuilder(newArray);
+  musicBuilder(newArray, musicPage, true);
   
   const moreMusic = elementBuilder("button", "music-button", musicPage);
   const musicAnchor = elementBuilder("div", "music-link", moreMusic);
   musicAnchor.textContent = "More Music >";
 
   musicAnchor.addEventListener("click", function goVid() {
-    tabSelect(["home", "videos", "podcast", "streams", "contact"]);
+    tabSelect(["videos", "podcast", "streams", "contact"]);
                 
     removeExistingPage(mainBody, juniorBody)
     Plugs() 
@@ -94,34 +94,7 @@ const Home = () => {
   })
   
   spaceCreator(juniorBody);
-  
-  
-  /* Blog Section */
-  /*
-  
-  const newBlog = blogArray[0];
-  
-  const blogContainer = elementBuilder("div", "blog-container", juniorBody);
-  const blog = elementBuilder("article", "blog", blogContainer);
-  const blogHead = elementBuilder("h2", "blog-head", blog);
-  blogHead.textContent = newBlog.head;
-  
-  const blogTitle = elementBuilder("h3", "blog-title", blog);
-  blogTitle.textContent = newBlog.title;
-  
-  const blogDate = elementBuilder("p", "blog-date", blog);
-  blogDate.textContent = newBlog.date;
-  
-  const blogBody = elementBuilder("article", "blog-body", blog);
-  blogBody.innerHTML = newBlog.preview;
-  
-  const readMore = elementBuilder("button", "read-more-button", blog);
-  const readLink = elementBuilder("a", "read-link", readMore);
-  readLink.textContent = "Read More >";
-  readLink.href = "blog.html";
-  
-  spaceCreator(juniorBody);*/
-  
+    
   /* Announcements */
   
   const announcementsContainer = elementBuilder("div", "a-container", juniorBody);

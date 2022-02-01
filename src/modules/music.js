@@ -3,7 +3,7 @@ import Data from '../data/data.json5'
 
 const Music = () => {
   let homelink = document.querySelector(".home-link")
-  homelink.setAttribute("id", "home-special");
+  homelink.classList.add("home-special");
 
   let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-music");
@@ -20,10 +20,11 @@ const Music = () => {
   
   let musicArray = []
   for (let prop in Data.tracks) {
+    console.log(Data.tracks[prop])
     musicArray.push(Data.tracks[prop])
   }
   
-  const musicElementArray = musicBuilder(musicArray);
+  const musicElementArray = musicBuilder(musicArray, mainBody);
   
   let albumArray = []
   for (let prop in Data.albums) {

@@ -116,61 +116,47 @@ function elementBuilder(elType, className, parent) {
     return podElementsArray;
   }
   
-  // For Blogs...
-  
-  function blogBuilder(newBlogArray) {
-    let mainBody = document.querySelector(".main-body")
-    let blogElementsArray = [];
-    for (let i = 0; i < newBlogArray.length; i++) {
-      let blogElements = [];
-      let blogContainer = elementBuilder("div", "blog-container", mainBody);
-      blogElements.push(blogContainer);
-      let blog = elementBuilder("article", "blog", blogContainer);
-      blogElements.push(blog);
-  
-      let blogTitle = elementBuilder("h2", "blog-title", blog);
-      blogTitle.textContent = newBlogArray[i].title;
-      blogElements.push(blogTitle);
-  
-      let blogDate = elementBuilder("p", "blog-date", blog);
-      blogDate.textContent = `Posted ` + newBlogArray[i].date;
-      blogElements.push(blogDate);
-  
-      let blogBody = elementBuilder("div", "blog-body", blog);
-      blogBody.innerHTML = newBlogArray[i].text;
-      blogElements.push(blogBody);
-  
-      let spacer = elementBuilder("div", "spacer", mainBody);
-      blogElements.push(spacer);
-  
-      blogElementsArray.push(blogElements);
-    }
-  
-    return blogElementsArray;
-  }
-  
   // for music
   
-  function musicBuilder(newMusicArray) {
+  function musicBuilder(newMusicArray, parent, home=false) {
     let musicElementArray = [];
-    for (let i = 0; i < newMusicArray.length; i++) {
-      let musicElements = [];
-      let mainBody = document.querySelector(".main-body")
-      let musicPage = elementBuilder("div", "music-container", mainBody);
-      let newMusicContainer = elementBuilder("div", "track-container", musicPage);
-      musicElements.push(newMusicContainer);
-      let newMusic = iframeHelper(
-        newMusicContainer,
-        `new-music`,
-        newMusicArray[i].iframeRef
-      );
-      newMusic.setAttribute("id", `${newMusicArray[i].id}`);
-      newMusic.loading = "lazy";
-      newMusic.title = newMusicArray[i].track;
-      musicElements.push(newMusic);
-      musicElementArray.push(musicElements);
+    if (home) {
+      for (let i = 0; i < newMusicArray.length; i++) {
+        let musicElements = [];
+        let newMusicContainer = elementBuilder("div", "track-container", parent);
+        musicElements.push(newMusicContainer);
+        let newMusic = iframeHelper(
+          newMusicContainer,
+          `new-music`,
+          newMusicArray[i].iframeRef
+        );
+        newMusic.setAttribute("id", `${newMusicArray[i].id}`);
+        newMusic.loading = "lazy";
+        newMusic.title = newMusicArray[i].track;
+        musicElements.push(newMusic);
+        musicElementArray.push(musicElements);
+      }
+      return musicElementArray;
+    } else {
+      for (let i = 0; i < newMusicArray.length; i++) {
+        let musicElements = [];
+        let musicPage = elementBuilder("div", "music-container", parent);
+        let newMusicContainer = elementBuilder("div", "track-container", musicPage);
+        musicElements.push(newMusicContainer);
+        let newMusic = iframeHelper(
+          newMusicContainer,
+          `new-music`,
+          newMusicArray[i].iframeRef
+        );
+        newMusic.setAttribute("id", `${newMusicArray[i].id}`);
+        newMusic.loading = "lazy";
+        newMusic.title = newMusicArray[i].track;
+        musicElements.push(newMusic);
+        musicElementArray.push(musicElements);
+      }
+      return musicElementArray;
     }
-    return musicElementArray;
+
   }
   
   function randomImageGenerator(imagesObject) {
@@ -311,4 +297,4 @@ function elementBuilder(elType, className, parent) {
     }
 
   }
-export {  elementBuilder, spaceCreator, linkBuilder, videoBuilder, videoArrayHandler, randomGenerator, podBuilder, podListBuilder, blogBuilder, musicBuilder, randomImageGenerator, iframeHelper, albumBuilder, bandcampBuilder, patreonPlugBuilder, koFiBuilder, tabSelect, removeExistingPage }  
+export {  elementBuilder, spaceCreator, linkBuilder, videoBuilder, videoArrayHandler, randomGenerator, podBuilder, podListBuilder, musicBuilder, randomImageGenerator, iframeHelper, albumBuilder, bandcampBuilder, patreonPlugBuilder, koFiBuilder, tabSelect, removeExistingPage }  

@@ -27,6 +27,7 @@ favIcon.href = Favicon
 
 const header = elementBuilder("header", "head-nav", mainContainer);
 const homelink = elementBuilder("a", "home-link", header);
+homelink.style.cursor = "pointer";
 const logo = elementBuilder("img", "logo", homelink);
 logo.src = Logo
 logo.alt = `NMMC logo`;
@@ -131,6 +132,7 @@ const tabBuilder = (() => {
             switch (tab) {
               case 'videos':
                 tabSelect(["home", "music", "podcast", "streams", "contact"]);
+                homelink.classList.remove("home-special")
 
                 removeExistingPage(mainBody, juniorBody) 
                 Plugs()
@@ -139,6 +141,7 @@ const tabBuilder = (() => {
                 break;
               case 'podcast':
                 tabSelect(["home", "videos", 'music', "streams", "contact"]);
+                homelink.classList.remove("home-special")
 
                 removeExistingPage(mainBody, juniorBody) 
                 Plugs()
@@ -153,12 +156,14 @@ const tabBuilder = (() => {
                 break;
               case 'streams':
                 tabSelect(["home", "videos", "podcast", "contact", "music"]);
+                homelink.classList.remove("home-special")
               
                 removeExistingPage(mainBody, juniorBody)
                 Plugs()
                 Streams()
               case 'contact':
                 tabSelect(["home", "videos", "podcast", "streams", "music"]);
+                homelink.classList.remove("home-special")
               
                 removeExistingPage(mainBody, juniorBody)
                 Plugs()
