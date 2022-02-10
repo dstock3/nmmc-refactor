@@ -13,11 +13,6 @@ const Music = () => {
   const musicHead = elementBuilder("h1", "music-page-head", musicPage);
   musicHead.textContent = `Freshest Tracks`;
   
-  const albumHead = elementBuilder("h2", "album-head", mainBody);
-  const albumSection = elementBuilder("div", "album-section", mainBody);
-  
-  albumHead.textContent = "Full Albums";
-  
   let musicArray = []
   for (let prop in Data.tracks) {
     console.log(Data.tracks[prop])
@@ -26,6 +21,12 @@ const Music = () => {
   
   const musicElementArray = musicBuilder(musicArray, mainBody);
   
+  
+  const albumHead = elementBuilder("h2", "album-head", mainBody);
+  const albumSection = elementBuilder("div", "album-section", mainBody);
+  
+  albumHead.textContent = "Full Albums";
+    
   let albumArray = []
   for (let prop in Data.albums) {
     albumArray.push(Data.albums[prop])
