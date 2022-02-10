@@ -1,7 +1,7 @@
 import './style/reset.css'
 import './style/style.css'
 import Data from './data/data.json5';
-import { elementBuilder, linkBuilder, tabSelect, removeExistingPage, randomGenerator, randomImageGenerator } from './modules/functions.js';
+import { elementBuilder, linkBuilder, tabSelect, removeExistingPage } from './modules/functions.js';
 import { Home } from './modules/home.js'
 import { Music } from './modules/music.js'
 import { Podcast } from './modules/podcast.js'
@@ -9,13 +9,10 @@ import { Streams } from './modules/streams.js'
 import { Videos } from './modules/videos.js'
 import { Contact } from './modules/contact.js'
 import { Plugs } from './modules/plug.js'
-import { quotes } from './data/quotes.js'
 import Logo from './assets/images/logo.png'
 import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.png'
-import Skull from './assets/images/illustrations/skull.png'
-import Alien from './assets/images/illustrations/ALIEN.png'
-import Television from './assets/images/illustrations/TELEVISION.png'
+import { Footer } from './modules/footer';
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
@@ -173,37 +170,4 @@ const tabBuilder = (() => {
     }
 })();
 
-/* Footer */
-
-const footer = document.createElement("footer");
-mainContainer.appendChild(footer);
-
-/* Random Quote Generator */
-
-
-const quoteContent = document.createElement("div");
-quoteContent.classList.add("quote");
-const quote = randomGenerator(quotes);
-quoteContent.textContent = quote;
-footer.appendChild(quoteContent);
-
-const footContent = document.createElement("div");
-footContent.classList.add("copyright");
-const date = new Date();
-const copyright = `Copyright © ${date.getFullYear()} by David Stockdale.`;
-footContent.textContent = copyright;
-footer.appendChild(footContent);
-
-const images = {
-  "an old television": Television,
-  "a rad skull": Skull,
-  "a grey alien": Alien,
-};
-
-const footImage = document.createElement("img");
-footImage.classList.add("foot-image");
-const image = randomImageGenerator(images);
-footImage.src = image[1];
-footImage.alt = image[0];
-
-footer.appendChild(footImage);
+Footer()

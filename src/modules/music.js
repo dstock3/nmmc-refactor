@@ -15,11 +15,10 @@ const Music = () => {
   
   let musicArray = []
   for (let prop in Data.tracks) {
-    console.log(Data.tracks[prop])
     musicArray.push(Data.tracks[prop])
   }
   
-  const musicElementArray = musicBuilder(musicArray, mainBody);
+  const musicElementArray = musicBuilder(musicArray, musicPage);
   
   
   const albumHead = elementBuilder("h2", "album-head", mainBody);

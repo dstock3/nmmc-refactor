@@ -1,4 +1,4 @@
-import { elementBuilder, videoBuilder, podBuilder, musicBuilder, spaceCreator, tabSelect, removeExistingPage } from './functions.js'
+import { elementBuilder, videoBuilder, podBuilder, musicBuilder, tabSelect, removeExistingPage } from './functions.js'
 import { Videos } from './videos.js'
 import { Podcast } from './podcast.js'
 import { Music } from './music.js'
@@ -93,7 +93,7 @@ const Home = () => {
     Music()
   })
   
-  spaceCreator(juniorBody);
+
     
   /* Announcements */
   

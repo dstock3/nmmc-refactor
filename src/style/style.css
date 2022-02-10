@@ -295,6 +295,7 @@ html {
     -webkit-padding-after: 15px;
     -webkit-padding-end: 15px;
     -webkit-padding-start: 15px;
+    margin-bottom: 20px;
   }
   
   .blog-container {
@@ -1238,6 +1239,7 @@ html {
     .music-container {
       width: 100%;
     }
+
     .blog-container {
       padding-inline: 15px;
       -webkit-padding-before: 15px;
