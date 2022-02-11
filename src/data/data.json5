@@ -353,6 +353,11 @@
     },
   },
   vids: {
+    sopranos: {
+      title: "Ghosts in the Sopranos Universe",
+      description: "In this installment, I’ll be analyzing the Sopranos. Specifically, I am interrogating the role ghosts play in the narrative in relation to one very important scene within the series.",
+      iframeRef: "https://www.youtube.com/embed/HvA5LIV2uPA",
+    },
     thhpii: {
       title: "Decoding This House Has People in It: REMASTERED",
       description: "As a special treat to kick off 2022, I’m releasing a new version of my very first video, Decoding This House Has People In It.",

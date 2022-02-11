@@ -14,9 +14,9 @@ const Podcast = () => {
     podArray.push(Data.pods[prop])
   }
   
-  const podElementsArray = podListBuilder(podArray);
+  const podElementsArray = podListBuilder(podArray, mainBody);
   
-  const podContainerArray = document.getElementsByClassName("pod-container");
+  const podContainerArray = Array.from(document.getElementsByClassName("pod-container"));
   for (let i = 0; i < podContainerArray.length; i++) {
     podContainerArray[i].classList.add("pod-page");
   }

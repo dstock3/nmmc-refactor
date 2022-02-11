@@ -139,6 +139,7 @@ html {
     display: inline;
     margin-right: 3%;
     position: relative;
+    font-style: italic;
   }
 
   .nav-li:hover {
@@ -266,8 +267,9 @@ html {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     width: 85%;
+    
   }
-  
+
   .pod-container {
     align-self: center;
     display: flex;
@@ -278,7 +280,7 @@ html {
     border: 3px solid #07aaf3;
     border-radius: 5px;
     -webkit-border-radius: 5px;
-    width: 85%;
+    margin-bottom: 15px;
   }
   
   .music-container {
@@ -570,6 +572,7 @@ html {
   
   .video-page {
     width: 90%;
+    margin-bottom: 15px;
   }
   
   .vid-page-head {

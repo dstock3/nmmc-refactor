@@ -101,7 +101,7 @@ const playlistLinks = linkBuilder(
   true
 );
 
-const tabBuilder = (() => {
+const TabBuilder = (() => {
     const tabs = ['videos', 'podcast', 'music', 'streams', 'contact']
     
     homelink.id = "home-tab"

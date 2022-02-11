@@ -49,9 +49,9 @@ const Home = () => {
   }
   
   const podData = podArray[0];
-  podBuilder(podData);
+  podBuilder(podData, juniorBody);
   
-  const podContainer = document.getElementsByClassName("pod-container")[0];
+  const podContainer = document.querySelector(".pod-container");
   const podButtonDiv = elementBuilder("div", "more-pods", podContainer);
   const morePods = elementBuilder("button", "pod-button", podButtonDiv);
   const podAnchor = elementBuilder("div", "vid-link", morePods);

@@ -57,13 +57,12 @@ function elementBuilder(elType, className, parent) {
     newVideoDescription.innerHTML = newVideoData.description;
     let vidDiv = elementBuilder("div", "vid-div", newVideoContainer);
     vidDiv.innerHTML = `<iframe src="${newVideoData.iframeRef}" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    let spacer = spaceCreator(mainBody);
+
     let videoElements = [
       newVideoContainer,
       newVideoHead,
       newVideoDescription,
       vidDiv,
-      spacer,
     ];
     return videoElements;
   }
@@ -82,9 +81,8 @@ function elementBuilder(elType, className, parent) {
   
   // for pods
   
-  function podBuilder(newPodData) {
-    let mainBody = document.querySelector(".main-body")
-    let newPodContainer = elementBuilder("div", "pod-container", mainBody);
+  function podBuilder(newPodData, parent) {
+    let newPodContainer = elementBuilder("div", "pod-container", parent);
     let newPodHead = elementBuilder("h2", "pod-head", newPodContainer);
     newPodHead.textContent = newPodData.title;
     let newPodDescription = elementBuilder("p", "pod-para", newPodContainer);
@@ -96,21 +94,19 @@ function elementBuilder(elType, className, parent) {
     );
     newPodcast.title = newPodData.title;
     newPodcast.loading = "lazy";
-    let spacer = spaceCreator(mainBody);
     let podElements = [
       newPodContainer,
       newPodHead,
       newPodDescription,
       newPodcast,
-      spacer,
     ];
     return podElements;
   }
   
-  function podListBuilder(myPodArray) {
+  function podListBuilder(myPodArray, parent) {
     let podElementsArray = [];
     for (let i = 0; i < myPodArray.length; i++) {
-      let podElements = podBuilder(myPodArray[i]);
+      let podElements = podBuilder(myPodArray[i], parent);
       podElementsArray.push(podElements);
     }
     return podElementsArray;
