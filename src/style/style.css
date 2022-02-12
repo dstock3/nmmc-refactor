@@ -105,8 +105,7 @@ html {
   .head-nav {
     display: flex;
     justify-content: space-between;
-    width: 98%;
-    height: 175px;
+    height: 150px;
     align-items: center;
   }
   
@@ -133,7 +132,7 @@ html {
   
   .nav-li {
     display: inline;
-    margin-right: 3%;
+    padding: 1%;
     position: relative;
     font-style: italic;
   }
@@ -146,7 +145,7 @@ html {
   }
   
   header .nav-li  {
-    font-size: 1.75em;
+    font-size: 1.5em;
     margin-left: 5px;
   }
   
@@ -195,6 +194,7 @@ html {
   .side-nav-li {
     padding-left: 5%;
     padding-top: 15%;
+    font-size: 1rem;
   }
   
   .playlist-button {
