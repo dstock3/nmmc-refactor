@@ -81,7 +81,7 @@ const Contact = () => {
   submitButton.setAttribute("id", "button");
   submitButton.textContent = "Send Message";
 
-  submitButton.addEventListener("click", function goResponse() {
+  submitButton.addEventListener("submit", function goResponse() {
     tabSelect(["home", "videos", "podcast", "streams", "music"]);
     let homelink = document.querySelector(".home-link")
     homelink.classList.remove("home-special")

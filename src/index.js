@@ -180,6 +180,7 @@ const TabBuilder = (() => {
 
 Footer()
 
+/*
 GBox()
 
 const lightbox = GLightbox({
@@ -189,3 +190,4 @@ const lightbox = GLightbox({
     width: 900,
     autoPlayVideos: "true",
 });
+*/
