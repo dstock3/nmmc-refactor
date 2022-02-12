@@ -82,7 +82,7 @@ const Contact = () => {
   submitButton.setAttribute("id", "button");
   submitButton.textContent = "Send Message";
 
-  submitButton.addEventListener("submit", function goResponse() {
+  submitButton.addEventListener("click", function goResponse() {
     pageState.contactResponse = true
 
     /*
