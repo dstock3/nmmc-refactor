@@ -14,6 +14,7 @@ import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.png'
 import { Footer } from './modules/footer';
 import { GBox } from './assets/vendors/glightbox.js'
+import { pageState } from './data/pageState.js';
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
@@ -104,20 +105,31 @@ const playlistLinks = linkBuilder(
 
 const TabBuilder = (() => {
     const tabs = ['videos', 'podcast', 'music', 'streams', 'contact']
-    
-    homelink.id = "home-tab"
-    titleChange("Home | NMMC")
-    homelink.addEventListener("click", function goHome() {
-      tabSelect(['music', "videos", "podcast", "streams", "contact"]);
-      titleChange("Home | NMMC")
 
+    if (pageState.contactResponse) {
+      tabSelect(["home", "videos", "podcast", "streams", "music"]);
+      let homelink = document.querySelector(".home-link")
+      homelink.classList.remove("home-special")
+      titleChange("Thanks! | NMMC")
       removeExistingPage(mainBody, juniorBody) 
+      Plugs()
+      ContactResponse()
+      pageState.contactResponse = false
+    } else {
+      homelink.id = "home-tab"
+      titleChange("Home | NMMC")
+      homelink.addEventListener("click", function goHome() {
+        tabSelect(['music', "videos", "podcast", "streams", "contact"]);
+        titleChange("Home | NMMC")
+  
+        removeExistingPage(mainBody, juniorBody) 
+        Home()
+  
+      })
+  
       Home()
-
-    })
-
-    Home()
-
+    }
+    
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
         let tabElement = elementBuilder('li', "nav-li", linkList);
@@ -132,6 +144,7 @@ const TabBuilder = (() => {
                 tabSelect(["home", "music", "podcast", "streams", "contact"]);
                 homelink.classList.remove("home-special")
                 titleChange("Videos | NMMC")
+                pageState.contactResponse = false
 
                 removeExistingPage(mainBody, juniorBody) 
                 Plugs()
@@ -142,6 +155,7 @@ const TabBuilder = (() => {
                 tabSelect(["home", "videos", 'music', "streams", "contact"]);
                 homelink.classList.remove("home-special")
                 titleChange("Podcast | NMMC")
+                pageState.contactResponse = false
 
                 removeExistingPage(mainBody, juniorBody) 
                 Plugs()
@@ -150,6 +164,7 @@ const TabBuilder = (() => {
               case 'music':
                 tabSelect(["home", "videos", "podcast", "streams", "contact"]);
                 titleChange("Music | NMMC")
+                pageState.contactResponse = false
                 
                 removeExistingPage(mainBody, juniorBody)
                 Plugs() 
@@ -159,6 +174,7 @@ const TabBuilder = (() => {
                 tabSelect(["home", "videos", "podcast", "contact", "music"]);
                 homelink.classList.remove("home-special")
                 titleChange("Streams | NMMC")
+                pageState.contactResponse = false
               
                 removeExistingPage(mainBody, juniorBody)
                 Plugs()
@@ -168,6 +184,7 @@ const TabBuilder = (() => {
                 tabSelect(["home", "videos", "podcast", "streams", "music"]);
                 homelink.classList.remove("home-special")
                 titleChange("Contact | NMMC")
+                pageState.contactResponse = false
               
                 removeExistingPage(mainBody, juniorBody)
                 Plugs()
