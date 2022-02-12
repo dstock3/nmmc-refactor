@@ -1,5 +1,6 @@
 import { elementBuilder, musicBuilder, albumBuilder, bandcampBuilder } from "./functions";
 import Data from '../data/data.json5'
+import { musicArray } from "../data/tracks.js";
 
 const Music = () => {
   let homelink = document.querySelector(".home-link")
@@ -13,13 +14,7 @@ const Music = () => {
   const musicHead = elementBuilder("h1", "music-page-head", musicPage);
   musicHead.textContent = `Freshest Tracks`;
   
-  let musicArray = []
-  for (let prop in Data.tracks) {
-    musicArray.push(Data.tracks[prop])
-  }
-  
   const musicElementArray = musicBuilder(musicArray, musicPage);
-  
   
   const albumHead = elementBuilder("h2", "album-head", mainBody);
   const albumSection = elementBuilder("div", "album-section", mainBody);

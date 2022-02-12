@@ -4,6 +4,7 @@ import { Podcast } from './podcast.js'
 import { Music } from './music.js'
 import { Plugs } from './plug.js'
 import Data from '../data/data.json5'
+import { musicArray } from '../data/tracks.js'
 
 const Home = () => {
   let sideNavContainer = document.querySelector(".side-nav-container")
@@ -67,11 +68,6 @@ const Home = () => {
 
   
   /* Music Section */
-  
-  let musicArray = []
-  for (let prop in Data.tracks) {
-    musicArray.push(Data.tracks[prop])
-  }
   
   const musicPage = elementBuilder("div", "music-container", juniorBody);
   

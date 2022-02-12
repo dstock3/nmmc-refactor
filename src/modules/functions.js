@@ -5,6 +5,11 @@ function elementBuilder(elType, className, parent) {
     parent.appendChild(newElement);
     return newElement;
   }
+
+  function titleChange(newTitle) {
+    let titleElement = document.querySelector("title")
+    titleElement.textContent = newTitle
+  }
   
   function linkBuilder(linkArray, ulVar, className, openNewTab) {
     let linkElementArray = [];
@@ -27,11 +32,6 @@ function elementBuilder(elType, className, parent) {
     }
   
     return linkElementArray;
-  }
-  
-  function spaceCreator(parent) {
-    let spaceDiv = elementBuilder("div", "spacer", parent);
-    return spaceDiv;
   }
   
   function randomGenerator(thingArray) {
@@ -293,4 +293,4 @@ function elementBuilder(elType, className, parent) {
     }
 
   }
-export {  elementBuilder, spaceCreator, linkBuilder, videoBuilder, videoArrayHandler, randomGenerator, podBuilder, podListBuilder, musicBuilder, randomImageGenerator, iframeHelper, albumBuilder, bandcampBuilder, patreonPlugBuilder, koFiBuilder, tabSelect, removeExistingPage }  
+export {  elementBuilder, titleChange, linkBuilder, videoBuilder, videoArrayHandler, randomGenerator, podBuilder, podListBuilder, musicBuilder, randomImageGenerator, iframeHelper, albumBuilder, bandcampBuilder, patreonPlugBuilder, koFiBuilder, tabSelect, removeExistingPage }  

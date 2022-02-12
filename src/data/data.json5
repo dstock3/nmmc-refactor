@@ -266,11 +266,6 @@
     },  
   },
   tracks: {
-    epstein: {
-      track: "Jeffrey Epstein Didn't Kill Himself",
-      id: 'epstein',
-      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:112110958/size:large/bgcol:333333/linkcol:0f91ff/tracklist:false/artwork:small/transparent:true/" 
-    },
     instrumentality: {
       track: "Instrumentality",
       id: 'instrumentality',

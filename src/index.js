@@ -1,7 +1,7 @@
 import './style/reset.css'
 import './style/style.css'
 import Data from './data/data.json5';
-import { elementBuilder, linkBuilder, tabSelect, removeExistingPage } from './modules/functions.js';
+import { elementBuilder, titleChange, linkBuilder, tabSelect, removeExistingPage } from './modules/functions.js';
 import { Home } from './modules/home.js'
 import { Music } from './modules/music.js'
 import { Podcast } from './modules/podcast.js'
@@ -13,6 +13,7 @@ import Logo from './assets/images/logo.png'
 import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.png'
 import { Footer } from './modules/footer';
+import { GBox } from './assets/vendors/glightbox.js'
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
@@ -105,8 +106,10 @@ const TabBuilder = (() => {
     const tabs = ['videos', 'podcast', 'music', 'streams', 'contact']
     
     homelink.id = "home-tab"
+    titleChange("Home | NMMC")
     homelink.addEventListener("click", function goHome() {
       tabSelect(['music', "videos", "podcast", "streams", "contact"]);
+      titleChange("Home | NMMC")
 
       removeExistingPage(mainBody, juniorBody) 
       Home()
@@ -128,6 +131,7 @@ const TabBuilder = (() => {
               case 'videos':
                 tabSelect(["home", "music", "podcast", "streams", "contact"]);
                 homelink.classList.remove("home-special")
+                titleChange("Videos | NMMC")
 
                 removeExistingPage(mainBody, juniorBody) 
                 Plugs()
@@ -137,6 +141,7 @@ const TabBuilder = (() => {
               case 'podcast':
                 tabSelect(["home", "videos", 'music', "streams", "contact"]);
                 homelink.classList.remove("home-special")
+                titleChange("Podcast | NMMC")
 
                 removeExistingPage(mainBody, juniorBody) 
                 Plugs()
@@ -144,6 +149,7 @@ const TabBuilder = (() => {
                 break;
               case 'music':
                 tabSelect(["home", "videos", "podcast", "streams", "contact"]);
+                titleChange("Music | NMMC")
                 
                 removeExistingPage(mainBody, juniorBody)
                 Plugs() 
@@ -152,6 +158,7 @@ const TabBuilder = (() => {
               case 'streams':
                 tabSelect(["home", "videos", "podcast", "contact", "music"]);
                 homelink.classList.remove("home-special")
+                titleChange("Streams | NMMC")
               
                 removeExistingPage(mainBody, juniorBody)
                 Plugs()
@@ -160,6 +167,7 @@ const TabBuilder = (() => {
               case 'contact':
                 tabSelect(["home", "videos", "podcast", "streams", "music"]);
                 homelink.classList.remove("home-special")
+                titleChange("Contact | NMMC")
               
                 removeExistingPage(mainBody, juniorBody)
                 Plugs()
@@ -171,3 +179,13 @@ const TabBuilder = (() => {
 })();
 
 Footer()
+
+GBox()
+
+const lightbox = GLightbox({
+    href: Data.vids[0].iframeRef,
+    type: "video",
+    source: "youtube", //vimeo, youtube or local
+    width: 900,
+    autoPlayVideos: "true",
+});

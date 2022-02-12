@@ -96,10 +96,6 @@ html {
     position: fixed;
   }
   
-  .spacer {
-    height: 25px;
-  }
-  
   .video-para a {
     padding-inline: 5%;
   }
@@ -109,8 +105,8 @@ html {
   .head-nav {
     display: flex;
     justify-content: space-between;
-    width: 96%;
-    height: 150px;
+    width: 98%;
+    height: 175px;
     align-items: center;
   }
   
@@ -151,7 +147,7 @@ html {
   
   header .nav-li  {
     font-size: 1.75em;
-    padding: 5px;
+    margin-left: 5px;
   }
   
   .nav-anchor {
@@ -267,11 +263,11 @@ html {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     width: 85%;
+    margin-bottom: 15px;
     
   }
 
   .pod-container {
-    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,6 +294,12 @@ html {
     -webkit-padding-end: 15px;
     -webkit-padding-start: 15px;
     margin-bottom: 20px;
+  }
+
+  .music-page .music-container {
+    padding-bottom: 0px;
+  
+    -webkit-padding-after: 0px;
   }
   
   .blog-container {
@@ -602,6 +604,16 @@ html {
     min-width: 85%;
     max-width: 100%;
   }
+
+  .music-page .track-container {
+    width: 85%;
+
+  }
+
+  .music-page .new-music {
+    margin-bottom: 0;
+
+  }
   
   .track-container {
     margin: auto;
@@ -638,7 +650,7 @@ html {
   .new-music {
     height: 120px;
     width: 100%;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
   
   .streams-page-head {
@@ -1089,6 +1101,8 @@ html {
     }
   
     .album-section {
+      position: relative;
+      display: flex;
       flex-wrap: wrap;
       left: 0;
     }
@@ -1104,12 +1118,7 @@ html {
       margin: auto;
       width: 100%;
     }
-  
-    .album-section {
-      position: relative;
-      display: flex;
-    }
-  
+    
     .album-container {
       padding-bottom: 15px;
     }
@@ -1164,7 +1173,6 @@ html {
   
     .head-nav {
       flex-direction: column;
-      margin-bottom: 25px;
     }
   
     .link-nav {
@@ -1192,7 +1200,7 @@ html {
     }
   
     header .nav-li {
-      font-size: 1.75em;
+      font-size: 1.25em;
     }
   
     .nav-li:hover {
@@ -1204,7 +1212,6 @@ html {
   
     .main-container {
       width: 100%;
-      align-items: center;
     }
   
     .section-container {
@@ -1239,10 +1246,6 @@ html {
       width: 100%;
     }
   
-    .music-container {
-      width: 100%;
-    }
-
     .blog-container {
       padding-inline: 15px;
       -webkit-padding-before: 15px;
@@ -1316,6 +1319,15 @@ html {
     .album-section {
       flex-wrap: wrap;
       left: 0;
+      justify-content: center;
+    }
+
+    .music-container {
+      width: 100%;
+    }
+
+    .music-page .music-container {
+      width: 85%;
     }
   
     .music-page {
