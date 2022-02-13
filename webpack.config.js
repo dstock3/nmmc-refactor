@@ -40,13 +40,13 @@ module.exports = {
       filename: 'index.html',
       chunks: ['main'],
       title: 'Home | NMMC',
-      template: 'src/templates/index.html'
+      template: 'src/templates/template.html'
     }),
     new HtmlWebpackPlugin({
       filename: 'contact-response.html',
       chunks: ['response'],
       title: 'Thanks! | NMMC',
-      template: 'src/templates/contact-response.html'
+      template: 'src/templates/template.html'
     }),
   ]
 };
