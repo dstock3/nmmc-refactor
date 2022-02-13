@@ -66,7 +66,7 @@ if (isset($_POST['Email'])) {
     @mail($email_to, $email_subject, $email_message, $headers);
 ?>
 
-<?php header("Location: index.html"); ?>
+<?php header("Location: contact-response.html"); ?>
 
 <?php
 }
