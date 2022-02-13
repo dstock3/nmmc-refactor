@@ -1,10 +1,14 @@
 const path = require('path');
 const json5 = require('json5');
+const HtmlWebpackPlugin =  require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    response: './src/contactServe.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public_html'),
   },
   watch: true,
@@ -31,4 +35,18 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      chunks: ['main'],
+      title: 'Home | NMMC',
+      template: 'src/templates/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'contact-response.html',
+      chunks: ['response'],
+      title: 'Thanks! | NMMC',
+      template: 'src/templates/contact-response.html'
+    }),
+  ]
 };

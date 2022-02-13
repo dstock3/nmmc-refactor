@@ -12,8 +12,8 @@ import { Plugs } from './modules/plug.js'
 import Logo from './assets/images/logo.png'
 import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.png'
+import { ContactResponse } from './modules/contact-response';
 import { Footer } from './modules/footer';
-import { GBox } from './assets/vendors/glightbox.js'
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
@@ -106,7 +106,7 @@ const TabBuilder = (() => {
     const tabs = ['videos', 'podcast', 'music', 'streams', 'contact']
 
     homelink.id = "home-tab"
-    titleChange("Home | NMMC")
+    titleChange("Thanks! | NMMC")
     homelink.addEventListener("click", function goHome() {
       tabSelect(['music', "videos", "podcast", "streams", "contact"]);
       titleChange("Home | NMMC")
@@ -116,7 +116,8 @@ const TabBuilder = (() => {
 
     })
 
-    Home()
+    ContactResponse()
+    Plugs()
 
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
@@ -180,14 +181,3 @@ const TabBuilder = (() => {
 
 Footer()
 
-/*
-GBox()
-
-const lightbox = GLightbox({
-    href: Data.vids[0].iframeRef,
-    type: "video",
-    source: "youtube", //vimeo, youtube or local
-    width: 900,
-    autoPlayVideos: "true",
-});
-*/

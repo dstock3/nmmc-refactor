@@ -2,7 +2,6 @@ import '../style/contact.css'
 import { elementBuilder, tabSelect, removeExistingPage, titleChange } from './functions.js'
 import { ContactResponse } from './contact-response.js'
 import { Plugs } from './plug.js'
-import { pageState } from '../data/pageState'
 
 const Contact = () => {
   let sideNavContainer = document.querySelector(".side-nav-container")
@@ -81,21 +80,6 @@ const Contact = () => {
   submitButton.classList.add("btn-block");
   submitButton.setAttribute("id", "button");
   submitButton.textContent = "Send Message";
-
-  submitButton.addEventListener("click", function goResponse() {
-    pageState.contactResponse = true
-
-    /*
-    tabSelect(["home", "videos", "podcast", "streams", "music"]);
-    let homelink = document.querySelector(".home-link")
-    homelink.classList.remove("home-special")
-    titleChange("Thanks! | NMMC")
-
-    removeExistingPage(mainBody, juniorBody) 
-    Plugs()
-    ContactResponse()
-    */
-  })
 
   const fixedFooter = document.querySelector("footer");
   fixedFooter.setAttribute("id", "fixed-footer");
