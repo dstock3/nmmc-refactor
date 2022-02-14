@@ -580,6 +580,49 @@ html {
   .vid-page-head {
     padding-bottom: 15px;
   }
+
+  .vid-page {
+    margin-left: 5%;
+  }
+
+  .vid-list-head {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+
+  .vid-list-container {
+    border: 3px solid #07aaf3;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    height: fit-content;
+    padding-inline: 15px;
+    padding-bottom: 15px;
+    min-width: 350px;
+    max-width: 25%;
+    margin-bottom: 25px;
+  }
+
+  .vid-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .vid-list-item {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .vid-list-item:hover {
+    background-color: #a0dcf8;
+    color: black;
+
+  }
   
   .pod-page {
     width: 85%;
@@ -689,7 +732,6 @@ html {
   /* Patreon Plug */
   
   .patreon {
-    position: fixed;
     min-width: 350px;
     max-width: 25%;
     display: flex;
@@ -1029,6 +1071,14 @@ html {
   
     .patreon {
       right: 1.75%;
+    }
+
+    .vid-page {
+      margin-left: 0;
+    }
+
+    .vid-list-container {
+      min-width: 100%;
     }
   
     .foot-image {

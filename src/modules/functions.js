@@ -63,20 +63,37 @@ function elementBuilder(elType, className, parent) {
       newVideoHead,
       newVideoDescription,
       vidDiv,
+      vidDiv.firstChild
     ];
     return videoElements;
   }
   
   function videoArrayHandler(videoArray) {
     let videoElementsArray = [];
+    let juniorBody = document.querySelector(".junior-body")
+    juniorBody.classList.add("vid-page")
+    let vidListContainer = elementBuilder("div", "vid-list-container", juniorBody)
+    let vidListHead = elementBuilder("h4", "vid-list-head", vidListContainer)
+    vidListHead.textContent = "Recent Vids"
+    let vidList = elementBuilder("ul", "vid-list", vidListContainer)
+    let vidListArray = []
+
     for (let i = 0; i < videoArray.length; i++) {
-      let videoElements = videoBuilder(videoArray[i]);
-      let video = document.getElementsByTagName("iframe")[i];
-      videoElements.push(video);
-      video.classList.add("video");
-      videoElementsArray.push(videoElements);
+      if (i === 0) {
+        let videoElements = videoBuilder(videoArray[i]);
+        let video = document.getElementsByTagName("iframe")[i];
+        videoElements.push(video);
+        video.classList.add("video");
+        videoElementsArray.push(videoElements);
+
+      } else {
+        let vidListItem = elementBuilder("li", "vid-list-item", vidList)
+        vidListItem.textContent = videoArray[i].title
+        let vidObj = videoArray[i]
+        vidListArray.push({vidListItem, vidObj})
+      }
     }
-    return videoElementsArray;
+    return { videoElementsArray, vidListArray }
   }
   
   // for pods

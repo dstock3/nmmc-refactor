@@ -133,10 +133,9 @@ const TabBuilder = (() => {
                 homelink.classList.remove("home-special")
                 titleChange("Videos | NMMC")
 
-                removeExistingPage(mainBody, juniorBody) 
-                Plugs()
+                removeExistingPage(mainBody, juniorBody)
                 Videos()
-                
+
                 break;
               case 'podcast':
                 tabSelect(["home", "videos", 'music', "streams", "contact"]);
@@ -144,16 +143,18 @@ const TabBuilder = (() => {
                 titleChange("Podcast | NMMC")
 
                 removeExistingPage(mainBody, juniorBody) 
-                Plugs()
                 Podcast()
+                Plugs()
                 break;
               case 'music':
                 tabSelect(["home", "videos", "podcast", "streams", "contact"]);
                 titleChange("Music | NMMC")
                 
                 removeExistingPage(mainBody, juniorBody)
-                Plugs() 
+                
+                
                 Music()
+                Plugs()
                 break;
               case 'streams':
                 tabSelect(["home", "videos", "podcast", "contact", "music"]);
@@ -161,7 +162,6 @@ const TabBuilder = (() => {
                 titleChange("Streams | NMMC")
               
                 removeExistingPage(mainBody, juniorBody)
-                Plugs()
                 Streams()
                 break;
               case 'contact':
