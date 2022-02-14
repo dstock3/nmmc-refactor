@@ -599,8 +599,7 @@ html {
     height: fit-content;
     padding-inline: 15px;
     padding-bottom: 15px;
-    min-width: 350px;
-    max-width: 25%;
+    min-width: 30%;
     margin-bottom: 25px;
   }
 
@@ -612,6 +611,7 @@ html {
   }
 
   .vid-list-item {
+    width: fit-content;
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 5px;
