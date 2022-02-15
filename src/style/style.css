@@ -953,6 +953,12 @@ html {
     font-weight: bold;
   }
   
+  #bandcamp-plug {
+    width: 80%;
+    padding-inline: 15px;
+    margin: auto;
+  }
+
   #bandcamp-button {
     padding-left: 21px;
   }
@@ -1079,7 +1085,7 @@ html {
       margin-left: 0;
     }
 
-    .vid-list-container {
+    .list-container {
       min-width: 100%;
     }
   
@@ -1204,6 +1210,10 @@ html {
       height: 120px;
       width: 100%;
       padding-bottom: 15px;
+    }
+
+    #bandcamp-plug {
+      width: 100%;
     }
   
     .blog-container {

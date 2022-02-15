@@ -9,6 +9,7 @@ const Music = () => {
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
 
   let mainBody = document.querySelector(".main-body")
+  let juniorBody = document.querySelector(".junior-body")
   let musicPage = elementBuilder("div", "music-page", mainBody);
   let musicHead = elementBuilder("h1", "music-page-head", musicPage);
   musicHead.textContent = `New Music`;
@@ -45,15 +46,10 @@ const Music = () => {
   
   let albumElementArray = albumBuilder(albumArray);
   
-  
-  let kofiDiv = document.getElementsByClassName("kofi-div")[0];
-  kofiDiv.classList.add("hidden");
-  
-  let bandcampArray = bandcampBuilder(Data.bandcamp);
-  
+  let bandcampArray = bandcampBuilder(Data.bandcamp, juniorBody);
   let bandCampDiv = document.getElementsByClassName("kofi-div")[0];
   bandCampDiv.style.order = 2;
-  let bandcampButton = document.getElementsByClassName("kofi-button")[1];
+  let bandcampButton = document.getElementsByClassName("kofi-button")[0];
   bandcampButton.setAttribute("id", "bandcamp-button");
   
 }

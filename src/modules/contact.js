@@ -1,7 +1,5 @@
 import '../style/contact.css'
-import { elementBuilder, tabSelect, removeExistingPage, titleChange } from './functions.js'
-import { ContactResponse } from './contact-response.js'
-import { Plugs } from './plug.js'
+import { elementBuilder } from './functions.js'
 
 const Contact = () => {
   let sideNavContainer = document.querySelector(".side-nav-container")

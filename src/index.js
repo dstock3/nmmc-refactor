@@ -132,34 +132,27 @@ const TabBuilder = (() => {
                 tabSelect(["home", "music", "podcast", "streams", "contact"]);
                 homelink.classList.remove("home-special")
                 titleChange("Videos | NMMC")
-
                 removeExistingPage(mainBody, juniorBody)
                 Videos()
-
                 break;
               case 'podcast':
                 tabSelect(["home", "videos", 'music', "streams", "contact"]);
                 homelink.classList.remove("home-special")
                 titleChange("Podcast | NMMC")
-
                 removeExistingPage(mainBody, juniorBody) 
                 Podcast()
                 Plugs(mainBody)
-
                 break;
               case 'music':
                 tabSelect(["home", "videos", "podcast", "streams", "contact"]);
                 titleChange("Music | NMMC")
-                
                 removeExistingPage(mainBody, juniorBody)
                 Music()
-
                 break;
               case 'streams':
                 tabSelect(["home", "videos", "podcast", "contact", "music"]);
                 homelink.classList.remove("home-special")
                 titleChange("Streams | NMMC")
-              
                 removeExistingPage(mainBody, juniorBody)
                 Streams()
                 break;
@@ -169,8 +162,9 @@ const TabBuilder = (() => {
                 titleChange("Contact | NMMC")
               
                 removeExistingPage(mainBody, juniorBody)
-                Plugs()
+                Plugs(juniorBody, true)
                 Contact()
+                
                 break;
             }
         });

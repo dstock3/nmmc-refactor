@@ -234,8 +234,8 @@ function elementBuilder(elType, className, parent) {
   }
   
   function bandcampBuilder(newBandcampData, parent) {
-    let patreonPlug = document.querySelector(".patreon")
     let bandcampDiv = elementBuilder("div", "kofi-div", parent);
+    bandcampDiv.id = "bandcamp-plug"
     let bandcampHead = elementBuilder("h2", "kofi-head", bandcampDiv);
     bandcampHead.textContent = newBandcampData.lede;
     let bandcampPlugDiv = elementBuilder("div", "kofi-plug-div", bandcampDiv);

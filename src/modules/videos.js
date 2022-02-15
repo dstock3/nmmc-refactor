@@ -22,6 +22,8 @@ const Videos = () => {
     vidListArray[i].vidListItem.addEventListener("click", function switchVids(){
       document.getElementsByClassName("video-container")[0].remove()
       let vidElements = videoBuilder(vidListArray[i].vidObj)
+      let plugElement = document.querySelector(".plug-container")
+      mainBody.insertBefore(vidElements[0], plugElement);
       vidElements[0].classList.add("video-page")
       vidElements[4].classList.add("video");
     })
