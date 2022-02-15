@@ -1,23 +1,40 @@
-import { elementBuilder, musicBuilder, albumBuilder, bandcampBuilder } from "./functions";
+import { elementBuilder, musicBuilder, iframeHelper, albumBuilder, bandcampBuilder } from "./functions";
 import Data from '../data/data.json5'
 import { musicArray } from "../data/tracks.js";
 
 const Music = () => {
   let homelink = document.querySelector(".home-link")
-  homelink.classList.add("home-special");
 
   let sideNavContainer = document.querySelector(".side-nav-container")
-  sideNavContainer.setAttribute("id", "side-nav-music");
+  sideNavContainer.setAttribute("id", "side-nav-unfixed");
 
-  const mainBody = document.querySelector(".main-body")
-  const musicPage = elementBuilder("div", "music-page", mainBody);
-  const musicHead = elementBuilder("h1", "music-page-head", musicPage);
-  musicHead.textContent = `Freshest Tracks`;
+  let mainBody = document.querySelector(".main-body")
+  let musicPage = elementBuilder("div", "music-page", mainBody);
+  let musicHead = elementBuilder("h1", "music-page-head", musicPage);
+  musicHead.textContent = `New Music`;
   
-  const musicElementArray = musicBuilder(musicArray, musicPage);
+  let musicElements = musicBuilder(musicArray, musicPage);
+  let musicElementArray = musicElements.musicElementArray
+  let trackListArray = musicElements.trackListArray
+
+  for (let i = 0; i < trackListArray.length; i++) {
+    trackListArray[i].trackListItem.addEventListener("click", function switchTracks(){
+      document.getElementsByClassName("music-container")[0].remove()
+      let newMusicContainer = elementBuilder("div", "music-container", musicPage);
+      let newTrackContainer = elementBuilder("div", "track-container", newMusicContainer);
+      let newMusic = iframeHelper(
+        newTrackContainer,
+        `new-music`,
+        trackListArray[i].trackObj.iframeRef
+      );
+      newMusic.setAttribute("id", `${trackListArray[i].trackObj.id}`);
+      newMusic.loading = "lazy";
+      newMusic.title = trackListArray[i].trackObj.track;
+    })
+  }
   
-  const albumHead = elementBuilder("h2", "album-head", mainBody);
-  const albumSection = elementBuilder("div", "album-section", mainBody);
+  let albumHead = elementBuilder("h2", "album-head", mainBody);
+  let albumSection = elementBuilder("div", "album-section", mainBody);
   
   albumHead.textContent = "Full Albums";
     
@@ -26,16 +43,17 @@ const Music = () => {
     albumArray.push(Data.albums[prop])
   }
   
-  const albumElementArray = albumBuilder(albumArray);
+  let albumElementArray = albumBuilder(albumArray);
   
-  const kofiDiv = document.getElementsByClassName("kofi-div")[0];
+  
+  let kofiDiv = document.getElementsByClassName("kofi-div")[0];
   kofiDiv.classList.add("hidden");
   
-  const bandcampArray = bandcampBuilder(Data.bandcamp);
+  let bandcampArray = bandcampBuilder(Data.bandcamp);
   
-  const bandCampDiv = document.getElementsByClassName("kofi-div")[0];
+  let bandCampDiv = document.getElementsByClassName("kofi-div")[0];
   bandCampDiv.style.order = 2;
-  const bandcampButton = document.getElementsByClassName("kofi-button")[1];
+  let bandcampButton = document.getElementsByClassName("kofi-button")[1];
   bandcampButton.setAttribute("id", "bandcamp-button");
   
 }

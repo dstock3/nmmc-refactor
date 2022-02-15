@@ -144,16 +144,15 @@ const TabBuilder = (() => {
 
                 removeExistingPage(mainBody, juniorBody) 
                 Podcast()
+
                 break;
               case 'music':
                 tabSelect(["home", "videos", "podcast", "streams", "contact"]);
                 titleChange("Music | NMMC")
                 
                 removeExistingPage(mainBody, juniorBody)
-                
-                
                 Music()
-                Plugs()
+
                 break;
               case 'streams':
                 tabSelect(["home", "videos", "podcast", "contact", "music"]);

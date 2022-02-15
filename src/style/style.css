@@ -298,6 +298,7 @@ html {
 
   .music-page .music-container {
     padding-bottom: 0px;
+    width: 85%;
   
     -webkit-padding-after: 0px;
   }

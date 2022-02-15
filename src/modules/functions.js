@@ -85,7 +85,6 @@ function elementBuilder(elType, className, parent) {
         videoElements.push(video);
         video.classList.add("video");
         videoElementsArray.push(videoElements);
-
       } else {
         let vidListItem = elementBuilder("li", "item", vidList)
         vidListItem.textContent = videoArray[i].title
@@ -167,23 +166,37 @@ function elementBuilder(elType, className, parent) {
       }
       return musicElementArray;
     } else {
+      let juniorBody = document.querySelector(".junior-body")
+      let musicListContainer = elementBuilder("div", "list-container", juniorBody)
+      let musicHead = elementBuilder("h4", "list-head", musicListContainer)
+      musicHead.textContent = "Recent Tracks"
+      let trackList = elementBuilder("ul", "list", musicListContainer)
+      let trackListArray = []
+
       for (let i = 0; i < newMusicArray.length; i++) {
-        let musicElements = [];
-        let musicPage = elementBuilder("div", "music-container", parent);
-        let newMusicContainer = elementBuilder("div", "track-container", musicPage);
-        musicElements.push(newMusicContainer);
-        let newMusic = iframeHelper(
-          newMusicContainer,
-          `new-music`,
-          newMusicArray[i].iframeRef
-        );
-        newMusic.setAttribute("id", `${newMusicArray[i].id}`);
-        newMusic.loading = "lazy";
-        newMusic.title = newMusicArray[i].track;
-        musicElements.push(newMusic);
-        musicElementArray.push(musicElements);
+        if (i === 0) {
+          let musicElements = [];
+          let musicPage = elementBuilder("div", "music-container", parent);
+          let newMusicContainer = elementBuilder("div", "track-container", musicPage);
+          musicElements.push(newMusicContainer);
+          let newMusic = iframeHelper(
+            newMusicContainer,
+            `new-music`,
+            newMusicArray[i].iframeRef
+          );
+          newMusic.setAttribute("id", `${newMusicArray[i].id}`);
+          newMusic.loading = "lazy";
+          newMusic.title = newMusicArray[i].track;
+          musicElements.push(newMusic);
+          musicElementArray.push(musicElements);
+        } else {
+          let trackListItem = elementBuilder("li", "item", trackList)
+          trackListItem.textContent = newMusicArray[i].track
+          let trackObj = newMusicArray[i]
+          trackListArray.push({trackListItem, trackObj})
+        }
       }
-      return musicElementArray;
+      return { musicElementArray, trackListArray};
     }
 
   }
