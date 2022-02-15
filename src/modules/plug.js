@@ -9,7 +9,9 @@ const Plugs = (parent) => {
         myTiers.push(Data.plugs[prop])
     }
 
-    let patreonPlug = elementBuilder("div", "patreon", parent);
+    let plugContainer = elementBuilder("div", "plug-container", parent)
+
+    let patreonPlug = elementBuilder("div", "patreon", plugContainer);
     let patreonHead = elementBuilder("h2", "patreon-head", patreonPlug);
     
     let tabDiv = elementBuilder("div", "tab-div", patreonPlug);
@@ -122,7 +124,7 @@ const Plugs = (parent) => {
       buttonLink: `https://ko-fi.com/A0A260RL`,
     };
     
-    let koFiArray = koFiBuilder(koFi);
+    let koFiArray = koFiBuilder(koFi, plugContainer);
 
 }
 export { Plugs }

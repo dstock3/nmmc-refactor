@@ -150,7 +150,6 @@ html {
   }
   
   .nav-anchor {
-    font-size: 1.5em;
     text-decoration: none;
     color: #07aaf3;
     padding: 5px;
@@ -194,7 +193,7 @@ html {
   .side-nav-li {
     padding-left: 5%;
     padding-top: 15%;
-    font-size: 1rem;
+    font-size: 1.5em;
   }
   
   .playlist-button {
@@ -732,6 +731,14 @@ html {
   }
   
   /* Patreon Plug */
+
+  .plug-container {
+    margin-top: 25px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+
+  }
   
   .patreon {
     min-width: 350px;
@@ -744,8 +751,6 @@ html {
   
     border-radius: 5px;
     -webkit-border-radius: 5px;
-    padding-left: 5%;
-    -webkit-padding-start: 5%;
   }
   
   .patreon-head {
@@ -899,8 +904,7 @@ html {
   
   .kofi-div {
     order: 1;
-    min-width: 350px;
-    max-width: 100%;
+    width: 45%;
   }
   
   .kofi-head {
@@ -1071,10 +1075,6 @@ html {
       left: 0;
     }
   
-    .patreon {
-      right: 1.75%;
-    }
-
     .vid-page {
       margin-left: 0;
     }
@@ -1094,10 +1094,18 @@ html {
   }
   
   @media (max-width: 900px) {
+    .list-container {
+      width: 100%;
+    }
+
+    .plug-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .patreon {
       min-width: 450px;
       position: relative;
-      margin: auto;
     }
   
     .link-nav {
@@ -1316,20 +1324,24 @@ html {
     .a-container {
       width: 100%;
     }
+
+    .plug-container {
+      width: 100%;
+    }
   
     .patreon {
-      right: 0;
-      min-width: 320px;
+      min-width: 100%;
+    }
+
+    .kofi-div {
+      min-width: 100%;
+
     }
   
     .tab {
       padding: 7px;
     }
-  
-    .kofi-div {
-      min-width: 70%;
-    }
-  
+    
     #main-head {
       font-size: 1.5em;
     }

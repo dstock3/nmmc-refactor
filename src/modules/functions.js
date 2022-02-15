@@ -233,9 +233,9 @@ function elementBuilder(elType, className, parent) {
     return albumElementArray;
   }
   
-  function bandcampBuilder(newBandcampData) {
+  function bandcampBuilder(newBandcampData, parent) {
     let patreonPlug = document.querySelector(".patreon")
-    let bandcampDiv = elementBuilder("div", "kofi-div", patreonPlug);
+    let bandcampDiv = elementBuilder("div", "kofi-div", parent);
     let bandcampHead = elementBuilder("h2", "kofi-head", bandcampDiv);
     bandcampHead.textContent = newBandcampData.lede;
     let bandcampPlugDiv = elementBuilder("div", "kofi-plug-div", bandcampDiv);
@@ -301,9 +301,9 @@ function elementBuilder(elType, className, parent) {
     return patreonPlugArray;
   }
   
-  function koFiBuilder(koFiData) {
+  function koFiBuilder(koFiData, parent) {
     let patreonPlug = document.querySelector(".patreon")
-    let koFiDiv = elementBuilder("div", "kofi-div", patreonPlug);
+    let koFiDiv = elementBuilder("div", "kofi-div", parent);
     let koFiHead = elementBuilder("h2", "kofi-head", koFiDiv);
     koFiHead.textContent = koFiData.lede;
     let koFiPlugDiv = elementBuilder("div", "kofi-plug-div", koFiDiv);

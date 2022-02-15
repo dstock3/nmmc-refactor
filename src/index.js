@@ -144,6 +144,7 @@ const TabBuilder = (() => {
 
                 removeExistingPage(mainBody, juniorBody) 
                 Podcast()
+                Plugs(mainBody)
 
                 break;
               case 'music':

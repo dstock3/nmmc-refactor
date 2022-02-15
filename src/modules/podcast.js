@@ -22,6 +22,8 @@ const Podcast = () => {
     podItems[i].podItem.addEventListener("click", function switchVids(){
       document.getElementsByClassName("pod-container")[0].remove()
       let podElements = podBuilder(podItems[i].podObj, mainBody)
+      let plugElement = document.querySelector(".plug-container")
+      mainBody.insertBefore(podElements[0], plugElement);
       podElements[0].classList.add("pod-page")
       podElements[3].classList.add("podcast")
 
