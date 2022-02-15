@@ -72,10 +72,10 @@ function elementBuilder(elType, className, parent) {
     let videoElementsArray = [];
     let juniorBody = document.querySelector(".junior-body")
     juniorBody.classList.add("vid-page")
-    let vidListContainer = elementBuilder("div", "vid-list-container", juniorBody)
-    let vidListHead = elementBuilder("h4", "vid-list-head", vidListContainer)
+    let vidListContainer = elementBuilder("div", "list-container", juniorBody)
+    let vidListHead = elementBuilder("h4", "list-head", vidListContainer)
     vidListHead.textContent = "Recent Vids"
-    let vidList = elementBuilder("ul", "vid-list", vidListContainer)
+    let vidList = elementBuilder("ul", "list", vidListContainer)
     let vidListArray = []
 
     for (let i = 0; i < videoArray.length; i++) {
@@ -87,7 +87,7 @@ function elementBuilder(elType, className, parent) {
         videoElementsArray.push(videoElements);
 
       } else {
-        let vidListItem = elementBuilder("li", "vid-list-item", vidList)
+        let vidListItem = elementBuilder("li", "item", vidList)
         vidListItem.textContent = videoArray[i].title
         let vidObj = videoArray[i]
         vidListArray.push({vidListItem, vidObj})
@@ -122,11 +122,27 @@ function elementBuilder(elType, className, parent) {
   
   function podListBuilder(myPodArray, parent) {
     let podElementsArray = [];
+    let juniorBody = document.querySelector(".junior-body")
+    let podListContainer = elementBuilder("div", "list-container", juniorBody)
+    let podListHead = elementBuilder("h4", "list-head", podListContainer)
+    podListHead.textContent = "Recent Episodes"
+    let podList = elementBuilder("ul", "list", podListContainer)
+    let podItems = []
     for (let i = 0; i < myPodArray.length; i++) {
-      let podElements = podBuilder(myPodArray[i], parent);
-      podElementsArray.push(podElements);
+      if (i === 0) {
+        let podElements = podBuilder(myPodArray[i], parent);
+        podElementsArray.push(podElements);
+
+      } else {
+        let podItem = elementBuilder("li", "item", podList)
+        podItem.textContent = myPodArray[i].title
+        let podObj = myPodArray[i]
+        podItems.push({podItem, podObj})
+
+      }
+
     }
-    return podElementsArray;
+    return {podElementsArray, podItems};
   }
   
   // for music

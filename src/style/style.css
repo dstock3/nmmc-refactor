@@ -585,14 +585,14 @@ html {
     margin-left: 5%;
   }
 
-  .vid-list-head {
+  .list-head {
     margin-top: 15px;
     text-align: center;
     font-weight: bold;
   }
   
 
-  .vid-list-container {
+  .list-container {
     border: 3px solid #07aaf3;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -601,16 +601,17 @@ html {
     padding-bottom: 15px;
     min-width: 30%;
     margin-bottom: 25px;
+    font-style:
   }
 
-  .vid-list {
+  .list {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  .vid-list-item {
+  .item {
     width: fit-content;
     margin-bottom: 5px;
     padding: 5px;
@@ -618,7 +619,7 @@ html {
     cursor: pointer;
   }
 
-  .vid-list-item:hover {
+  .item:hover {
     background-color: #a0dcf8;
     color: black;
 

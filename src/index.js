@@ -144,7 +144,6 @@ const TabBuilder = (() => {
 
                 removeExistingPage(mainBody, juniorBody) 
                 Podcast()
-                Plugs()
                 break;
               case 'music':
                 tabSelect(["home", "videos", "podcast", "streams", "contact"]);
