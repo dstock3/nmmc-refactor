@@ -331,6 +331,11 @@
       track: "It's Okay, Doomer",
       id: "its-okay-doomer",
       iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:2590734630/size:large/bgcol:333333/linkcol:0687f5/tracklist:false/artwork:small/transparent:true/",
+    },
+    musicTen: {
+      track: "Nightmare Tonight Theme",
+      id: "nightmare-tonight-theme",
+      iframeRef: "https://bandcamp.com/EmbeddedPlayer/track:760481419/size:large/bgcol:333333/linkcol:0687f5/tracklist:false/artwork:small/transparent:true/",
     }
   },
   albums: {

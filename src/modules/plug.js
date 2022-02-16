@@ -3,13 +3,15 @@ import Data from '../data/data.json5'
 
 /* Patreon Plug */
 
-const Plugs = () => {
+const Plugs = (parent, contact=false) => {
     let myTiers = []
     for (let prop in Data.plugs) {
         myTiers.push(Data.plugs[prop])
     }
-    let juniorBody = document.querySelector(".junior-body")
-    let patreonPlug = elementBuilder("div", "patreon", juniorBody);
+
+    let plugContainer = elementBuilder("div", "plug-container", parent)
+
+    let patreonPlug = elementBuilder("div", "patreon", plugContainer);
     let patreonHead = elementBuilder("h2", "patreon-head", patreonPlug);
     
     let tabDiv = elementBuilder("div", "tab-div", patreonPlug);
@@ -114,15 +116,15 @@ const Plugs = () => {
     patreonHead.textContent = "Support Me on Patreon";
     
     /* Ko-Fi Plug */
-    
-    const koFi = {
-      lede: "Buy Me a Coffee!",
-      copy: `If you find value in my content and want to throw me a few bucks, buy me a coffee at Ko-Fi!`,
-      buttonCopy: "Support Me",
-      buttonLink: `https://ko-fi.com/A0A260RL`,
-    };
-    
-    let koFiArray = koFiBuilder(koFi);
-
+    if (!contact) {
+      const koFi = {
+        lede: "Buy Me a Coffee!",
+        copy: `If you find value in my content and want to throw me a few bucks, buy me a coffee at Ko-Fi!`,
+        buttonCopy: "Support Me",
+        buttonLink: `https://ko-fi.com/A0A260RL`,
+      };
+      
+      let koFiArray = koFiBuilder(koFi, plugContainer);
+    } 
 }
 export { Plugs }

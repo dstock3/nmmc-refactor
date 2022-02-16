@@ -150,7 +150,6 @@ html {
   }
   
   .nav-anchor {
-    font-size: 1.5em;
     text-decoration: none;
     color: #07aaf3;
     padding: 5px;
@@ -194,7 +193,7 @@ html {
   .side-nav-li {
     padding-left: 5%;
     padding-top: 15%;
-    font-size: 1rem;
+    font-size: 1.5em;
   }
   
   .playlist-button {
@@ -298,6 +297,7 @@ html {
 
   .music-page .music-container {
     padding-bottom: 0px;
+    width: 85%;
   
     -webkit-padding-after: 0px;
   }
@@ -580,6 +580,50 @@ html {
   .vid-page-head {
     padding-bottom: 15px;
   }
+
+  .vid-page {
+    margin-left: 5%;
+  }
+
+  .list-head {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+
+  .list-container {
+    border: 3px solid #07aaf3;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    height: fit-content;
+    padding-inline: 15px;
+    padding-bottom: 15px;
+    min-width: 30%;
+    margin-bottom: 25px;
+    font-style:
+  }
+
+  .list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .item {
+    width: fit-content;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .item:hover {
+    background-color: #a0dcf8;
+    color: black;
+
+  }
   
   .pod-page {
     width: 85%;
@@ -687,9 +731,16 @@ html {
   }
   
   /* Patreon Plug */
+
+  .plug-container {
+    margin-top: 25px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+
+  }
   
   .patreon {
-    position: fixed;
     min-width: 350px;
     max-width: 25%;
     display: flex;
@@ -700,8 +751,6 @@ html {
   
     border-radius: 5px;
     -webkit-border-radius: 5px;
-    padding-left: 5%;
-    -webkit-padding-start: 5%;
   }
   
   .patreon-head {
@@ -855,8 +904,7 @@ html {
   
   .kofi-div {
     order: 1;
-    min-width: 350px;
-    max-width: 100%;
+    width: 45%;
   }
   
   .kofi-head {
@@ -905,6 +953,12 @@ html {
     font-weight: bold;
   }
   
+  #bandcamp-plug {
+    width: 80%;
+    padding-inline: 15px;
+    margin: auto;
+  }
+
   #bandcamp-button {
     padding-left: 21px;
   }
@@ -1027,8 +1081,12 @@ html {
       left: 0;
     }
   
-    .patreon {
-      right: 1.75%;
+    .vid-page {
+      margin-left: 0;
+    }
+
+    .list-container {
+      min-width: 100%;
     }
   
     .foot-image {
@@ -1042,10 +1100,18 @@ html {
   }
   
   @media (max-width: 900px) {
+    .list-container {
+      width: 100%;
+    }
+
+    .plug-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .patreon {
       min-width: 450px;
       position: relative;
-      margin: auto;
     }
   
     .link-nav {
@@ -1144,6 +1210,10 @@ html {
       height: 120px;
       width: 100%;
       padding-bottom: 15px;
+    }
+
+    #bandcamp-plug {
+      width: 100%;
     }
   
     .blog-container {
@@ -1264,20 +1334,24 @@ html {
     .a-container {
       width: 100%;
     }
+
+    .plug-container {
+      width: 100%;
+    }
   
     .patreon {
-      right: 0;
-      min-width: 320px;
+      min-width: 100%;
+    }
+
+    .kofi-div {
+      min-width: 100%;
+
     }
   
     .tab {
       padding: 7px;
     }
-  
-    .kofi-div {
-      min-width: 70%;
-    }
-  
+    
     #main-head {
       font-size: 1.5em;
     }

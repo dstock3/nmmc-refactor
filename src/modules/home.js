@@ -37,9 +37,7 @@ const Home = () => {
     tabSelect(["music", "podcast", "streams", "contact"]);
 
     removeExistingPage(mainBody, juniorBody) 
-    Plugs()
     Videos()
-
   })
   
   /* Podcast Section */
@@ -62,7 +60,6 @@ const Home = () => {
     tabSelect(["videos", 'music', "streams", "contact"]);
 
     removeExistingPage(mainBody, juniorBody) 
-    Plugs()
     Podcast()
   })
 
@@ -85,8 +82,8 @@ const Home = () => {
     tabSelect(["videos", "podcast", "streams", "contact"]);
                 
     removeExistingPage(mainBody, juniorBody)
-    Plugs() 
     Music()
+    Plugs() 
   })
   
 

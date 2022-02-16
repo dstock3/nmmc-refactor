@@ -76,6 +76,12 @@ const instrumentality = {
     id: `its-okay-doomer`,
     iframeRef: `https://bandcamp.com/EmbeddedPlayer/track=2590734630/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/`,
   };
+
+  const musicTen = {
+    track: "Nightmare Tonight Theme",
+    id: "nightmare-tonight-theme",
+    iframeRef: "https://bandcamp.com/EmbeddedPlayer/track=760481419/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/",
+  }
   
   const musicArray = [
     instrumentality,
@@ -90,6 +96,7 @@ const instrumentality = {
     musicSix,
     musicEight,
     musicNine,
+    musicTen
   ];
 
   export { musicArray }

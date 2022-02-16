@@ -63,20 +63,36 @@ function elementBuilder(elType, className, parent) {
       newVideoHead,
       newVideoDescription,
       vidDiv,
+      vidDiv.firstChild
     ];
     return videoElements;
   }
   
   function videoArrayHandler(videoArray) {
     let videoElementsArray = [];
+    let juniorBody = document.querySelector(".junior-body")
+    juniorBody.classList.add("vid-page")
+    let vidListContainer = elementBuilder("div", "list-container", juniorBody)
+    let vidListHead = elementBuilder("h4", "list-head", vidListContainer)
+    vidListHead.textContent = "Recent Vids"
+    let vidList = elementBuilder("ul", "list", vidListContainer)
+    let vidListArray = []
+
     for (let i = 0; i < videoArray.length; i++) {
-      let videoElements = videoBuilder(videoArray[i]);
-      let video = document.getElementsByTagName("iframe")[i];
-      videoElements.push(video);
-      video.classList.add("video");
-      videoElementsArray.push(videoElements);
+      if (i === 0) {
+        let videoElements = videoBuilder(videoArray[i]);
+        let video = document.getElementsByTagName("iframe")[i];
+        videoElements.push(video);
+        video.classList.add("video");
+        videoElementsArray.push(videoElements);
+      } else {
+        let vidListItem = elementBuilder("li", "item", vidList)
+        vidListItem.textContent = videoArray[i].title
+        let vidObj = videoArray[i]
+        vidListArray.push({vidListItem, vidObj})
+      }
     }
-    return videoElementsArray;
+    return { videoElementsArray, vidListArray }
   }
   
   // for pods
@@ -105,11 +121,27 @@ function elementBuilder(elType, className, parent) {
   
   function podListBuilder(myPodArray, parent) {
     let podElementsArray = [];
+    let juniorBody = document.querySelector(".junior-body")
+    let podListContainer = elementBuilder("div", "list-container", juniorBody)
+    let podListHead = elementBuilder("h4", "list-head", podListContainer)
+    podListHead.textContent = "Recent Episodes"
+    let podList = elementBuilder("ul", "list", podListContainer)
+    let podItems = []
     for (let i = 0; i < myPodArray.length; i++) {
-      let podElements = podBuilder(myPodArray[i], parent);
-      podElementsArray.push(podElements);
+      if (i === 0) {
+        let podElements = podBuilder(myPodArray[i], parent);
+        podElementsArray.push(podElements);
+
+      } else {
+        let podItem = elementBuilder("li", "item", podList)
+        podItem.textContent = myPodArray[i].title
+        let podObj = myPodArray[i]
+        podItems.push({podItem, podObj})
+
+      }
+
     }
-    return podElementsArray;
+    return {podElementsArray, podItems};
   }
   
   // for music
@@ -134,23 +166,37 @@ function elementBuilder(elType, className, parent) {
       }
       return musicElementArray;
     } else {
+      let juniorBody = document.querySelector(".junior-body")
+      let musicListContainer = elementBuilder("div", "list-container", juniorBody)
+      let musicHead = elementBuilder("h4", "list-head", musicListContainer)
+      musicHead.textContent = "Recent Tracks"
+      let trackList = elementBuilder("ul", "list", musicListContainer)
+      let trackListArray = []
+
       for (let i = 0; i < newMusicArray.length; i++) {
-        let musicElements = [];
-        let musicPage = elementBuilder("div", "music-container", parent);
-        let newMusicContainer = elementBuilder("div", "track-container", musicPage);
-        musicElements.push(newMusicContainer);
-        let newMusic = iframeHelper(
-          newMusicContainer,
-          `new-music`,
-          newMusicArray[i].iframeRef
-        );
-        newMusic.setAttribute("id", `${newMusicArray[i].id}`);
-        newMusic.loading = "lazy";
-        newMusic.title = newMusicArray[i].track;
-        musicElements.push(newMusic);
-        musicElementArray.push(musicElements);
+        if (i === 0) {
+          let musicElements = [];
+          let musicPage = elementBuilder("div", "music-container", parent);
+          let newMusicContainer = elementBuilder("div", "track-container", musicPage);
+          musicElements.push(newMusicContainer);
+          let newMusic = iframeHelper(
+            newMusicContainer,
+            `new-music`,
+            newMusicArray[i].iframeRef
+          );
+          newMusic.setAttribute("id", `${newMusicArray[i].id}`);
+          newMusic.loading = "lazy";
+          newMusic.title = newMusicArray[i].track;
+          musicElements.push(newMusic);
+          musicElementArray.push(musicElements);
+        } else {
+          let trackListItem = elementBuilder("li", "item", trackList)
+          trackListItem.textContent = newMusicArray[i].track
+          let trackObj = newMusicArray[i]
+          trackListArray.push({trackListItem, trackObj})
+        }
       }
-      return musicElementArray;
+      return { musicElementArray, trackListArray};
     }
 
   }
@@ -187,9 +233,9 @@ function elementBuilder(elType, className, parent) {
     return albumElementArray;
   }
   
-  function bandcampBuilder(newBandcampData) {
-    let patreonPlug = document.querySelector(".patreon")
-    let bandcampDiv = elementBuilder("div", "kofi-div", patreonPlug);
+  function bandcampBuilder(newBandcampData, parent) {
+    let bandcampDiv = elementBuilder("div", "kofi-div", parent);
+    bandcampDiv.id = "bandcamp-plug"
     let bandcampHead = elementBuilder("h2", "kofi-head", bandcampDiv);
     bandcampHead.textContent = newBandcampData.lede;
     let bandcampPlugDiv = elementBuilder("div", "kofi-plug-div", bandcampDiv);
@@ -255,9 +301,9 @@ function elementBuilder(elType, className, parent) {
     return patreonPlugArray;
   }
   
-  function koFiBuilder(koFiData) {
+  function koFiBuilder(koFiData, parent) {
     let patreonPlug = document.querySelector(".patreon")
-    let koFiDiv = elementBuilder("div", "kofi-div", patreonPlug);
+    let koFiDiv = elementBuilder("div", "kofi-div", parent);
     let koFiHead = elementBuilder("h2", "kofi-head", koFiDiv);
     koFiHead.textContent = koFiData.lede;
     let koFiPlugDiv = elementBuilder("div", "kofi-plug-div", koFiDiv);
