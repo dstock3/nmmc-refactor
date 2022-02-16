@@ -33,31 +33,31 @@
   playlist: {
     petscopPlaylist: {
       name: "The Petscop Investigation",
-      link: "https://www.youtube.com/watch?v:Crvn5-LOUFA&list:PL66V-u4b7Z8BkYl59qLV5-6N3FkxTG0Pw",
+      link: "https://www.youtube.com/watch?v=Crvn5-LOUFA&list:PL66V-u4b7Z8BkYl59qLV5-6N3FkxTG0Pw",
     },
     recentAnalysisPlaylist: {
       name: "Recent Analysis Vids",
-      link: "https://www.youtube.com/watch?v:vny8mR9AqN0&list:PL66V-u4b7Z8BdTuMdwhazUMFUcn9g8KWX",
+      link: "https://www.youtube.com/watch?v=vny8mR9AqN0&list:PL66V-u4b7Z8BdTuMdwhazUMFUcn9g8KWX",
     },
     theoryPlaylist: {
       name: "Theory",
-      link: "https://www.youtube.com/watch?v:usmyyHxO6Fo&list:PL66V-u4b7Z8DlzVfXLyKHfG34tuDI5Ohl",
+      link: "https://www.youtube.com/watch?v=usmyyHxO6Fo&list:PL66V-u4b7Z8DlzVfXLyKHfG34tuDI5Ohl",
     },
     criticismPlaylist: {
       name: "Criticism",
-      link: "https://www.youtube.com/watch?v:Jg5_Q5opuRY&list:PL66V-u4b7Z8DgHIPLhilRSuDuAzpcuLsd",
+      link: "https://www.youtube.com/watch?v=Jg5_Q5opuRY&list:PL66V-u4b7Z8DgHIPLhilRSuDuAzpcuLsd",
     },
     podcastPlaylist: {
       name: "Nightmare Tonight",
-      link: "https://www.youtube.com/watch?v:fz1XgHpTk1U&list:PL66V-u4b7Z8A-GBlwAoZwPYaWL_tXWisf",
+      link: "https://www.youtube.com/watch?v=fz1XgHpTk1U&list:PL66V-u4b7Z8A-GBlwAoZwPYaWL_tXWisf",
     },
     dhmisPlaylist: {
       name: "DHMIS Critical Approaches",
-      link: "https://www.youtube.com/watch?v:X0LHtXVQo5o&list:PL66V-u4b7Z8Ar5xKspcwaq7r_uFlvWDs6",
+      link: "https://www.youtube.com/watch?v=X0LHtXVQo5o&list:PL66V-u4b7Z8Ar5xKspcwaq7r_uFlvWDs6",
     },
     diminishPlaylist: {
       name: "Exploring Diminish",
-      link: "https://www.youtube.com/watch?v:A3WT0cqx4pg&list:PL8aKnJJbVcbSmiAHMYM3TMqMaTzNk1tu9",
+      link: "https://www.youtube.com/watch?v=A3WT0cqx4pg&list:PL8aKnJJbVcbSmiAHMYM3TMqMaTzNk1tu9",
     },
   },
   announcements: {

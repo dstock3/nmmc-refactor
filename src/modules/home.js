@@ -56,11 +56,12 @@ const Home = () => {
   const podAnchor = elementBuilder("div", "vid-link", morePods);
   podAnchor.textContent = "More Pods >";
 
-  podAnchor.addEventListener("click", function goVid() {
+  podAnchor.addEventListener("click", function goPod() {
     tabSelect(["videos", 'music', "streams", "contact"]);
 
     removeExistingPage(mainBody, juniorBody) 
     Podcast()
+    Plugs(mainBody)
   })
 
   
@@ -78,7 +79,7 @@ const Home = () => {
   const musicAnchor = elementBuilder("div", "music-link", moreMusic);
   musicAnchor.textContent = "More Music >";
 
-  musicAnchor.addEventListener("click", function goVid() {
+  musicAnchor.addEventListener("click", function goMusic() {
     tabSelect(["videos", "podcast", "streams", "contact"]);
                 
     removeExistingPage(mainBody, juniorBody)
