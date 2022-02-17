@@ -2,6 +2,7 @@ import { elementBuilder, podBuilder, podListBuilder } from "./functions";
 import Data from '../data/data.json5'
 
 const Podcast = () => {
+  let media = window.matchMedia("(max-width: 900px)")
   let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
 
@@ -14,7 +15,7 @@ const Podcast = () => {
     podArray.push(Data.pods[prop])
   }
   
-  let podElementsArray = podListBuilder(podArray, mainBody);
+  let podElementsArray = podListBuilder(podArray, mainBody, media);
 
   let podItems = podElementsArray.podItems
 

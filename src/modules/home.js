@@ -7,6 +7,7 @@ import Data from '../data/data.json5'
 import { musicArray } from '../data/tracks.js'
 
 const Home = () => {
+  let media = window.matchMedia("(max-width: 900px)")
   let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
 
@@ -73,7 +74,7 @@ const Home = () => {
   musicHead.textContent = `Freshest Tracks`;
   const newArray = [musicArray[0]];
   
-  musicBuilder(newArray, musicPage, true);
+  musicBuilder(newArray, musicPage, media, true);
   
   const moreMusic = elementBuilder("button", "music-button", musicPage);
   const musicAnchor = elementBuilder("div", "music-link", moreMusic);

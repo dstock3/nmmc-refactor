@@ -3,6 +3,7 @@ import Data from '../data/data.json5'
 import { musicArray } from "../data/tracks.js";
 
 const Music = () => {
+  let media = window.matchMedia("(max-width: 900px)")
   let homelink = document.querySelector(".home-link")
 
   let sideNavContainer = document.querySelector(".side-nav-container")
@@ -14,7 +15,7 @@ const Music = () => {
   let musicHead = elementBuilder("h1", "music-page-head", musicPage);
   musicHead.textContent = `New Music`;
   
-  let musicElements = musicBuilder(musicArray, musicPage);
+  let musicElements = musicBuilder(musicArray, musicPage, media);
   let musicElementArray = musicElements.musicElementArray
   let trackListArray = musicElements.trackListArray
 

@@ -68,11 +68,23 @@ function elementBuilder(elType, className, parent) {
     return videoElements;
   }
   
-  function videoArrayHandler(videoArray) {
+  function videoArrayHandler(videoArray, media) {
     let videoElementsArray = [];
-    let juniorBody = document.querySelector(".junior-body")
-    juniorBody.classList.add("vid-page")
-    let vidListContainer = elementBuilder("div", "list-container", juniorBody)
+
+    let listParent
+    let vidListContainer
+    if (media.matches) {
+      listParent = document.querySelector(".main-body")
+      vidListContainer = document.createElement("div");
+      vidListContainer.classList.add("list-container")
+      vidListContainer.id =  "mobile-list"
+      listParent.insertBefore(vidListContainer, document.querySelector(".video-container"));
+    } else {
+      listParent = document.querySelector(".junior-body")
+      listParent.classList.add("vid-page")
+      vidListContainer = elementBuilder("div", "list-container", listParent)
+    }
+
     let vidListHead = elementBuilder("h4", "list-head", vidListContainer)
     vidListHead.textContent = "Recent Vids"
     let vidList = elementBuilder("ul", "list", vidListContainer)
@@ -123,14 +135,27 @@ function elementBuilder(elType, className, parent) {
     return podElements;
   }
   
-  function podListBuilder(myPodArray, parent) {
+  function podListBuilder(myPodArray, parent, media) {
     let podElementsArray = [];
     let juniorBody = document.querySelector(".junior-body")
-    let podListContainer = elementBuilder("div", "list-container", juniorBody)
+
+    let listParent
+    let podListContainer
+    if (media.matches) {
+      listParent = parent
+      podListContainer = document.createElement("div");
+      podListContainer.classList.add("list-container")
+      podListContainer.id =  "mobile-list"
+      listParent.insertBefore(podListContainer, document.querySelector(".pod-container"));
+    } else {
+      podListContainer = elementBuilder("div", "list-container", juniorBody)
+    }
+
     let podListHead = elementBuilder("h4", "list-head", podListContainer)
     podListHead.textContent = "Recent Episodes"
     let podList = elementBuilder("ul", "list", podListContainer)
     let podItems = []
+
     for (let i = 0; i < myPodArray.length; i++) {
       if (i === 0) {
         let podElements = podBuilder(myPodArray[i], parent);
@@ -154,7 +179,7 @@ function elementBuilder(elType, className, parent) {
   
   // for music
   
-  function musicBuilder(newMusicArray, parent, home=false) {
+  function musicBuilder(newMusicArray, parent, media, home=false) {
     let musicElementArray = [];
     if (home) {
       for (let i = 0; i < newMusicArray.length; i++) {
@@ -175,7 +200,20 @@ function elementBuilder(elType, className, parent) {
       return musicElementArray;
     } else {
       let juniorBody = document.querySelector(".junior-body")
-      let musicListContainer = elementBuilder("div", "list-container", juniorBody)
+
+      let musicListContainer
+      let listParent
+      if (media.matches) {
+        listParent = document.querySelector(".main-body")
+        musicListContainer = document.createElement("div");
+        musicListContainer.classList.add("list-container")
+        musicListContainer.id =  "mobile-list"
+        document.querySelector(".music-page").insertBefore(musicListContainer, document.querySelector(".music-container"));
+      } else {
+        listParent = document.querySelector(".junior-body")
+        musicListContainer = elementBuilder("div", "list-container", listParent)
+      }
+
       let musicHead = elementBuilder("h4", "list-head", musicListContainer)
       musicHead.textContent = "Recent Tracks"
       let trackList = elementBuilder("ul", "list", musicListContainer)

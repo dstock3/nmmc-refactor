@@ -2,6 +2,7 @@ import { elementBuilder, videoBuilder, videoArrayHandler } from "./functions";
 import Data from '../data/data.json5'
 
 const Streams = () => {
+  let media = window.matchMedia("(max-width: 900px)")
   let sideNavContainer = document.querySelector(".side-nav-container")
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
   
@@ -14,7 +15,7 @@ const Streams = () => {
     streamArray.push(Data.live[prop])
   }
   
-  let videoElements = videoArrayHandler(streamArray);
+  let videoElements = videoArrayHandler(streamArray, media);
   let vidElementsArray = videoElements.videoElementsArray
   let vidListArray = videoElements.vidListArray
 
