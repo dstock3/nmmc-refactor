@@ -9,9 +9,9 @@ import { Streams } from './modules/streams.js'
 import { Videos } from './modules/videos.js'
 import { Contact } from './modules/contact.js'
 import { Plugs } from './modules/plug.js'
-import Logo from './assets/images/logo.png'
+import Logo from './assets/images/logo.webp'
 import Favicon from './assets/images/icons/favicon.png'
-import Play from './assets/images/icons/play.png'
+import Play from './assets/images/icons/play.webp'
 import { Footer } from './modules/footer';
 import { GBox } from './assets/vendors/glightbox.js'
 

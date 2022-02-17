@@ -1,8 +1,8 @@
 import {randomGenerator, randomImageGenerator} from '../modules/functions.js'
 import { quotes } from '../data/quotes.js'
-import Skull from '../assets/images/illustrations/skull.png'
-import Alien from '../assets/images/illustrations/ALIEN.png'
-import Television from '../assets/images/illustrations/TELEVISION.png'
+import Skull from '../assets/images/illustrations/skull.webp'
+import Alien from '../assets/images/illustrations/ALIEN.webp'
+import Television from '../assets/images/illustrations/TELEVISION.webp'
 
 const Footer = () => {
     const mainContainer = document.querySelector(".main-container")
