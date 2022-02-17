@@ -12,6 +12,7 @@ const Plugs = (parent, contact=false) => {
     }
 
     let plugContainer = elementBuilder("div", "plug-container", parent)
+    if (contact) { plugContainer.style = "width: 85%;"}
 
     let patreonPlug = elementBuilder("div", "patreon", plugContainer);
     let patreonHead = elementBuilder("h2", "patreon-head", patreonPlug);

@@ -51,10 +51,13 @@ function elementBuilder(elType, className, parent) {
       "video-para",
       newVideoContainer
     );
+    
     if (newVideoData.description === undefined) {
-      newVideoData.description = "";
+      newVideoDescription.remove()
+    } else {
+      newVideoDescription.innerHTML = newVideoData.description;
     }
-    newVideoDescription.innerHTML = newVideoData.description;
+    
     let vidDiv = elementBuilder("div", "vid-div", newVideoContainer);
     vidDiv.innerHTML = `<iframe src="${newVideoData.iframeRef}" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 

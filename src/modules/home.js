@@ -37,8 +37,11 @@ const Home = () => {
   vidAnchor.addEventListener("click", function goVid() {
     tabSelect(["music", "podcast", "streams", "contact"]);
 
-    removeExistingPage(mainBody, juniorBody) 
+    removeExistingPage(mainBody, juniorBody)
+    mainBody.removeAttribute('id')
+    juniorBody.removeAttribute('id')
     Videos()
+    if (media.matches) { Plugs(mainBody) }
   })
   
   /* Podcast Section */
@@ -60,7 +63,9 @@ const Home = () => {
   podAnchor.addEventListener("click", function goPod() {
     tabSelect(["videos", 'music', "streams", "contact"]);
 
-    removeExistingPage(mainBody, juniorBody) 
+    removeExistingPage(mainBody, juniorBody)
+    mainBody.removeAttribute('id')
+    juniorBody.removeAttribute('id')
     Podcast()
     Plugs(mainBody)
   })
@@ -84,6 +89,8 @@ const Home = () => {
     tabSelect(["videos", "podcast", "streams", "contact"]);
                 
     removeExistingPage(mainBody, juniorBody)
+    mainBody.removeAttribute('id')
+    juniorBody.removeAttribute('id')
     Music()
     Plugs() 
   })
