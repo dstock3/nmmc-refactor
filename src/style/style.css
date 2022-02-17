@@ -122,6 +122,7 @@ html {
     overflow: auto;
     margin-bottom: 0;
     margin-top: 0;
+    margin-inline: 5px;
   }
   
   /* Header Nav */
@@ -613,9 +614,13 @@ html {
     margin-top: 15px;
     text-align: center;
     font-weight: bold;
+    text-shadow: 1px 1px #0449699f;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-
   .list-container {
     border: 3px solid #07aaf3;
     border-radius: 5px;
@@ -625,7 +630,6 @@ html {
     padding-bottom: 15px;
     min-width: 30%;
     margin-bottom: 25px;
-    font-style:
   }
 
   .list {
@@ -1140,6 +1144,7 @@ html {
   
     .link-nav {
       width: 45%;
+      margin-bottom: 15px;
     }
   
     .home-link {
@@ -1281,8 +1286,6 @@ html {
   
     .link-nav {
       width: 100%;
-      padding-bottom: 5%;
-      -webkit-padding-after: 7%;
     }
   
     .home-link,
@@ -1295,6 +1298,7 @@ html {
       display: flex;
       position: relative;
       align-self: center;
+      margin-inline: 5%;
     }
   
     .nav-li {

@@ -4,6 +4,8 @@ import Data from '../data/data.json5'
 /* Patreon Plug */
 
 const Plugs = (parent, contact=false) => {
+    if (contact) { document.querySelector(".junior-body").id = "contact-plug" }
+      
     let myTiers = []
     for (let prop in Data.plugs) {
         myTiers.push(Data.plugs[prop])

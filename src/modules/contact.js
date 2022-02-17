@@ -9,15 +9,17 @@ const Contact = () => {
   patreonPlug.setAttribute("id", "patreon-contact");
 
   const mainBody = document.querySelector(".main-body")
+  mainBody.id = "contact-page"
   const formPage = elementBuilder("div", "form-page", mainBody);
   const formBody = elementBuilder("div", "form-body", formPage);
   const formHead = elementBuilder("h1", "form-head", formBody);
   formHead.textContent = "Contact Me";
 
+  const decLine = elementBuilder("div", "dec-line", formBody);
+
   const formCopy = elementBuilder("p", "form-copy-p", formBody);
   formCopy.textContent =
-    "Please feel free to send a message regarding any business inquiries you might have. " +
-    "Additionally, if you have any suggestions as to what I might cover on the channel, that would be much appreciated as well. ";
+    "Please feel free to send a message regarding any business inquiries you might have. Additionally, if you have any suggestions as to what I might cover on the channel, that would be much appreciated as well. ";
   formCopy.setAttribute("tabindex", "0");
 
   const formDiv = elementBuilder("div", "form-div", formBody);
