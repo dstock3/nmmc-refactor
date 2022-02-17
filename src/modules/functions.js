@@ -85,6 +85,10 @@ function elementBuilder(elType, className, parent) {
         videoElements.push(video);
         video.classList.add("video");
         videoElementsArray.push(videoElements);
+        let vidListItem = elementBuilder("li", "item", vidList)
+        vidListItem.textContent = videoArray[i].title
+        let vidObj = videoArray[i]
+        vidListArray.push({vidListItem, vidObj})
       } else {
         let vidListItem = elementBuilder("li", "item", vidList)
         vidListItem.textContent = videoArray[i].title
@@ -131,6 +135,10 @@ function elementBuilder(elType, className, parent) {
       if (i === 0) {
         let podElements = podBuilder(myPodArray[i], parent);
         podElementsArray.push(podElements);
+        let podItem = elementBuilder("li", "item", podList)
+        podItem.textContent = myPodArray[i].title
+        let podObj = myPodArray[i]
+        podItems.push({podItem, podObj})
 
       } else {
         let podItem = elementBuilder("li", "item", podList)
@@ -189,6 +197,10 @@ function elementBuilder(elType, className, parent) {
           newMusic.title = newMusicArray[i].track;
           musicElements.push(newMusic);
           musicElementArray.push(musicElements);
+          let trackListItem = elementBuilder("li", "item", trackList)
+          trackListItem.textContent = newMusicArray[i].track
+          let trackObj = newMusicArray[i]
+          trackListArray.push({trackListItem, trackObj})
         } else {
           let trackListItem = elementBuilder("li", "item", trackList)
           trackListItem.textContent = newMusicArray[i].track

@@ -1,6 +1,6 @@
 import { elementBuilder } from "./functions";
 import '../style/contact-response.css'
-import Cube from "../assets/images/illustrations/cube.png"
+import Cube from "../assets/images/illustrations/cube.webp"
 
 const ContactResponse = () => {
   const mainBody = document.querySelector(".main-body")
