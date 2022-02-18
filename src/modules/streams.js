@@ -7,9 +7,14 @@ const Streams = () => {
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
   
   const mainBody = document.querySelector(".main-body")
-  const streamsPageHead = elementBuilder("h1", "streams-page-head", mainBody);
-  streamsPageHead.textContent = "NMMC Live";
+
+  let streamsPageHead
   
+  if (!media.matches) {
+    streamsPageHead = elementBuilder("h1", "streams-page-head", mainBody);
+    streamsPageHead.textContent = "NMMC Live";
+  }
+
   let streamArray = []
   for (let prop in Data.live) {
     streamArray.push(Data.live[prop])

@@ -106,14 +106,8 @@ html {
 
   }
 
-  #mobile-list > .list-head {
-    margin-top: 0;
-    padding-top: 10px;
-    background-color: #07aaf3;
-    color: black;
-    padding-inline: 15px;
-    margin-block-end: 0;
-    padding-bottom: 10px;
+  .list-head {
+
 
   }
 
@@ -611,7 +605,6 @@ html {
   }
 
   .list-head {
-    margin-top: 15px;
     text-align: center;
     font-weight: bold;
     text-shadow: 1px 1px #0449699f;
@@ -619,17 +612,27 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
+    background-color: #07aaf3;
+    color: black;
+    padding-inline: 15px;
+    margin-block-end: 0;
+    padding-bottom: 10px;
   }
   
   .list-container {
-    border: 3px solid #07aaf3;
+    border: 15px solid #07aaf3;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     height: fit-content;
-    padding-inline: 15px;
     padding-bottom: 15px;
     min-width: 30%;
     margin-bottom: 25px;
+  }
+
+  #mobile-list {
+    border: 5px solid #07aaf3;
+
   }
 
   .list {
@@ -637,10 +640,11 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-inline: 15px;
   }
 
   .item {
-    width: fit-content;
+    width: 85%;
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 5px;
@@ -650,7 +654,6 @@ html {
   .item:hover {
     background-color: #a0dcf8;
     color: black;
-
   }
   
   .pod-page {

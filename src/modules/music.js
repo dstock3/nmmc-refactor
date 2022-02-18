@@ -12,9 +12,13 @@ const Music = () => {
   let mainBody = document.querySelector(".main-body")
   let juniorBody = document.querySelector(".junior-body")
   let musicPage = elementBuilder("div", "music-page", mainBody);
-  let musicHead = elementBuilder("h1", "music-page-head", musicPage);
-  musicHead.textContent = `New Music`;
   
+  let musicHead 
+  if (!media.matches) {
+    musicHead = elementBuilder("h1", "music-page-head", musicPage);
+    musicHead.textContent = `New Music`;
+  }
+
   let musicElements = musicBuilder(musicArray, musicPage, media);
   let musicElementArray = musicElements.musicElementArray
   let trackListArray = musicElements.trackListArray

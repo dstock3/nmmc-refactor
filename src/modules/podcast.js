@@ -7,9 +7,14 @@ const Podcast = () => {
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
 
   let mainBody = document.querySelector(".main-body")
-  let podPageHead = elementBuilder("h1", "pod-page-head", mainBody);
-  podPageHead.textContent = "Nightmare Tonight";
+
+  let podPageHead
   
+  if (!media.matches) {
+    podPageHead = elementBuilder("h1", "pod-page-head", mainBody);
+    podPageHead.textContent = "Nightmare Tonight";
+  }
+
   let podArray = []
   for (let prop in Data.pods) {
     podArray.push(Data.pods[prop])

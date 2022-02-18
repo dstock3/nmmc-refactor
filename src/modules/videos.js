@@ -8,8 +8,13 @@ const Videos = () => {
   sideNavContainer.setAttribute("id", "side-nav-unfixed");
   
   let mainBody = document.querySelector(".main-body")
-  let vidPageHead = elementBuilder("h1", "vid-page-head", mainBody);
-  vidPageHead.textContent = "Videos";
+
+  let vidPageHead
+
+  if (!media.matches) {
+    vidPageHead = elementBuilder("h1", "vid-page-head", mainBody);
+    vidPageHead.textContent = "Videos";
+  }
 
   let videoArray = []
   for (let prop in Data.vids) {
