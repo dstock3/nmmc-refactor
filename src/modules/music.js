@@ -33,6 +33,7 @@ const Music = () => {
       newMusic.loading = "lazy";
       newMusic.title = trackListArray[i].trackObj.track;
       titleChange(`${trackListArray[i].trackObj.track} | NMMC`)
+      scroll(0,0)
     })
   }
   

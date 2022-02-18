@@ -41,6 +41,7 @@ const Home = () => {
     mainBody.removeAttribute('id')
     juniorBody.removeAttribute('id')
     Videos()
+    scroll(0,0)
     if (media.matches) { Plugs(mainBody) }
   })
   
@@ -68,6 +69,7 @@ const Home = () => {
     juniorBody.removeAttribute('id')
     Podcast()
     Plugs(mainBody)
+    scroll(0,0)
   })
 
   
@@ -92,7 +94,8 @@ const Home = () => {
     mainBody.removeAttribute('id')
     juniorBody.removeAttribute('id')
     Music()
-    Plugs() 
+    Plugs()
+    scroll(0,0)
   })
   
 

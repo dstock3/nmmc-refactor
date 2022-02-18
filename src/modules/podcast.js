@@ -28,6 +28,7 @@ const Podcast = () => {
       podElements[0].classList.add("pod-page")
       podElements[3].classList.add("podcast")
       titleChange(`${podItems[i].podObj.title} | NMMC`)
+      scroll(0,0)
 
     })
   }

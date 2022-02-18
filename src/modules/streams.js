@@ -28,6 +28,7 @@ const Streams = () => {
       vidElements[0].classList.add("video-page")
       vidElements[4].classList.add("video");
       titleChange(`${vidListArray[i].vidObj.title} | NMMC`)
+      scroll(0,0)
     })
   }
 
