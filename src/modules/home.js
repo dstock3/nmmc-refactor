@@ -40,8 +40,8 @@ const Home = () => {
     removeExistingPage(mainBody, juniorBody)
     mainBody.removeAttribute('id')
     juniorBody.removeAttribute('id')
-    Videos()
     scroll(0,0)
+    Videos()
     if (media.matches) { Plugs(mainBody) }
   })
   
@@ -67,9 +67,9 @@ const Home = () => {
     removeExistingPage(mainBody, juniorBody)
     mainBody.removeAttribute('id')
     juniorBody.removeAttribute('id')
+    scroll(0,0)
     Podcast()
     Plugs(mainBody)
-    scroll(0,0)
   })
 
   
@@ -93,13 +93,12 @@ const Home = () => {
     removeExistingPage(mainBody, juniorBody)
     mainBody.removeAttribute('id')
     juniorBody.removeAttribute('id')
+    scroll(0,0)
     Music()
     Plugs()
-    scroll(0,0)
   })
   
 
-    
   /* Announcements */
   
   const announcementsContainer = elementBuilder("div", "a-container", juniorBody);
