@@ -36,6 +36,11 @@ const Music = () => {
       newMusic.setAttribute("id", `${trackListArray[i].trackObj.id}`);
       newMusic.loading = "lazy";
       newMusic.title = trackListArray[i].trackObj.track;
+      let listElements =  Array.from(document.getElementsByClassName("item"))
+      for (let y = 0; y < listElements.length; y++) {
+        listElements[y].classList.remove("item-selected")
+      }
+      trackListArray[i].trackListItem.classList.add("item-selected");
       titleChange(`${trackListArray[i].trackObj.track} | NMMC`)
       scroll(0,0)
     })

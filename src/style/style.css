@@ -106,8 +106,10 @@ html {
 
   }
 
-  .list-head {
-
+  .item-selected {
+    background-color: #027bb348; 
+    border-radius: 5px; 
+    color: #07aaf3;
 
   }
 
@@ -640,11 +642,11 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-inline: 15px;
+    padding-inline: 25px;
   }
 
   .item {
-    width: 85%;
+    width: 75%;
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 5px;

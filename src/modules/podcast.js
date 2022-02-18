@@ -32,6 +32,11 @@ const Podcast = () => {
       mainBody.insertBefore(podElements[0], plugElement);
       podElements[0].classList.add("pod-page")
       podElements[3].classList.add("podcast")
+      let listElements =  Array.from(document.getElementsByClassName("item"))
+      for (let y = 0; y < listElements.length; y++) {
+        listElements[y].classList.remove("item-selected")
+      }
+      podItems[i].podItem.classList.add("item-selected");
       titleChange(`${podItems[i].podObj.title} | NMMC`)
       scroll(0,0)
 

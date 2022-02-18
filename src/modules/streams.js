@@ -32,6 +32,11 @@ const Streams = () => {
       mainBody.insertBefore(vidElements[0], plugElement);
       vidElements[0].classList.add("video-page")
       vidElements[4].classList.add("video");
+      let listElements =  Array.from(document.getElementsByClassName("item"))
+      for (let y = 0; y < listElements.length; y++) {
+        listElements[y].classList.remove("item-selected")
+      }
+      vidListArray[i].vidListItem.classList.add("item-selected");
       titleChange(`${vidListArray[i].vidObj.title} | NMMC`)
       scroll(0,0)
     })

@@ -101,6 +101,7 @@ function elementBuilder(elType, className, parent) {
         video.classList.add("video");
         videoElementsArray.push(videoElements);
         let vidListItem = elementBuilder("li", "item", vidList)
+        vidListItem.classList.add("item-selected");
         vidListItem.textContent = videoArray[i].title
         let vidObj = videoArray[i]
         vidListArray.push({vidListItem, vidObj})
@@ -164,6 +165,7 @@ function elementBuilder(elType, className, parent) {
         let podElements = podBuilder(myPodArray[i], parent);
         podElementsArray.push(podElements);
         let podItem = elementBuilder("li", "item", podList)
+        podItem.classList.add("item-selected")
         podItem.textContent = myPodArray[i].title
         let podObj = myPodArray[i]
         podItems.push({podItem, podObj})
@@ -239,6 +241,7 @@ function elementBuilder(elType, className, parent) {
           musicElements.push(newMusic);
           musicElementArray.push(musicElements);
           let trackListItem = elementBuilder("li", "item", trackList)
+          trackListItem.classList.add("item-selected")
           trackListItem.textContent = newMusicArray[i].track
           let trackObj = newMusicArray[i]
           trackListArray.push({trackListItem, trackObj})
