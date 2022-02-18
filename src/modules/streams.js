@@ -1,4 +1,4 @@
-import { elementBuilder, videoBuilder, videoArrayHandler } from "./functions";
+import { elementBuilder, videoBuilder, titleChange, videoArrayHandler } from "./functions";
 import Data from '../data/data.json5'
 
 const Streams = () => {
@@ -27,6 +27,7 @@ const Streams = () => {
       mainBody.insertBefore(vidElements[0], plugElement);
       vidElements[0].classList.add("video-page")
       vidElements[4].classList.add("video");
+      titleChange(`${vidListArray[i].vidObj.title} | NMMC`)
     })
   }
 

@@ -1,4 +1,4 @@
-import { elementBuilder, musicBuilder, iframeHelper, albumBuilder, bandcampBuilder } from "./functions";
+import { elementBuilder, musicBuilder, iframeHelper, titleChange, albumBuilder, bandcampBuilder } from "./functions";
 import Data from '../data/data.json5'
 import { musicArray } from "../data/tracks.js";
 
@@ -32,6 +32,7 @@ const Music = () => {
       newMusic.setAttribute("id", `${trackListArray[i].trackObj.id}`);
       newMusic.loading = "lazy";
       newMusic.title = trackListArray[i].trackObj.track;
+      titleChange(`${trackListArray[i].trackObj.track} | NMMC`)
     })
   }
   

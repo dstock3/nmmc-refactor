@@ -1,4 +1,4 @@
-import { elementBuilder, podBuilder, podListBuilder } from "./functions";
+import { elementBuilder, podBuilder, titleChange, podListBuilder } from "./functions";
 import Data from '../data/data.json5'
 
 const Podcast = () => {
@@ -27,6 +27,7 @@ const Podcast = () => {
       mainBody.insertBefore(podElements[0], plugElement);
       podElements[0].classList.add("pod-page")
       podElements[3].classList.add("podcast")
+      titleChange(`${podItems[i].podObj.title} | NMMC`)
 
     })
   }
