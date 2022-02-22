@@ -9,10 +9,11 @@ import { Videos } from './modules/videos.js'
 import { Contact } from './modules/contact.js'
 import { Plugs } from './modules/plug.js'
 import { Sidebar } from './modules/sidebar.js'
-import Logo from './assets/images/logo.webp'
+
 import Favicon from './assets/images/icons/favicon.png'
 
 import { Footer } from './modules/footer';
+import { HeadNav } from './modules/headNav';
 //import { GBox } from './assets/vendors/glightbox.js'
 
 let media = window.matchMedia("(max-width: 900px)")
@@ -26,17 +27,9 @@ favIcon.rel = "shortcut icon";
 favIcon.type = "image/png";
 favIcon.href = Favicon
 
-const header = elementBuilder("header", "head-nav", mainContainer);
-const homelink = elementBuilder("a", "home-link", header);
-homelink.style.cursor = "pointer";
-const logo = elementBuilder("img", "logo", homelink);
-logo.src = Logo
-logo.alt = `NMMC logo`;
-
-const linkNav = elementBuilder("nav", "link-nav", header);
-const linkList = elementBuilder("ul", "nav-list", linkNav);
-
-const navLi = document.getElementsByClassName("nav-li");
+const headNav = HeadNav()
+const homelink = headNav.homelink
+const linkList = headNav.linkList
 
 const sectionContainer = elementBuilder(
   "section",

@@ -9,11 +9,12 @@ import { Streams } from './modules/streams.js'
 import { Videos } from './modules/videos.js'
 import { Contact } from './modules/contact.js'
 import { Plugs } from './modules/plug.js'
-import Logo from './assets/images/logo.webp'
 import Favicon from './assets/images/icons/favicon.png'
 import Play from './assets/images/icons/play.webp'
 import { ContactResponse } from './modules/contact-response';
 import { Footer } from './modules/footer';
+import { HeadNav } from './modules/headNav';
+import { Sidebar } from './modules/sidebar';
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
@@ -24,17 +25,9 @@ favIcon.rel = "shortcut icon";
 favIcon.type = "image/png";
 favIcon.href = Favicon
 
-const header = elementBuilder("header", "head-nav", mainContainer);
-const homelink = elementBuilder("a", "home-link", header);
-homelink.style.cursor = "pointer";
-const logo = elementBuilder("img", "logo", homelink);
-logo.src = Logo
-logo.alt = `NMMC logo`;
-
-const linkNav = elementBuilder("nav", "link-nav", header);
-const linkList = elementBuilder("ul", "nav-list", linkNav);
-
-const navLi = document.getElementsByClassName("nav-li");
+const headNav = HeadNav()
+const homelink = headNav.homelink
+const linkList = headNav.linkList
 
 const sectionContainer = elementBuilder(
   "section",
@@ -42,22 +35,10 @@ const sectionContainer = elementBuilder(
   mainContainer
 );
 
-const sideNavContainer = elementBuilder(
-  "div",
-  "side-nav-container",
-  sectionContainer
-);
-const sideNav = elementBuilder("nav", "side-nav", sideNavContainer);
-const sideNavDropdown = elementBuilder(
-  "div",
-  "side-nav-dropdown",
-  sideNavContainer
-);
-
 const mainBody = elementBuilder("main", "main-body", sectionContainer);
 const juniorBody = elementBuilder("div", "junior-body", sectionContainer);
 
-const sideNavList = elementBuilder("ul", "side-nav-list", sideNav);
+Sidebar()
 
 let sideNavLinkArray = []
 for (let prop in Data.sideNavLinks) {
