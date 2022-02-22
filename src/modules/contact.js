@@ -1,15 +1,15 @@
-import '../style/contact.css'
-import { elementBuilder } from './functions.js'
+import "../style/contact.css";
+import { elementBuilder } from "./functions.js";
 
 const Contact = () => {
-  let sideNavContainer = document.querySelector(".side-nav-container")
-  sideNavContainer.id = "side-nav-unfixed"
+  let sideNavContainer = document.querySelector(".side-nav-container");
+  sideNavContainer.id = "side-nav-unfixed";
 
-  let patreonPlug = document.querySelector(".patreon")
-  patreonPlug.id = "patreon-contact"
+  let patreonPlug = document.querySelector(".patreon");
+  patreonPlug.id = "patreon-contact";
 
-  const mainBody = document.querySelector(".main-body")
-  mainBody.id = "contact-page"
+  const mainBody = document.querySelector(".main-body");
+  mainBody.id = "contact-page";
 
   const formPage = elementBuilder("div", "form-page", mainBody);
   const formBody = elementBuilder("div", "form-body", formPage);
@@ -19,14 +19,15 @@ const Contact = () => {
   const decLine = elementBuilder("div", "dec-line", formBody);
 
   const formCopy = elementBuilder("p", "form-copy-p", formBody);
-  formCopy.textContent = "Please feel free to send a message regarding any business inquiries you might have. Additionally, if you have any suggestions as to what I might cover on the channel, that would be much appreciated as well."
+  formCopy.textContent =
+    "Please feel free to send a message regarding any business inquiries you might have. Additionally, if you have any suggestions as to what I might cover on the channel, that would be much appreciated as well.";
   formCopy.setAttribute("tabindex", "0");
 
   const formDiv = elementBuilder("div", "form-div", formBody);
-  formDiv.id = "form"
+  formDiv.id = "form";
 
   const form = elementBuilder("form", "form-class", formDiv);
-  form.id = "form-id"
+  form.id = "form-id";
   form.setAttribute("action", "contact-form.php");
   form.setAttribute("method", "POST");
 
@@ -38,7 +39,7 @@ const Contact = () => {
   const nameInputDiv = elementBuilder("div", "input-group", formGroupName);
   const nameInput = elementBuilder("input", "form-control", nameInputDiv);
   nameInput.setAttribute("type", "text");
-  nameInput.id = "Name"
+  nameInput.id = "Name";
   nameInput.setAttribute("name", "Name");
   nameInput.setAttribute("required", "");
 
@@ -50,7 +51,7 @@ const Contact = () => {
   const emailInputDiv = elementBuilder("div", "input-group", formGroupEmail);
   const emailInput = elementBuilder("input", "form-control", emailInputDiv);
   emailInput.setAttribute("type", "email");
-  emailInput.id = "Email"
+  emailInput.id = "Email";
   emailInput.setAttribute("name", "Email");
   emailInput.setAttribute("required", "");
 
@@ -59,8 +60,12 @@ const Contact = () => {
   messageLabel.textContent = "Please write your message here:";
   messageLabel.setAttribute("for", "Message");
 
-  const messageInputDiv = elementBuilder("div", "input-group", formGroupMessage);
-  messageInputDiv.id = "message"
+  const messageInputDiv = elementBuilder(
+    "div",
+    "input-group",
+    formGroupMessage
+  );
+  messageInputDiv.id = "message";
   const messageInput = elementBuilder(
     "textarea",
     "form-control",
@@ -78,12 +83,11 @@ const Contact = () => {
   submitButton.classList.add("btn-primary");
   submitButton.classList.add("btn-lg");
   submitButton.classList.add("btn-block");
-  submitButton.id = "button"
+  submitButton.id = "button";
   submitButton.textContent = "Send Message";
 
   const fixedFooter = document.querySelector("footer");
-  fixedFooter.id = "fixed-footer"
-}
+  fixedFooter.id = "fixed-footer";
+};
 
-export { Contact }
-
+export { Contact };

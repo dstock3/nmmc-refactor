@@ -1,7 +1,6 @@
 import './style/reset.css'
 import './style/style.css'
-import Data from './data/data.json5';
-import { elementBuilder, titleChange, linkBuilder, tabSelect, removeExistingPage } from './modules/functions.js';
+import { elementBuilder, titleChange, tabSelect, removeExistingPage } from './modules/functions.js';
 import { Home } from './modules/home.js'
 import { Music } from './modules/music.js'
 import { Podcast } from './modules/podcast.js'
@@ -9,11 +8,12 @@ import { Streams } from './modules/streams.js'
 import { Videos } from './modules/videos.js'
 import { Contact } from './modules/contact.js'
 import { Plugs } from './modules/plug.js'
+import { Sidebar } from './modules/sidebar.js'
 import Logo from './assets/images/logo.webp'
 import Favicon from './assets/images/icons/favicon.png'
-import Play from './assets/images/icons/play.webp'
+
 import { Footer } from './modules/footer';
-import { GBox } from './assets/vendors/glightbox.js'
+//import { GBox } from './assets/vendors/glightbox.js'
 
 let media = window.matchMedia("(max-width: 900px)")
 
@@ -44,65 +44,10 @@ const sectionContainer = elementBuilder(
   mainContainer
 );
 
-const sideNavContainer = elementBuilder(
-  "div",
-  "side-nav-container",
-  sectionContainer
-);
-const sideNav = elementBuilder("nav", "side-nav", sideNavContainer);
-const sideNavDropdown = elementBuilder(
-  "div",
-  "side-nav-dropdown",
-  sideNavContainer
-);
-
 const mainBody = elementBuilder("main", "main-body", sectionContainer);
 const juniorBody = elementBuilder("div", "junior-body", sectionContainer);
 
-const sideNavList = elementBuilder("ul", "side-nav-list", sideNav);
-
-let sideNavLinkArray = []
-for (let prop in Data.sideNavLinks) {
-  sideNavLinkArray.push(Data.sideNavLinks[prop])
-}
-linkBuilder(sideNavLinkArray, sideNavList, "side-nav-li", true);
-
-const playlistButton = elementBuilder(
-  "button",
-  "playlist-button",
-  sideNavDropdown
-);
-playlistButton.textContent = "Playlists";
-
-const playlistIcon = elementBuilder("img", "playlist-icon", playlistButton);
-playlistIcon.src = Play
-playlistIcon.alt = "playlist icon";
-
-
-const playlistDropdown = elementBuilder(
-  "div",
-  "playlist-dropdown",
-  sideNavDropdown
-);
-playlistDropdown.classList.add("hidden");
-
-playlistButton.addEventListener("click", () => {
-  playlistDropdown.classList.toggle("hidden");
-});
-
-const playlistList = elementBuilder("ul", "playlist-list", playlistDropdown);
-
-let playlistArray = []
-for (let prop in Data.playlist) {
-  playlistArray.push(Data.playlist[prop])
-}
-
-const playlistLinks = linkBuilder(
-  playlistArray,
-  playlistList,
-  "playlist-links",
-  true
-);
+Sidebar()
 
 const TabBuilder = (() => {
     const tabs = ['videos', 'podcast', 'music', 'streams', 'contact']

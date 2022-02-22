@@ -1,43 +1,42 @@
-import {randomGenerator, randomImageGenerator} from '../modules/functions.js'
-import { quotes } from '../data/quotes.js'
-import Skull from '../assets/images/illustrations/skull.webp'
-import Alien from '../assets/images/illustrations/ALIEN.webp'
-import Television from '../assets/images/illustrations/TELEVISION.webp'
+import { randomGenerator, randomImageGenerator } from "../modules/functions.js";
+import { quotes } from "../data/quotes.js";
+import Skull from "../assets/images/illustrations/skull.webp";
+import Alien from "../assets/images/illustrations/ALIEN.webp";
+import Television from "../assets/images/illustrations/TELEVISION.webp";
 
 const Footer = () => {
-    const mainContainer = document.querySelector(".main-container")
-    const footer = document.createElement("footer");
-    mainContainer.appendChild(footer);
+  const mainContainer = document.querySelector(".main-container");
+  const footer = document.createElement("footer");
+  mainContainer.appendChild(footer);
 
-    /* Random Quote Generator */
+  /* Random Quote Generator */
 
-    const quoteContent = document.createElement("div");
-    quoteContent.classList.add("quote");
-    const quote = randomGenerator(quotes);
-    quoteContent.textContent = quote;
-    footer.appendChild(quoteContent);
+  const quoteContent = document.createElement("div");
+  quoteContent.classList.add("quote");
+  const quote = randomGenerator(quotes);
+  quoteContent.textContent = quote;
+  footer.appendChild(quoteContent);
 
-    const footContent = document.createElement("div");
-    footContent.classList.add("copyright");
-    const date = new Date();
-    const copyright = `Copyright © ${date.getFullYear()} by David Stockdale.`;
-    footContent.textContent = copyright;
-    footer.appendChild(footContent);
+  const footContent = document.createElement("div");
+  footContent.classList.add("copyright");
+  const date = new Date();
+  const copyright = `Copyright © ${date.getFullYear()} by David Stockdale.`;
+  footContent.textContent = copyright;
+  footer.appendChild(footContent);
 
-    const images = {
+  const images = {
     "an old television": Television,
     "a rad skull": Skull,
     "a grey alien": Alien,
-    };
+  };
 
-    const footImage = document.createElement("img");
-    footImage.classList.add("foot-image");
-    const image = randomImageGenerator(images);
-    footImage.src = image[1];
-    footImage.alt = image[0];
+  const footImage = document.createElement("img");
+  footImage.classList.add("foot-image");
+  const image = randomImageGenerator(images);
+  footImage.src = image[1];
+  footImage.alt = image[0];
 
-    footer.appendChild(footImage);
+  footer.appendChild(footImage);
+};
 
-}
-
-export { Footer }
+export { Footer };
