@@ -1,20 +1,26 @@
-import './style/reset.css'
-import './style/style.css'
-import Data from './data/data.json5';
-import { elementBuilder, titleChange, linkBuilder, tabSelect, removeExistingPage } from './modules/functions.js';
-import { Home } from './modules/home.js'
-import { Music } from './modules/music.js'
-import { Podcast } from './modules/podcast.js'
-import { Streams } from './modules/streams.js'
-import { Videos } from './modules/videos.js'
-import { Contact } from './modules/contact.js'
-import { Plugs } from './modules/plug.js'
-import Favicon from './assets/images/icons/favicon.png'
-import Play from './assets/images/icons/play.webp'
-import { ContactResponse } from './modules/contact-response';
-import { Footer } from './modules/footer';
-import { HeadNav } from './modules/headNav';
-import { Sidebar } from './modules/sidebar';
+import "./style/reset.css";
+import "./style/style.css";
+import {
+  elementBuilder,
+  titleChange,
+  linkBuilder,
+  tabSelect,
+  removeExistingPage,
+} from "./modules/functions.js";
+import { Home } from "./modules/home.js";
+import { Music } from "./modules/music.js";
+import { Podcast } from "./modules/podcast.js";
+import { Streams } from "./modules/streams.js";
+import { Videos } from "./modules/videos.js";
+import { Contact } from "./modules/contact.js";
+import { Plugs } from "./modules/plug.js";
+import Favicon from "./assets/images/icons/favicon.png";
+import { ContactResponse } from "./modules/contact-response";
+import { Footer } from "./modules/footer";
+import { HeadNav } from "./modules/headNav";
+import { Sidebar } from "/modules/sidebar";
+
+let media = window.matchMedia("(max-width: 900px)")
 
 const head = document.querySelector("head");
 const body = document.querySelector("body");
@@ -40,125 +46,85 @@ const juniorBody = elementBuilder("div", "junior-body", sectionContainer);
 
 Sidebar()
 
-let sideNavLinkArray = []
-for (let prop in Data.sideNavLinks) {
-  sideNavLinkArray.push(Data.sideNavLinks[prop])
-}
-linkBuilder(sideNavLinkArray, sideNavList, "side-nav-li", true);
-
-const playlistButton = elementBuilder(
-  "button",
-  "playlist-button",
-  sideNavDropdown
-);
-playlistButton.textContent = "Playlists";
-
-const playlistIcon = elementBuilder("img", "playlist-icon", playlistButton);
-playlistIcon.src = Play
-playlistIcon.alt = "playlist icon";
-
-
-const playlistDropdown = elementBuilder(
-  "div",
-  "playlist-dropdown",
-  sideNavDropdown
-);
-playlistDropdown.classList.add("hidden");
-
-playlistButton.addEventListener("click", () => {
-  playlistDropdown.classList.toggle("hidden");
-});
-
-const playlistList = elementBuilder("ul", "playlist-list", playlistDropdown);
-
-let playlistArray = []
-for (let prop in Data.playlist) {
-  playlistArray.push(Data.playlist[prop])
-}
-
-const playlistLinks = linkBuilder(
-  playlistArray,
-  playlistList,
-  "playlist-links",
-  true
-);
-
 const TabBuilder = (() => {
-    const tabs = ['videos', 'podcast', 'music', 'streams', 'contact']
+  const tabs = ["videos", "podcast", "music", "streams", "contact"];
 
-    homelink.id = "home-tab"
-    titleChange("Thanks! | NMMC")
-    homelink.addEventListener("click", function goHome() {
-      tabSelect(['music', "videos", "podcast", "streams", "contact"]);
-      titleChange("Home | NMMC")
+  homelink.id = "home-tab";
+  titleChange("Thanks! | NMMC");
+  homelink.addEventListener("click", function goHome() {
+    tabSelect(["music", "videos", "podcast", "streams", "contact"]);
+    titleChange("Home | NMMC");
 
-      removeExistingPage(mainBody, juniorBody) 
-      Home()
+    removeExistingPage(mainBody, juniorBody);
+    Home();
+  });
 
-    })
+  ContactResponse();
+  Plugs(juniorBody, true);
 
-    ContactResponse()
-    Plugs()
+  for (let i = 0; i < tabs.length; i++) {
+    let tab = tabs[i];
+    let tabElement = elementBuilder("li", "nav-li", linkList);
+    tabElement.id = tab + "-tab";
+    tabElement.textContent = tab.charAt(0).toUpperCase() + tab.slice(1);
 
-    for (let i = 0; i < tabs.length; i++) {
-        let tab = tabs[i];
-        let tabElement = elementBuilder('li', "nav-li", linkList);
-        tabElement.id = tab + "-tab"
-        tabElement.textContent = tab.charAt(0).toUpperCase() + tab.slice(1);
-        
-        tabElement.addEventListener('click', function goToPage() {
-            tabElement.classList.add("selected");
+    tabElement.addEventListener("click", function goToPage() {
+      tabElement.classList.add("selected");
 
-            switch (tab) {
-              case 'videos':
-                tabSelect(["home", "music", "podcast", "streams", "contact"]);
-                homelink.classList.remove("home-special")
-                titleChange("Videos | NMMC")
+      switch (tab) {
+        case "videos":
+          tabSelect(["home", "music", "podcast", "streams", "contact"]);
+          homelink.classList.remove("home-special")
+          titleChange("Videos | NMMC")
+          removeExistingPage(mainBody, juniorBody)
+          mainBody.removeAttribute('id')
+          juniorBody.removeAttribute('id')
+          Videos()
+          if (media.matches) { Plugs(mainBody) }
 
-                removeExistingPage(mainBody, juniorBody) 
-                Plugs()
-                Videos()
-                
-                break;
-              case 'podcast':
-                tabSelect(["home", "videos", 'music', "streams", "contact"]);
-                homelink.classList.remove("home-special")
-                titleChange("Podcast | NMMC")
-
-                removeExistingPage(mainBody, juniorBody) 
-                Plugs()
-                Podcast()
-                break;
-              case 'music':
-                tabSelect(["home", "videos", "podcast", "streams", "contact"]);
-                titleChange("Music | NMMC")
-                
-                removeExistingPage(mainBody, juniorBody)
-                Plugs() 
-                Music()
-                break;
-              case 'streams':
-                tabSelect(["home", "videos", "podcast", "contact", "music"]);
-                homelink.classList.remove("home-special")
-                titleChange("Streams | NMMC")
-              
-                removeExistingPage(mainBody, juniorBody)
-                Plugs()
-                Streams()
-                break;
-              case 'contact':
-                tabSelect(["home", "videos", "podcast", "streams", "music"]);
-                homelink.classList.remove("home-special")
-                titleChange("Contact | NMMC")
-              
-                removeExistingPage(mainBody, juniorBody)
-                Plugs()
-                Contact()
-                break;
-            }
-        });
-    }
+          break;
+        case "podcast":
+          tabSelect(["home", "videos", 'music', "streams", "contact"]);
+          homelink.classList.remove("home-special")
+          titleChange("Podcast | NMMC")
+          removeExistingPage(mainBody, juniorBody) 
+          mainBody.removeAttribute('id')
+          juniorBody.removeAttribute('id')
+          Podcast()
+          Plugs(mainBody)
+          break;
+        case "music":
+          tabSelect(["home", "videos", "podcast", "streams", "contact"]);
+          titleChange("Music | NMMC")
+          removeExistingPage(mainBody, juniorBody)
+          mainBody.removeAttribute('id')
+          juniorBody.removeAttribute('id')
+          Music()
+          break;
+        case "streams":
+          tabSelect(["home", "videos", "podcast", "contact", "music"]);
+          homelink.classList.remove("home-special")
+          titleChange("Streams | NMMC")
+          removeExistingPage(mainBody, juniorBody)
+          mainBody.removeAttribute('id')
+          juniorBody.removeAttribute('id')
+          Streams()
+          if (media.matches) { Plugs(mainBody) }
+          break;
+        case "contact":
+          tabSelect(["home", "videos", "podcast", "streams", "music"]);
+          homelink.classList.remove("home-special")
+          titleChange("Contact | NMMC")
+          removeExistingPage(mainBody, juniorBody)
+          mainBody.removeAttribute('id')
+          juniorBody.removeAttribute('id')
+          Plugs(juniorBody, true)
+          Contact()
+          
+          break;
+      }
+    });
+  }
 })();
 
-Footer()
-
+Footer();

@@ -1,6 +1,10 @@
 function elementBuilder(elType, className, parent) {
   const newElement = document.createElement(elType);
   newElement.classList.add(className);
+  console.log("Parent: ")
+  console.log(parent)
+  console.log("newElement: ")
+  console.log(newElement)
   parent.appendChild(newElement);
   return newElement;
 }
