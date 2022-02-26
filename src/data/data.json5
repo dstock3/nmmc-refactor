@@ -67,6 +67,10 @@
     desc: "Simulation Theory: Disaster and Marxian Futures, ft. Nightmare Masterclass"
   },
   live: {
+    elden: {
+      title: "Elden Ring 2.25.22",
+      iframeRef: "https://www.youtube.com/embed/7JnayCLbW1w",
+    },
     drawing: {
       title: "Drawing Stuff 7.10.21",
       iframeRef: "https://www.youtube.com/embed/U29HdJEJmRg",
