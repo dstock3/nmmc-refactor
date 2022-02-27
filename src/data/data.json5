@@ -61,10 +61,10 @@
     },
   },
   announcements: {
-    head: "Appearances",
-    text: "I recently went on Epoch Philosophy's podcast to talk about the simulation hypothesis. Check it out!",
-    link: "https://open.spotify.com/episode/1HVdBGwtmF2Vauy1vqiEjy",
-    desc: "Simulation Theory: Disaster and Marxian Futures, ft. Nightmare Masterclass"
+    head: "Elden Ring",
+    text: "I'm streaming a playthrough of Elden Ring. Watch me get continually owned by crabs, giants, and other horrific creatures.",
+    link: "https://www.youtube.com/watch?v=7JnayCLbW1w",
+    desc: "Elden Ring 2.25.22"
   },
   live: {
     elden: {
