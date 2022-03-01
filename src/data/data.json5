@@ -63,10 +63,14 @@
   announcements: {
     head: "Elden Ring",
     text: "I'm streaming a playthrough of Elden Ring. Watch me get continually owned by crabs, giants, and other horrific creatures.",
-    link: "https://www.youtube.com/watch?v=7JnayCLbW1w",
-    desc: "Elden Ring 2.25.22"
+    link: "https://www.youtube.com/watch?v=7JnayCLbW1w&list=PL8aKnJJbVcbTfiPYS7raxmyRYM-UbLKOx",
+    desc: "Elden Ring Playlist"
   },
   live: {
+    elden2: {
+      title: "Elden Ring 2.27.22",
+      iframeRef: "https://www.youtube.com/embed/IJos-9O5ujk",
+    },
     elden: {
       title: "Elden Ring 2.25.22",
       iframeRef: "https://www.youtube.com/embed/7JnayCLbW1w",
