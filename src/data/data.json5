@@ -67,6 +67,10 @@
     desc: "Elden Ring Playlist"
   },
   live: {
+    postVid: {
+      title: "Post Vid Q&A : The Monument Mythos Deep Dive",
+      iframeRef: "https://www.youtube.com/embed/oXfWf2AiWK0"
+    },
     elden4: {
       title: "Elden Ring 3.2.22",
       iframeRef: "https://www.youtube.com/embed/EReKMw9LQbY",
@@ -369,6 +373,11 @@
     },
   },
   vids: {
+    mythos: {
+      title: "The Monument Mythos: A Deep Dive",
+      description: "Every once in a while, a series comes along that really piques my interest. In this installment, I’ll be analyzing a strange web series known as The Monument Mythos.",
+      iframeRef: "https://www.youtube.com/embed/pQMA0IG7Jdk"
+    },
     sopranos: {
       title: "Ghosts in the Sopranos Universe",
       description: "In this installment, I’ll be analyzing the Sopranos. Specifically, I am interrogating the role ghosts play in the narrative in relation to one very important scene within the series.",
