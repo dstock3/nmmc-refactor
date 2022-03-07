@@ -67,13 +67,17 @@
     desc: "Elden Ring Playlist"
   },
   live: {
-    elden5: {
+    elden6: {
       title: "Elden Ring 3.5.22",
       iframeRef: "https://www.youtube.com/embed/mZrgWrmarEw"
     },
     postVid: {
       title: "Post Vid Q&A : The Monument Mythos Deep Dive",
       iframeRef: "https://www.youtube.com/embed/oXfWf2AiWK0"
+    },
+    elden5: {
+      title: "Elden Ring 3.4.22",
+      iframeRef: "https://www.youtube.com/embed/1zUquPF-aJE"
     },
     elden4: {
       title: "Elden Ring 3.2.22",
