@@ -1,3 +1,9 @@
+const event = {
+  track: "A Mostly Inconsequential Event",
+  id: "inconsequential-event",
+  iframeRef: `https://bandcamp.com/EmbeddedPlayer/track=2946777459/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/`
+};
+
 const instrumentality = {
   track: "Instrumentality",
   id: "instrumentality",
@@ -6,7 +12,7 @@ const instrumentality = {
 
 const endOfEverything = {
   track: "The End of Everything",
-  id: "endOfEverything",
+  id: "end-of-everything",
   iframeRef: `https://bandcamp.com/EmbeddedPlayer/track=4028507714/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true`,
 };
 
@@ -85,6 +91,7 @@ const musicTen = {
 };
 
 const musicArray = [
+  event,
   instrumentality,
   endOfEverything,
   baseReality,
