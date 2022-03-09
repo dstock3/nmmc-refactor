@@ -67,6 +67,10 @@
     desc: "Elden Ring Playlist"
   },
   live: {
+    elden7: {
+      title: "Elden Ring 3.8.22",
+      iframeRef: "https://www.youtube.com/embed/jJVwteiQkM4"
+    },
     elden6: {
       title: "Elden Ring 3.5.22",
       iframeRef: "https://www.youtube.com/embed/mZrgWrmarEw"
