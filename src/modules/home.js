@@ -38,6 +38,7 @@ const Home = () => {
 
   const vidButtonDiv = elementBuilder("div", "more-vids", videoContainer);
   const moreVideos = elementBuilder("button", "vid-button", vidButtonDiv);
+  moreVideos.classList.add("home-buttons");
   const vidAnchor = elementBuilder("div", "vid-link", moreVideos);
   vidAnchor.textContent = "More Vids >";
 
