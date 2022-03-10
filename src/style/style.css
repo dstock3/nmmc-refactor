@@ -634,15 +634,18 @@ header .nav-li {
 }
 
 .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  width: 85%;
-  padding-inline: 25px;
+  width: 95%;
+  padding-inline: 15px;
 }
 
 .item {
-  width: 75%;
+  width: 65%;
   margin-bottom: 5px;
   padding: 5px;
   border-radius: 5px;
@@ -774,7 +777,6 @@ header .nav-li {
   color: #07aaf3;
   background-color: transparent;
   z-index: 9;
-
   border-radius: 5px;
   -webkit-border-radius: 5px;
 }
@@ -1111,6 +1113,12 @@ header .nav-li {
     min-width: 100%;
   }
 
+  .plug-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .foot-image {
     visibility: hidden;
     position: absolute;
@@ -1124,12 +1132,6 @@ header .nav-li {
 @media (max-width: 900px) {
   .list-container {
     width: 100%;
-  }
-
-  .plug-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
   }
 
   .patreon {
