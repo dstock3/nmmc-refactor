@@ -409,6 +409,11 @@
     },
   },
   vids: {
+    doomer2022: {
+      title: "Doomer Response 2022 Edition",
+      description: "In July of 2020, I released a video called Doomerism: The Struggle to Find Meaning. In that video, I sought out to analyze the Doomer phenomenon from a sociopolitical perspective. If you haven’t watched my first video on the topic, you might want to do so prior to watching this video. In this installment, I wanted to highlight a very illuminating email exchange I had with someone who once identified with the Doomer perspective and has recently had a change of heart.",
+      iframeRef: "https://www.youtube.com/embed/hHE1adRKuIs"
+    },
     mythos: {
       title: "The Monument Mythos: A Deep Dive",
       description: "Every once in a while, a series comes along that really piques my interest. In this installment, I’ll be analyzing a strange web series known as The Monument Mythos.",
