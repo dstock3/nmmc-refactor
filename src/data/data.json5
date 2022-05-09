@@ -409,6 +409,11 @@
     },
   },
   vids: {
+    fair: {
+      title: "This Indie Horror Movie is a Grade A Mindf*ck",
+      description: "In this installment, I'll be talking about a movie called We're All Going to the World's Fair, which premiered at Sundance last year. It is the directorial debut of Jane Schoenbrun, and I would say it is very impressive for her first feature length film. Schoenbrun referred to this project as an “emo horror movie,” and I think that’s an apt description.",
+      iframeRef: "https://www.youtube.com/embed/JN29HmyuS5w"
+    },
     doomer2022: {
       title: "Doomer Response 2022 Edition",
       description: "In July of 2020, I released a video called Doomerism: The Struggle to Find Meaning. In that video, I sought out to analyze the Doomer phenomenon from a sociopolitical perspective. If you haven’t watched my first video on the topic, you might want to do so prior to watching this video. In this installment, I wanted to highlight a very illuminating email exchange I had with someone who once identified with the Doomer perspective and has recently had a change of heart.",
