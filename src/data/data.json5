@@ -61,10 +61,10 @@
     },
   },
   announcements: {
-    head: "Elden Ring",
-    text: "I'm streaming a playthrough of Elden Ring. Watch me get continually owned by crabs, giants, and other horrific creatures.",
-    link: "https://www.youtube.com/watch?v=7JnayCLbW1w&list=PL8aKnJJbVcbTfiPYS7raxmyRYM-UbLKOx",
-    desc: "Elden Ring Playlist"
+    head: "Appearances",
+    text: "Had a great time in this marathon stream on Varn Vlog. We discussed a great many things, including geopolitics, arthouse horror, political identities, feudalism, food shortages, etc.",
+    link: "https://www.youtube.com/watch?v=zL4G2l8VodQ",
+    desc: "Varn Vlog Appearance"
   },
   live: {
     elden13: {
