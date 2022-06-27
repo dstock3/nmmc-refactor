@@ -67,6 +67,10 @@
     desc: "Varn Vlog Appearance"
   },
   live: {
+    eldenLive: {
+      title: "Post Vid Q&A: Elden Ring Discussion", 
+      iframeRef: "https://www.youtube.com/embed/m5il8pDHX3E"
+    },
     elden13: {
       title: "Elden Ring 3.18.22",
       iframeRef: "https://www.youtube.com/embed/WBfhET0AhGk"
