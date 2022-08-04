@@ -239,6 +239,13 @@
     }
   },
   pods: {
+    cronenPod: {
+      title: "You Just Got Cronenberged - Vol. 1: The Brood",
+      description:
+        "This is a very special installment of my podcast, Nightmare Tonight; it's the first part of a mini-series called You Just Got Cronenberged, which as the name implies is going to cover the many works of the great David Cronenberg. In this one, we're covering The Brood.",
+      iframeRef:
+        "//html5-player.libsyn.com/embed/episode/id/23949093/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
     podData: {
       title: "The Folly of Happiness with Epoch Philosophy",
       description:
