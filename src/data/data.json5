@@ -420,6 +420,11 @@
     },
   },
   vids: {
+    hypno: {
+      title: "Mystery of the Hypnagogic Archive",
+      description: "In this installment, I’ll be inspecting a mysterious work by the name of The Hypnagogic Archive. In some sense, it is a work that defies the type of explanation and analysis one typically comes across on YouTube. And this is precisely why I felt the need to cover it.",
+      iframeRef: "https://www.youtube.com/embed/6WVTHHkUjjE"
+    },
     elden: {
       title: "Elden Ring and the Logic of Feudalism",
       description: "In this installment, I want to talk about Elden Ring, a game I have played my fair share of at this point. Elden Ring was developed by FromSoftware, a company largely known for Dark Souls. FromSoftware games have a notorious reputation for being extremely difficult. I’m not going to say Elden Ring isn’t difficult, but if you’re a moderately experienced gamer, I think you’ll be able to get the hang of it fairly quickly. The UI is a little wonky, and rest assured, you will die countless times in your quest to become the Elden Lord, but if you have some persistence, you can beat this game in a reasonable amount of time. It took me about 70 hours. I’d argue that the majority of its content constitutes a grotesque mockery of Feudalism’s ideological foundations.",
