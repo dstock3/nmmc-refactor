@@ -1,3 +1,9 @@
+const time = {
+  track: "Time Stops For No One",
+  id: "time", 
+  iframeRef: `https://bandcamp.com/EmbeddedPlayer/track=2587799340/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent:true/`,
+};
+
 const event = {
   track: "A Mostly Inconsequential Event",
   id: "inconsequential-event",
@@ -91,6 +97,7 @@ const musicTen = {
 };
 
 const musicArray = [
+  time,
   event,
   instrumentality,
   endOfEverything,
