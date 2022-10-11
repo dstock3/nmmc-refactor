@@ -239,6 +239,13 @@
     }
   },
   pods: {
+    cronenPod2: {
+      title: "You Just Got Cronenberged - Vol. 2: The Dead Zone",
+      description:
+        "Does The Dead Zone hold up? Find out in this UNLOCKED installment of You Just Got Cronenberged. Apologies in advance to any Stephen King heads out there. 🎃",
+      iframeRef:
+        "//html5-player.libsyn.com/embed/episode/id/24654033/height/360/theme/legacy/thumbnail/yes/direction/backward/",
+    },
     cronenPod: {
       title: "You Just Got Cronenberged - Vol. 1: The Brood",
       description:
