@@ -432,6 +432,11 @@
     },
   },
   vids: {
+    horrorMarathon: {
+      title: "HORROR MOVIE ROUNDUP: Possum, Mad God, Hellraiser and MORE!",
+      description: "If you've been following my updates on Patreon this month, you of course know that we've been doing a horror movie marathon here at the ol' Nightmare Masterclass compound. This is a compilation of our thoughts on the various movies we watched. Enjoy!",
+      iframeRef: "https://www.youtube.com/embed/lOSNXXP8S_0"
+    },
     hypno: {
       title: "Mystery of the Hypnagogic Archive",
       description: "In this installment, I’ll be inspecting a mysterious work by the name of The Hypnagogic Archive. In some sense, it is a work that defies the type of explanation and analysis one typically comes across on YouTube. And this is precisely why I felt the need to cover it.",
