@@ -432,6 +432,11 @@
     },
   },
   vids: {
+    nathan: {
+      title: "The Rehearsal: Art in the Age of Disintegration",
+      description: "In this installment, I’d like to discuss The Rehearsal, a series on HBO created by a comedian named Nathan Fielder. At first glance, The Rehearsal might seem like another one of Fielder’s comedic vehicles. You might think it’s yet another parodic reality tv show, like Nathan For You. In a certain sense, this is true; however, after a thorough inspection of the material, I have reason to believe that something extremely weird is going on with this show.",
+      iframeRef: "https://www.youtube.com/embed/2pj8UYjodNA"
+    },
     horrorMarathon: {
       title: "HORROR MOVIE ROUNDUP: Possum, Mad God, Hellraiser and MORE!",
       description: "If you've been following my updates on Patreon this month, you of course know that we've been doing a horror movie marathon here at the ol' Nightmare Masterclass compound. This is a compilation of our thoughts on the various movies we watched. Enjoy!",
