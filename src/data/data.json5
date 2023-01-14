@@ -432,6 +432,11 @@
     },
   },
   vids: {
+    megan: {
+      title: "M3GAN: The Terrifying Future of AI Companionship",
+      description: "In this installment, I am going to be sharing some thoughts on a fun little horror movie I recently watched called M3GAN. M3GAN is a science fiction horror film about an artificially intelligent doll named M3GAN, who develops self-awareness and eventually becomes hostile to anyone who poses a threat to her primary user, a young girl named Cady.",
+      iframeRef: "https://www.youtube.com/embed/0tVeSUS_i9U"
+    },
     nathan: {
       title: "The Rehearsal: Art in the Age of Disintegration",
       description: "In this installment, I’d like to discuss The Rehearsal, a series on HBO created by a comedian named Nathan Fielder. At first glance, The Rehearsal might seem like another one of Fielder’s comedic vehicles. You might think it’s yet another parodic reality tv show, like Nathan For You. In a certain sense, this is true; however, after a thorough inspection of the material, I have reason to believe that something extremely weird is going on with this show.",
