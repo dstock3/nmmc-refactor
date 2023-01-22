@@ -67,6 +67,11 @@
     desc: "Varn Vlog Appearance"
   },
   live: {
+    sonic: {
+      title: "Sonic Mania Chill Stream",
+      iframeRef: "https://www.youtube.com/embed/VgXFZypD-t0"
+
+    },
     eldenLive: {
       title: "Post Vid Q&A: Elden Ring Discussion", 
       iframeRef: "https://www.youtube.com/embed/m5il8pDHX3E"
@@ -432,6 +437,11 @@
     },
   },
   vids: {
+    skinamarink: {
+      title: "The REAL Upside-Down? Skinamarink (2022) Review 🙃",
+      description: "In this installment, I'd like to introduce you to a particularly unconventional horror film by the name of Skinamarink. Now, I must issue a warning: this movie is not for the faint of heart. It delves into some deeply unsettling territory. I implore you to approach it with an open mind.  I must also note that the film’s pacing is unlike the mainstream films that you may be used to. While Skinamarink may challenge your attention span in addition to your comfort level, I believe it has the potential to be a truly transformative and thought-provoking viewing experience for those brave enough to endure it.",
+      iframeRef: "https://www.youtube.com/embed/Zr25oBCMKX4"
+    },
     megan: {
       title: "M3GAN: The Terrifying Future of AI Companionship",
       description: "In this installment, I am going to be sharing some thoughts on a fun little horror movie I recently watched called M3GAN. M3GAN is a science fiction horror film about an artificially intelligent doll named M3GAN, who develops self-awareness and eventually becomes hostile to anyone who poses a threat to her primary user, a young girl named Cady.",
