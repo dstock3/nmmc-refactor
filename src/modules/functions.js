@@ -5,6 +5,22 @@ function elementBuilder(elType, className, parent) {
   return newElement;
 }
 
+function updateMetaKeywords(keywords) {
+  let metaTags = document.getElementsByTagName("meta");
+
+  for (let i = 0; i < metaTags.length; i++) {
+    if (metaTags[i].getAttribute("name") === "keywords") {
+      metaTags[i].setAttribute("content", keywords);
+      return;
+    }
+  }
+
+  let metaKeywords = document.createElement("meta");
+  metaKeywords.setAttribute("name", "keywords");
+  metaKeywords.setAttribute("content", keywords);
+  document.getElementsByTagName("head")[0].appendChild(metaKeywords);
+}
+
 function titleChange(newTitle) {
   let titleElement = document.querySelector("title");
   titleElement.textContent = newTitle;
@@ -406,6 +422,7 @@ function removeExistingPage(parent, parentTwo) {
 }
 export {
   elementBuilder,
+  updateMetaKeywords,
   titleChange,
   linkBuilder,
   videoBuilder,
