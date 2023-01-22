@@ -31,7 +31,7 @@ const headNav = HeadNav()
 const homelink = headNav.homelink
 const linkList = headNav.linkList
 
-updateMetaKeywords("arg,arg explained,game theory arg,arg secret,arg solved,top arg,best arg,fnaf arg,muse arg,scary arg,funny arg,arg scary,arg gaming,analog arg,arg horror,matpat arg,inside arg,reddit arg,arg iceberg,arg coverage,arg tutorial, horror,horror stories,horror movie,horror story,horror short film,best horror,horror movies,horror channel,new horror movie,best horror movies,alter horror channel,free horror,full horror,horror 2023,horror real,horror short,horror video,horror facts,horror videos,modern horror,horror podcast");
+updateMetaKeywords("nightmare masterclass,horror youtuber,horror commentary, horror analysis,arg,arg explained,game theory arg,arg secret,arg solved,top arg,best arg,fnaf arg,muse arg,scary arg,funny arg,arg scary,arg gaming,analog arg,arg horror,matpat arg,inside arg,reddit arg,arg iceberg,arg coverage,arg tutorial, horror,horror stories,horror movie,horror story,horror short film,best horror,horror movies,horror channel,new horror movie,best horror movies,alter horror channel,free horror,full horror,horror 2023,horror real,horror short,horror video,horror facts,horror videos,modern horror,horror podcast");
 
 const sectionContainer = elementBuilder(
   "section",
