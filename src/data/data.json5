@@ -437,6 +437,11 @@
     },
   },
   vids: {
+    surrealism: {
+      title: "Surrealism Without the Unconscious",
+      description: "The following is a breakdown of “Surrealism without the Unconscious,” the third chapter from Frederic Jameson’s Postmodernism, or, the Cultural Logic of Late Capitalism.",
+      iframeRef: "https://www.youtube.com/embed/qVJSTeg-cf8"
+    },
     skinamarink: {
       title: "The REAL Upside-Down? Skinamarink (2022) Review 🙃",
       description: "In this installment, I'd like to introduce you to a particularly unconventional horror film by the name of Skinamarink. Now, I must issue a warning: this movie is not for the faint of heart. It delves into some deeply unsettling territory. I implore you to approach it with an open mind.  I must also note that the film’s pacing is unlike the mainstream films that you may be used to. While Skinamarink may challenge your attention span in addition to your comfort level, I believe it has the potential to be a truly transformative and thought-provoking viewing experience for those brave enough to endure it.",
