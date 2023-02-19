@@ -62,9 +62,9 @@
   },
   announcements: {
     head: "Appearances",
-    text: "Had a great time in this marathon stream on Varn Vlog. We discussed a great many things, including geopolitics, arthouse horror, political identities, feudalism, food shortages, etc.",
-    link: "https://www.youtube.com/watch?v=zL4G2l8VodQ",
-    desc: "Varn Vlog Appearance"
+    text: "I was recently interviewed by Matthew Tannam-Elgie of Commendable Commotion, a great podcast about art and creativity. If that sounds up your alley, check out the interview:",
+    link: "https://www.youtube.com/watch?v=_IHZtzk5-pY",
+    desc: "Commendable Commotion"
   },
   live: {
     sonic: {
