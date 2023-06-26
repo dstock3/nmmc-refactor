@@ -437,6 +437,16 @@
     },
   },
   vids: {
+    valle2: {
+      title: "The Valle Verde Investigation - Part 2",
+      description: "In this video, we'll be continuing our investigation into the mysterious and disturbing world of Valle Verde, a spooky web series about a seemingly innocent children's game from the 90s with a dark underworld of horrific secrets.",
+      iframeRef: "https://www.youtube.com/embed/w_wGLn8wPsQ"
+    },
+    valle1: {
+      title: "The Valle Verde Investigation - Part 1",
+      description: "Today we'll be delving into a most peculiar and unsettling piece of footage recently uploaded by a YouTube channel called Alluvium. It appears to depict, you guessed it, a malfunctioning PS1 game. So, yeah, that’s kind of my specialty. I should let you know upfront that there are a number of disturbing elements in this footage so keep that in mind prior to watching the video. I’m going to be breaking up this analysis in a manner that I think is appropriate for the purposes of both my workflow and what I have discerned to be the overall structure of the video itself. In this installment, I’ll be covering the first five minutes of the footage, and I must say, it is a veritable cornucopia of symbol, subtext, and intertextual references, all ready to be dissected and deciphered by yours truly.",
+      iframeRef: "https://www.youtube.com/embed/sEjcePu7WIE"
+    },
     surrealism: {
       title: "Surrealism Without the Unconscious",
       description: "The following is a breakdown of “Surrealism without the Unconscious,” the third chapter from Frederic Jameson’s Postmodernism, or, the Cultural Logic of Late Capitalism.",
