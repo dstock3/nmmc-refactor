@@ -67,6 +67,10 @@
     desc: "Commendable Commotion"
   },
   live: {
+    myHouse: {
+      title: "myhouse.wad playthrough",
+      iframeRef: "https://www.youtube.com/embed/Ym_1be3bqpQ",
+    },
     sonic: {
       title: "Sonic Mania Chill Stream",
       iframeRef: "https://www.youtube.com/embed/VgXFZypD-t0"
