@@ -437,6 +437,11 @@
     },
   },
   vids: {
+    barbenheimer: {
+      title: "Barbenheimer Unmasked: The Ideological Paralysis of Modern Cinema"
+      description: "In this kaleidoscopic voyage through celluloid and simulacra, we encounter two iconic cultural constructs: Barbie, the hyperreal avatar of American femininity, and Oppenheimer, the weepy father of the Atomic Age. Join me as we uncover the terrain where nostalgia crashes into contemporary critique, revealing the architecture of our mass illusions.",
+      iframeRef: "https://www.youtube.com/embed/yXoxrNOMj74&t"
+    },
     valle2: {
       title: "The Valle Verde Investigation - Part 2",
       description: "In this video, we'll be continuing our investigation into the mysterious and disturbing world of Valle Verde, a spooky web series about a seemingly innocent children's game from the 90s with a dark underworld of horrific secrets.",
