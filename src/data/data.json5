@@ -441,6 +441,12 @@
     },
   },
   vids: {
+    hare: {
+      title: "An Angel Hare Analysis",
+      description: "Tonight, we're doing a deep dive into Angel Hare, a complex tapestry of memories, metafiction, and mystery, cleverly woven together into an animated web series that has captivated many.",
+      iframeRef: "https://www.youtube.com/embed/oV0YuJ6ZnbY&t=2109s"
+
+    }, 
     barbenheimer: {
       title: "Barbenheimer Unmasked: The Ideological Paralysis of Modern Cinema",
       description: "In this kaleidoscopic voyage through celluloid and simulacra, we encounter two iconic cultural constructs: Barbie, the hyperreal avatar of American femininity, and Oppenheimer, the weepy father of the Atomic Age. Join me as we uncover the terrain where nostalgia crashes into contemporary critique, revealing the architecture of our mass illusions.",
