@@ -14,7 +14,6 @@ import Favicon from './assets/images/icons/favicon.png'
 
 import { Footer } from './modules/footer';
 import { HeadNav } from './modules/headNav';
-//import { GBox } from './assets/vendors/glightbox.js'
 
 let media = window.matchMedia("(max-width: 900px)")
 
@@ -45,12 +44,12 @@ const juniorBody = elementBuilder("div", "junior-body", sectionContainer);
 Sidebar()
 
 const TabBuilder = (() => {
-    const tabs = ['videos', 'podcast', 'music', 'streams', 'contact']
+    const tabs = ['videos', 'music', 'streams', 'contact']
 
     homelink.id = "home-tab"
     titleChange("Home | NMMC")
     homelink.addEventListener("click", function goHome() {
-      tabSelect(['music', "videos", "podcast", "streams", "contact"]);
+      tabSelect(['music', "videos", "streams", "contact"]);
       titleChange("Home | NMMC")
       removeExistingPage(mainBody, juniorBody)
       mainBody.removeAttribute('id')
@@ -71,7 +70,7 @@ const TabBuilder = (() => {
 
             switch (tab) {
               case 'videos':
-                tabSelect(["home", "music", "podcast", "streams", "contact"]);
+                tabSelect(["home", "music", "streams", "contact"]);
                 homelink.classList.remove("home-special")
                 titleChange("Videos | NMMC")
                 removeExistingPage(mainBody, juniorBody)
@@ -79,20 +78,9 @@ const TabBuilder = (() => {
                 juniorBody.removeAttribute('id')
                 Videos()
                 if (media.matches) { Plugs(mainBody) }
-
-                break;
-              case 'podcast':
-                tabSelect(["home", "videos", 'music', "streams", "contact"]);
-                homelink.classList.remove("home-special")
-                titleChange("Podcast | NMMC")
-                removeExistingPage(mainBody, juniorBody) 
-                mainBody.removeAttribute('id')
-                juniorBody.removeAttribute('id')
-                Podcast()
-                Plugs(mainBody)
                 break;
               case 'music':
-                tabSelect(["home", "videos", "podcast", "streams", "contact"]);
+                tabSelect(["home", "videos", "streams", "contact"]);
                 titleChange("Music | NMMC")
                 removeExistingPage(mainBody, juniorBody)
                 mainBody.removeAttribute('id')
@@ -100,7 +88,7 @@ const TabBuilder = (() => {
                 Music()
                 break;
               case 'streams':
-                tabSelect(["home", "videos", "podcast", "contact", "music"]);
+                tabSelect(["home", "videos", "contact", "music"]);
                 homelink.classList.remove("home-special")
                 titleChange("Streams | NMMC")
                 removeExistingPage(mainBody, juniorBody)
@@ -110,7 +98,7 @@ const TabBuilder = (() => {
                 if (media.matches) { Plugs(mainBody) }
                 break;
               case 'contact':
-                tabSelect(["home", "videos", "podcast", "streams", "music"]);
+                tabSelect(["home", "videos", "streams", "music"]);
                 homelink.classList.remove("home-special")
                 titleChange("Contact | NMMC")
                 removeExistingPage(mainBody, juniorBody)

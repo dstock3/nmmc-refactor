@@ -444,8 +444,7 @@
     hare: {
       title: "An Angel Hare Analysis",
       description: "Tonight, we're doing a deep dive into Angel Hare, a complex tapestry of memories, metafiction, and mystery, cleverly woven together into an animated web series that has captivated many.",
-      iframeRef: "https://www.youtube.com/embed/oV0YuJ6ZnbY&t=2109s"
-
+      iframeRef: "https://www.youtube.com/embed/oV0YuJ6ZnbY"
     }, 
     barbenheimer: {
       title: "Barbenheimer Unmasked: The Ideological Paralysis of Modern Cinema",
