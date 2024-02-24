@@ -1,13 +1,11 @@
 import {
   elementBuilder,
   videoBuilder,
-  podBuilder,
   musicBuilder,
   tabSelect,
   removeExistingPage,
 } from "./functions.js";
 import { Videos } from "./videos.js";
-import { Podcast } from "./podcast.js";
 import { Music } from "./music.js";
 import { Plugs } from "./plug.js";
 import Data from "../data/data.json5";
@@ -43,7 +41,7 @@ const Home = () => {
   vidAnchor.textContent = "More Vids >";
 
   vidAnchor.addEventListener("click", function goVid() {
-    tabSelect(["music", "podcast", "streams", "contact"]);
+    tabSelect(["music", "streams", "contact"]);
 
     removeExistingPage(mainBody, juniorBody);
     mainBody.removeAttribute("id");
@@ -53,58 +51,6 @@ const Home = () => {
     if (media.matches) {
       Plugs(mainBody);
     }
-  });
-
-  /* Podcast Section */
-
-  let podArray = [];
-  for (let prop in Data.pods) {
-    podArray.push(Data.pods[prop]);
-  }
-
-  const podData = podArray[0];
-  podBuilder(podData, juniorBody);
-
-  const podContainer = document.querySelector(".pod-container");
-  const podButtonDiv = elementBuilder("div", "more-pods", podContainer);
-  const morePods = elementBuilder("button", "pod-button", podButtonDiv);
-  const podAnchor = elementBuilder("div", "vid-link", morePods);
-  podAnchor.textContent = "More Pods >";
-
-  podAnchor.addEventListener("click", function goPod() {
-    tabSelect(["videos", "music", "streams", "contact"]);
-
-    removeExistingPage(mainBody, juniorBody);
-    mainBody.removeAttribute("id");
-    juniorBody.removeAttribute("id");
-    scroll(0, 0);
-    Podcast();
-    Plugs(mainBody);
-  });
-
-  /* Music Section */
-
-  const musicPage = elementBuilder("div", "music-container", juniorBody);
-
-  const musicHead = elementBuilder("h2", "music-head", musicPage);
-  musicHead.textContent = `Freshest Tracks`;
-  const newArray = [musicArray[0]];
-
-  musicBuilder(newArray, musicPage, media, true);
-
-  const moreMusic = elementBuilder("button", "music-button", musicPage);
-  const musicAnchor = elementBuilder("div", "music-link", moreMusic);
-  musicAnchor.textContent = "More Music >";
-
-  musicAnchor.addEventListener("click", function goMusic() {
-    tabSelect(["videos", "podcast", "streams", "contact"]);
-
-    removeExistingPage(mainBody, juniorBody);
-    mainBody.removeAttribute("id");
-    juniorBody.removeAttribute("id");
-    scroll(0, 0);
-    Music();
-    Plugs();
   });
 
   /* Announcements */
@@ -134,6 +80,31 @@ const Home = () => {
   for (let i = 1; i < buttons.length; i++) {
     buttons[i].classList.add("home-buttons");
   }
+
+  /* Music Section */
+
+  const musicPage = elementBuilder("div", "music-container", juniorBody);
+
+  const musicHead = elementBuilder("h2", "music-head", musicPage);
+  musicHead.textContent = `Freshest Tracks`;
+  const newArray = [musicArray[0]];
+
+  musicBuilder(newArray, musicPage, media, true);
+
+  const moreMusic = elementBuilder("button", "music-button", musicPage);
+  const musicAnchor = elementBuilder("div", "music-link", moreMusic);
+  musicAnchor.textContent = "More Music >";
+
+  musicAnchor.addEventListener("click", function goMusic() {
+    tabSelect(["videos", "podcast", "streams", "contact"]);
+
+    removeExistingPage(mainBody, juniorBody);
+    mainBody.removeAttribute("id");
+    juniorBody.removeAttribute("id");
+    scroll(0, 0);
+    Music();
+    Plugs();
+  });
 };
 
 export { Home };

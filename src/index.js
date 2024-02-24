@@ -3,7 +3,6 @@ import './style/style.css'
 import { elementBuilder, updateMetaKeywords, titleChange, tabSelect, removeExistingPage } from './modules/functions.js';
 import { Home } from './modules/home.js'
 import { Music } from './modules/music.js'
-import { Podcast } from './modules/podcast.js'
 import { Streams } from './modules/streams.js'
 import { Videos } from './modules/videos.js'
 import { Contact } from './modules/contact.js'
@@ -114,15 +113,3 @@ const TabBuilder = (() => {
 })();
 
 Footer()
-
-/*
-GBox()
-
-const lightbox = GLightbox({
-    href: Data.vids[0].iframeRef,
-    type: "video",
-    source: "youtube", //vimeo, youtube or local
-    width: 900,
-    autoPlayVideos: "true",
-});
-*/
