@@ -23,11 +23,6 @@
     bandcampLink: {
       name: "Bandcamp",
       link: "https://nightmaremasterclass.bandcamp.com/",
-    },
-
-    libsynLink: {
-      name: "Libsyn",
-      link: "https://nightmaretonight.libsyn.com/",
     }
   },
   playlist: {
