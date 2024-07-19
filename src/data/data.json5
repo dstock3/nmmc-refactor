@@ -436,6 +436,11 @@
     },
   },
   vids: {
+    glow: {
+      title: "The Dream Logic of I Saw the TV Glow",
+      description: "I just saw a wonderful film by the name of I Saw the TV Glow, directed by Jane Schoenbrun. The film had a limited theatrical release; I'm pleased to say I was able to see it in theaters. If you haven't been able to see it yet, the movie is now available on VOD, and I'd highly recommend you check it out.",
+      iframeRef: "https://www.youtube.com/embed/QlWFSpGnmPo"
+    },
     hare: {
       title: "An Angel Hare Analysis",
       description: "Tonight, we're doing a deep dive into Angel Hare, a complex tapestry of memories, metafiction, and mystery, cleverly woven together into an animated web series that has captivated many.",
